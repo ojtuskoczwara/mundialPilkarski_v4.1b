@@ -84,4 +84,16 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
         String sql = "DELETE FROM t_zawodnicy_w_reprezentacji WHERE id_mundialu = ? AND id_reprezentacji = ? AND id_zawodnika = ?";
         parserSQL.parseQuery(sql, mundial.getIdMundialu(), reprezentacja.getIdReprezentacji(), zawodnik.getIdZawodnika()).executeUpdate();
     }
+
+    @Override
+    public void deleteRowsByIdMundialu(Mundial mundial) throws Exception {
+        String sql = "DELETE FROM t_zawodnicy_w_reprezentacji WHERE id_mundialu = ?";
+        parserSQL.parseQuery(sql, mundial.getIdMundialu()).executeUpdate();
+    }
+
+    @Override
+    public void deleteRowsByIdReprezentacji(Reprezentacja reprezentacja) throws Exception {
+        String sql = "DELETE FROM t_zawodnicy_w_reprezentacji WHERE id_reprezentacji = ?";
+        parserSQL.parseQuery(sql, reprezentacja.getIdReprezentacji()).executeUpdate();
+    }
 }

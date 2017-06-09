@@ -10,6 +10,6 @@ public interface ReprezentacjaDAO {
     public Reprezentacja getReprezentacjaById(int id) throws Exception;
     public List<Reprezentacja> getAllReprezentacja() throws Exception;
     public void deleteReprezentacja(int id) throws Exception;
-    public void updateReprezentacja(Reprezentacja reprezentacja) throws Exception;
+    public void updateReprezentacjaById(Reprezentacja reprezentacja) throws Exception;
     public Reprezentacja getIdRepByNazwa(String nazwaRep) throws Exception;
 }

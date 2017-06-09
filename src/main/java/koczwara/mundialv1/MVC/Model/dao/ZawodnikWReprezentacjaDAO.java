@@ -14,5 +14,7 @@ public interface ZawodnikWReprezentacjaDAO {
     public int getIdZawodnikByLokalizacjaNazwaImieNazwisko(String mundialLokalizacja, String reprezentacjaNazwa, Zawodnik zawodnik) throws Exception;
     public Zawodnik getZawodnikIdByLokalizacjaRokNazwaImieNazwisko(Mundial mundial, Reprezentacja reprezentacja, Zawodnik zawodnik) throws Exception;
     public void deleteRowsByMundialIdReprezentacjaIdZawodnikId(Mundial mundial, Reprezentacja reprezentacja, Zawodnik zawodnik) throws Exception;
+    public void deleteRowsByIdMundialu(Mundial mundial) throws Exception;
+    public void deleteRowsByIdReprezentacji(Reprezentacja reprezentacja) throws Exception;
 
 }

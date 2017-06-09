@@ -144,7 +144,7 @@ public class ControllerZawodnikDodaj {
 
                 //Pobranie idMundialu z tabeli t_Mundial automatycznie po dodaniu nowego uzytkownika, idMundialu == zaznaczony element z JList mundialList
                 try {
-                    modelMundial = mundialDAO.getMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
+                    modelMundial = mundialDAO.getIdMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }

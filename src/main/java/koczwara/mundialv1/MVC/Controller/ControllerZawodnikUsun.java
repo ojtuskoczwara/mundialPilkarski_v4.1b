@@ -150,7 +150,7 @@ public class ControllerZawodnikUsun {
         public void actionPerformed(ActionEvent e) {
 
             try { //Pobranie idMundialu i zapisanie w modelMundial
-                modelMundial = mundialDAO.getMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
+                modelMundial = mundialDAO.getIdMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
             } catch (Exception e1) {
                 e1.printStackTrace();
             }

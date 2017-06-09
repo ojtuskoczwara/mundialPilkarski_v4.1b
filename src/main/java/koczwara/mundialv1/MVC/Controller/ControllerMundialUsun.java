@@ -3,6 +3,8 @@ package koczwara.mundialv1.MVC.Controller;
 
 import koczwara.mundialv1.MVC.Model.dao.MundialDAO;
 import koczwara.mundialv1.MVC.Model.dao.MundialDAOImpl;
+import koczwara.mundialv1.MVC.Model.dao.ZawodnikWReprezentacjaDAO;
+import koczwara.mundialv1.MVC.Model.dao.ZawodnikWReprezentacjaDAOImpl;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMundialUsun;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
@@ -19,6 +21,7 @@ public class ControllerMundialUsun {
     private Mundial model;
     private DefaultListModel dlm = new DefaultListModel();
     MundialDAO mundialDAO = new MundialDAOImpl();
+    ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
     private String valueMundial;
     private String valueMundialLokalizacja;
     private int valueMundialRok;
@@ -60,12 +63,11 @@ public class ControllerMundialUsun {
     private class UsunMundialButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            Mundial m = null;
             int wynik = 0;
             try {
-                m = mundialDAO.getMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
-                int idMundialu = m.getIdMundialu();
-                wynik = mundialDAO.deleteMundialByIdMundialu(idMundialu);
+                model = mundialDAO.getIdMundialuByLokalizacjaRok(model); // setIdMundialu
+                zawodnikWReprezentacjaDAO.deleteRowsByIdMundialu(model); // Usuniecie wierszy z t_zwr gdzie idMundialu = wartowsci getIdMundialu (powyzej)
+                wynik = mundialDAO.deleteMundialByIdMundialu(model.getIdMundialu()); //Usuniecie mundialu z t_mundial
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
@@ -92,7 +94,8 @@ public class ControllerMundialUsun {
                 valueMundial = view.getMundialListSelectedValue().getSelectedValue().toString();
                 valueMundialLokalizacja = valueMundial.substring(0,valueMundial.length()-5); // toString do MundialLokalizacja
                 valueMundialRok = Integer.parseInt(valueMundial.substring(valueMundial.length()-4)); // parseInt do MundialRok
-
+                model.setLokalizacja(valueMundial.substring(0,valueMundial.length()-5)); //od razu setterem przypisac wartosc zamiast tworzyc String valueMundialLokalizacja itp
+                model.setRok(Integer.parseInt(valueMundial.substring(valueMundial.length()-4)));
                 view.setLokalizacjaTF(valueMundialLokalizacja);
                 view.setRokTF(String.valueOf(valueMundialRok));
             }

@@ -2,6 +2,8 @@ package koczwara.mundialv1.MVC.Controller;
 
 import koczwara.mundialv1.MVC.Model.dao.ReprezentacjaDAO;
 import koczwara.mundialv1.MVC.Model.dao.ReprezentacjaDAOImpl;
+import koczwara.mundialv1.MVC.Model.dao.ZawodnikWReprezentacjaDAO;
+import koczwara.mundialv1.MVC.Model.dao.ZawodnikWReprezentacjaDAOImpl;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
 import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewReprezentacjaUsun;
@@ -19,6 +21,7 @@ public class ControllerReprezentacjaUsun {
     private ViewReprezentacjaUsun view;
     private Reprezentacja model;
     ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
+    ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
     private DefaultListModel dlm = new DefaultListModel();
     ShowMyMessage showMyMessage = new ShowMyMessage();
 
@@ -62,6 +65,7 @@ public class ControllerReprezentacjaUsun {
                 int idReprezentacja = 0;
                 try {
                     model = reprezentacjaDAO.getIdRepByNazwa(view.getReprezentacjaList().getSelectedValue().toString());
+                    zawodnikWReprezentacjaDAO.deleteRowsByIdReprezentacji(model);
                     idReprezentacja = model.getIdReprezentacji();
                     reprezentacjaDAO.deleteReprezentacja(idReprezentacja);
                     setRepDLM();

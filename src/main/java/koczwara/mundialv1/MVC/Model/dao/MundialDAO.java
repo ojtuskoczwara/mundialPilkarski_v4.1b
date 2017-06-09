@@ -11,11 +11,11 @@ public interface MundialDAO {
 
     public List<Mundial> getAllMundial() throws Exception;
 
-    public Mundial getMundialByLokalizacja(String lokalizacja) throws Exception;
+    public Mundial getIdMundialuByLokalizacjaRok(Mundial mundial) throws Exception;
 
     public int deleteMundialByIdMundialu(int idMundialu) throws SQLException;
 
-    public Mundial getMundialByLokalizacjaRok(String lokalizacja, int rok) throws Exception;
+    public Mundial getIdMundialByLokalizacjaRok(String lokalizacja, int rok) throws Exception;
 
     public int updateMundial(int idMundialu, String nowaLokalizacja, int nowyRok) throws SQLException;
 

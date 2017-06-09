@@ -62,7 +62,7 @@ public class ControllerReprezentacjaEdytuj {
                 try {
                     model = reprezentacjaDAO.getIdRepByNazwa(view.getReprezentacjaList().getSelectedValue().toString());
                     model.setNazwa(view.getNowaNazwaReprezentacji());
-                    reprezentacjaDAO.updateReprezentacja(model);
+                    reprezentacjaDAO.updateReprezentacjaById(model);
                     setRepDLM();
                 } catch (Exception e1) {
                     e1.printStackTrace();

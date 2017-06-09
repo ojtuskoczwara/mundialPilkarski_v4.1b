@@ -78,16 +78,16 @@ public class ControllerMundialEdytuj {
         public void actionPerformed(ActionEvent e) {
             int id = 0;
             int update = 0;
-            Mundial m = null;
 
             try {
-                m = mundialDAO.getMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
+                model = mundialDAO.getIdMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
-            id = m.getIdMundialu();
+            id = model.getIdMundialu();
 
-            if (view.getNowaLokalizacjaTextField().isEmpty() && view.getNowyRokTextField().isEmpty()) {
+
+            if (view.getNowaLokalizacjaTextField().isEmpty() & view.getNowyRokTextField().isEmpty()) {
                 view.showMyWarningMessage("Pola 'Lokalizacja' lub 'Rok' muszą zostać wypełnione!", "Wypełnij wymagane pola !");
             }
             else if (view.getNowaLokalizacjaTextField().isEmpty() || view.getNowyRokTextField().isEmpty()) {
@@ -106,6 +106,12 @@ public class ControllerMundialEdytuj {
                     }
                 }
             }
+            else
+                try {
+                    update = mundialDAO.updateMundial(id,view.getNowaLokalizacjaTextField(), Integer.parseInt(view.getNowyRokTextField()));
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
 
             if (update > 0) {
                 view.showMyInfoMessage("Mundial został edytowany pomyślnie.", "Success");
@@ -116,9 +122,47 @@ public class ControllerMundialEdytuj {
             else
                 view.showMyErrorMessage("Błąd podczas edytowania mundialu!", "Error");
 
+
+/*
+            try {
+                update = mundialDAO.updateMundial(id,view.getNowaLokalizacjaTextField(), Integer.parseInt(view.getNowyRokTextField()));
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+                try {
+                    update = mundialDAO.updateMundial(id,valueMundialLokalizacja, Integer.parseInt(view.getNowyRokTextField()));
+                } catch (SQLException e2) {
+                    e2.printStackTrace();
+                    try {
+                        update = mundialDAO.updateMundial(id,view.getNowaLokalizacjaTextField(), valueMundialRok);
+                    } catch (SQLException e3) {
+                        e3.printStackTrace();
+                        view.showMyWarningMessage("Pola 'Lokalizacja' lub 'Rok' muszą zostać wypełnione!", "Wypełnij wymagane pola !");
+                    }
+                }
+            }
+*/
+
+/*
+            try {
+                boolean czyPrawda = !view.getNowaLokalizacjaTextField().isEmpty() & !view.getNowyRokTextField().isEmpty();
+                if (Boolean.TRUE.equals(czyPrawda))
+                    update = mundialDAO.updateMundial(id,view.getNowaLokalizacjaTextField(), Integer.parseInt(view.getNowyRokTextField()));
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+
+
+            if (update > 0) {
+                view.showMyInfoMessage("Mundial został edytowany pomyślnie.", "Success");
+                setDLM();
+                view.setCzyszczenieNowaLokalizajcaTextField(null);
+                view.setCzyszczenieNowyRokTextField(null);
+            }
+
+*/
+
+
         }
      }
-
-
 }
 

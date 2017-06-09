@@ -51,7 +51,7 @@ public class ReprezentacjaDAOImpl implements ReprezentacjaDAO {
     }
 
     @Override
-    public void updateReprezentacja(Reprezentacja reprezentacja) throws Exception {
+    public void updateReprezentacjaById(Reprezentacja reprezentacja) throws Exception {
         String sql = "UPDATE t_reprezentacje SET nazwa_reprezentacji = ? WHERE id_reprezentacji = ?";
         parserSQL.parseQuery(sql,reprezentacja.getNazwa(), reprezentacja.getIdReprezentacji()).executeUpdate();
     }
