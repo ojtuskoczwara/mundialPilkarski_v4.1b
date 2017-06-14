@@ -28,6 +28,7 @@ public class Rozgrywka {
     public void setIdGrupy1(int idGrupy1) {
         this.idGrupy1 = idGrupy1;
     }
+
     public int getIdGrupy() {
         return idGrupy;
     }
