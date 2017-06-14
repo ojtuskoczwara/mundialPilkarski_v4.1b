@@ -23,7 +23,7 @@ public class Grupa {
         this.idMundialuPFK = idMundialuPFK;
     }
 
-    public String  getNazwaGrupy() {
+    public String getNazwaGrupy() {
         return nazwaGrupy;
     }
 

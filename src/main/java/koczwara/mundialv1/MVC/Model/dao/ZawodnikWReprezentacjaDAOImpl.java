@@ -53,7 +53,7 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
 
     @Override
     public int getIdZawodnikByLokalizacjaNazwaImieNazwisko(String lokalizacja, String nazwa, Zawodnik zawodnik) throws Exception {
-        String sql = "SELECT z.id_zawodnika FROM t_zawodnicy z, t_reprezentacje r, t_mundial m, t_zawodnicy_w_reprezentacji zwr" +
+        String sql = "SELECT z.id_zawodnika FROM t_zawodnicy z, t_reprezentacje r, t_mundiale m, t_zawodnicy_w_reprezentacji zwr" +
                 " WHERE m.id_mundialu = zwr.id_mundialu AND r.id_reprezentacji = zwr.id_reprezentacji AND z.id_zawodnika = zwr.id_zawodnika" +
                 " AND m.lokalizacja = ? AND r.nazwa_reprezentacji = ? AND z.imie = ? AND z.nazwisko = ?";
         PreparedStatement ps = parserSQL.parseQuery(sql, lokalizacja, nazwa, zawodnik.getImie(), zawodnik.getNazwisko());
@@ -65,7 +65,7 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
 
     @Override
     public Zawodnik getZawodnikIdByLokalizacjaRokNazwaImieNazwisko(Mundial mundial, Reprezentacja reprezentacja, Zawodnik zawodnik) throws Exception {
-        String sql = "SELECT z.id_zawodnika, z.imie, z.nazwisko FROM t_zawodnicy z, t_reprezentacje r, t_mundial m, t_zawodnicy_w_reprezentacji zwr" +
+        String sql = "SELECT z.id_zawodnika, z.imie, z.nazwisko FROM t_zawodnicy z, t_reprezentacje r, t_mundiale m, t_zawodnicy_w_reprezentacji zwr" +
                 " WHERE m.id_mundialu = zwr.id_mundialu AND r.id_reprezentacji = zwr.id_reprezentacji AND z.id_zawodnika = zwr.id_zawodnika" +
                 " AND m.lokalizacja = ? AND m.rok = ? AND r.nazwa_reprezentacji = ? AND z.imie = ? AND z.nazwisko = ?";
         ResultSet resultSet = parserSQL.parseQuery(sql, mundial.getLokalizacja(), mundial.getRok(), reprezentacja.getNazwa(), zawodnik.getImie(), zawodnik.getNazwisko()).executeQuery();

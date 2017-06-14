@@ -6,14 +6,6 @@ public class ReprezentacjaWGrupa {
     private int idGrupy;
     private int idMundialu;
 
-    public ReprezentacjaWGrupa(){
-    }
-
-    public ReprezentacjaWGrupa(int idReprezentacji, int idGrupy, int idMundialu) {
-        this.idReprezentacji = idReprezentacji;
-        this.idGrupy = idGrupy;
-        this.idMundialu = idMundialu;
-    }
 
     public int getIdReprezentacji() {
         return idReprezentacji;

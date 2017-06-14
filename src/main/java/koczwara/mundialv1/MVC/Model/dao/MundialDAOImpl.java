@@ -17,14 +17,14 @@ public class MundialDAOImpl implements MundialDAO{
 
     @Override
     public void addMundial(Mundial mundial) throws Exception {
-        String sql = "INSERT INTO t_mundial(lokalizacja,rok) VALUES(?,?)";
+        String sql = "INSERT INTO t_mundiale(lokalizacja,rok) VALUES(?,?)";
         parserSQL.parseQuery(sql, mundial.getLokalizacja(), mundial.getRok()).executeUpdate();
     }
 
     @Override
     public List<Mundial> getAllMundial() throws Exception {
         List<Mundial> mundiale = new ArrayList<Mundial>();
-        String sql = "SELECT * FROM t_mundial";
+        String sql = "SELECT * FROM t_mundiale";
         ResultSet resultSet = parserSQL.parseQuery(sql).executeQuery();
         while (resultSet.next()) {
             Mundial mundial = new Mundial();
@@ -38,7 +38,7 @@ public class MundialDAOImpl implements MundialDAO{
 
     @Override
     public Mundial getIdMundialuByLokalizacjaRok(Mundial mundial) throws Exception {
-        String sql = "SELECT * FROM t_mundial WHERE lokalizacja = ? AND rok = ?";
+        String sql = "SELECT * FROM t_mundiale WHERE lokalizacja = ? AND rok = ?";
         ResultSet resultSet = parserSQL.parseQuery(sql,mundial.getLokalizacja(), mundial.getRok()).executeQuery();
         Mundial m = null;
         while (resultSet.next()) {
@@ -51,14 +51,14 @@ public class MundialDAOImpl implements MundialDAO{
 
     @Override
     public int deleteMundialByIdMundialu(int idMundialu) throws SQLException {
-        String sql = "DELETE FROM t_mundial WHERE id_mundialu = ?";
+        String sql = "DELETE FROM t_mundiale WHERE id_mundialu = ?";
         int wynik = parserSQL.parseQuery(sql, idMundialu).executeUpdate();
         return wynik;
     }
 
     @Override
     public Mundial getIdMundialByLokalizacjaRok(String lokalizacja, int rok) throws Exception {
-        String sql = "SELECT * FROM t_mundial WHERE lokalizacja = ? AND rok = ?";
+        String sql = "SELECT * FROM t_mundiale WHERE lokalizacja = ? AND rok = ?";
         ResultSet resultSet = parserSQL.parseQuery(sql,lokalizacja, rok).executeQuery();
         Mundial m = null;
         while (resultSet.next()) {
@@ -71,7 +71,7 @@ public class MundialDAOImpl implements MundialDAO{
 
     @Override
     public int updateMundial(int idMundialu, String nowaLokalizacja, int nowyRok) throws SQLException {
-        String sql = "UPDATE t_mundial SET lokalizacja = ?, rok = ? WHERE id_mundialu = ?";
+        String sql = "UPDATE t_mundiale SET lokalizacja = ?, rok = ? WHERE id_mundialu = ?";
         PreparedStatement ps= parserSQL.parseQuery(sql, nowaLokalizacja, nowyRok, idMundialu);
         int wynik = ps.executeUpdate();
         return wynik;
@@ -79,7 +79,7 @@ public class MundialDAOImpl implements MundialDAO{
 
     @Override
     public int getMundialByLokalRok(String lokalizacja, int rok) throws Exception {
-        String sql = "SELECT id_mundialu FROM t_mundial WHERE lokalizacja = ? AND rok = ?";
+        String sql = "SELECT id_mundialu FROM t_mundiale WHERE lokalizacja = ? AND rok = ?";
         PreparedStatement ps = parserSQL.parseQuery(sql,lokalizacja, rok);
         ResultSet rs = ps.executeQuery();
         int id = rs.getInt("id_mundialu");
