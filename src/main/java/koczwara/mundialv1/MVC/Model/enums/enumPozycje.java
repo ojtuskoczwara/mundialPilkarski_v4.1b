@@ -1,0 +1,5 @@
+package koczwara.mundialv1.MVC.Model.enums;
+
+public enum enumPozycje {
+    BRAMKARZ, LEWY_OBRONCA, SRODKOWY_OBRONCA, PRAWY_OBRONCA, LEWY_POMOCNIK, SRODKOWY_POMOCNIK, PRAWY_POMOCNIK, NAPASTNIK
+}
