@@ -28,7 +28,7 @@ public class ViewGrupaDodaj extends JFrame{
 
     public ViewGrupaDodaj() {
         super("Dodawanie reprezentacji do grup");
-        setSize(600,800);
+        setSize(800,800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
@@ -48,85 +48,80 @@ public class ViewGrupaDodaj extends JFrame{
 
         grupaAListModel = new DefaultListModel();
         grupaAList = new JList();
-        grupaALabel.setBounds(140, 240, 60, 20);
+        grupaALabel.setBounds(120, 240, 60, 20);
         add(grupaALabel);
-        grupaAList.setBounds(120, 260, 150, 100);
+        grupaAList.setBounds(100, 260, 150, 100);
         add(grupaAList);
-        dodajGrAButton.setBounds(30,280,80,50);
+        dodajGrAButton.setBounds(10,280,80,50);
         add(dodajGrAButton);
 
         grupaBListModel = new DefaultListModel();
         grupaBList = new JList();
-        grupaBLabel.setBounds(420,240,60,20);
+        grupaBLabel.setBounds(380,240,60,20);
         add(grupaBLabel);
-        grupaBList.setBounds(400,260,150,100);
+        grupaBList.setBounds(360,260,150,100);
         add(grupaBList);
-        dodajGrBButton.setBounds(310,280,80,50);
+        dodajGrBButton.setBounds(270,280,80,50);
         add(dodajGrBButton);
 
         grupaCListModel = new DefaultListModel();
         grupaCList = new JList();
-        grupaCLabel.setBounds(140,380,60,20);
+        grupaCLabel.setBounds(640, 240, 60, 20);
         add(grupaCLabel);
-        grupaCList.setBounds(120,400,150,100);
+        grupaCList.setBounds(620, 260, 150, 100);
         add(grupaCList);
-        dodajGrCButton.setBounds(30,420,80,50);
+        dodajGrCButton.setBounds(530,280,80,50);
         add(dodajGrCButton);
 
         grupaDListModel = new DefaultListModel();
         grupaDList = new JList();
-        grupaDLabel.setBounds(420,380,60,20);
+        grupaDLabel.setBounds(120,380,60,20);
         add(grupaDLabel);
-        grupaDList.setBounds(400,400,150,100);
+        grupaDList.setBounds(100,400,150,100);
         add(grupaDList);
-        dodajGrDButton.setBounds(310,420,80,50);
+        dodajGrDButton.setBounds(10,420,80,50);
         add(dodajGrDButton);
 
         grupaEListModel = new DefaultListModel();
         grupaEList = new JList();
-        grupaELabel.setBounds(140,520,60,20);
+        grupaELabel.setBounds(380,380,60,20);
         add(grupaELabel);
-        grupaEList.setBounds(120,540,150,100);
+        grupaEList.setBounds(360,400,150,100);
         add(grupaEList);
-        dodajGrEButton.setBounds(30,560,80,50);
+        dodajGrEButton.setBounds(270,420,80,50);
         add(dodajGrEButton);
 
         grupaFListModel = new DefaultListModel();
         grupaFList = new JList();
-        grupaFLabel.setBounds(420,520,60,20);
+        grupaFLabel.setBounds(640,380,60,20);
         add(grupaFLabel);
-        grupaFList.setBounds(400,540,150,100);
+        grupaFList.setBounds(620,400,150,100);
         add(grupaFList);
-        dodajGrFButton.setBounds(310,560,80,50);
+        dodajGrFButton.setBounds(530,420,80,50);
         add(dodajGrFButton);
 
         grupaGListModel = new DefaultListModel();
         grupaGList = new JList();
-        grupaGLabel.setBounds(140,660,60,20);
+        grupaGLabel.setBounds(120,520,60,20);
         add(grupaGLabel);
-        grupaGList.setBounds(120,680,150,100);
+        grupaGList.setBounds(100,540,150,100);
         add(grupaGList);
-        dodajGrGButton.setBounds(30,700,80,50);
+        dodajGrGButton.setBounds(10,560,80,50);
         add(dodajGrGButton);
-/*
+
         grupaHListModel = new DefaultListModel();
         grupaHList = new JList();
-        grupaHLabel.setBounds(420,660,60,20);
+        grupaHLabel.setBounds(380,520,60,20);
         add(grupaHLabel);
-        grupaHList.setBounds(400,680,150,100);
+        grupaHList.setBounds(360,540,150,100);
         add(grupaHList);
-        dodajGrHButton.setBounds(310,700,80,50);
+        dodajGrHButton.setBounds(270,560,80,50);
         add(dodajGrHButton);
-        */
 
-        grupaCListModel = new DefaultListModel();
-        grupaCList = new JList();
-        grupaCLabel.setBounds(140, 240, 60, 20);
-        add(grupaCLabel);
-        grupaCList.setBounds(120, 260, 150, 100);
-        add(grupaCList);
-        dodajGrCButton.setBounds(30,280,80,50);
-        add(dodajGrCButton);
+        cofnijButton.setBounds(20,680,100,30);
+        add(cofnijButton);
+
+
     }
 
 
