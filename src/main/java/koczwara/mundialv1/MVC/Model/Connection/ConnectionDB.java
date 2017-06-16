@@ -24,7 +24,7 @@ public class ConnectionDB {
 
             String USER = "postgres";
             String PASSWORD = "90szkola12";
-            String DB_URL = "jdbc:postgresql://localhost:5432/mundial_v4.1b";
+            String DB_URL = "jdbc:postgresql://localhost:5432/mundial_v4.3";
 
             connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
             System.out.println("Połączono z bazą danych.");

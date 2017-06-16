@@ -1,10 +1,7 @@
 package koczwara.mundialv1.MVC.Controller;
 
 
-import koczwara.mundialv1.MVC.Model.entity.Mundial;
-import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
-import koczwara.mundialv1.MVC.Model.entity.Zawodnik;
-import koczwara.mundialv1.MVC.Model.entity.ZawodnikWReprezentacja;
+import koczwara.mundialv1.MVC.Model.entity.*;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.*;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
 import koczwara.mundialv1.MVC.View.ViewEkranGlowny;
@@ -27,6 +24,7 @@ public class ControllerPanelAdministratora {
         this.view.addDodajZawodnikButtonListener(new DodajZawodnikListener());
         this.view.addEdytujZawodnikButtonListener(new EdytujZawodnikListener());
         this.view.addUsunZawodnikButtonListener(new UsunZawodnikListener());
+        this.view.addDodajReprezentacjaDoGrupaButtonListener(new DodajReprezentacjeDoGrupyListener());
 
 
     }
@@ -110,6 +108,14 @@ public class ControllerPanelAdministratora {
         @Override
         public void actionPerformed(ActionEvent e) {
             new ControllerZawodnikUsun(new ViewZawodnikUsun(), new Zawodnik(), new Reprezentacja(), new Mundial(), new ZawodnikWReprezentacja());
+            view.setVisible(false);
+        }
+    }
+
+    private class DodajReprezentacjeDoGrupyListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerGrupaDodaj(new ViewGrupaDodaj(), new Mundial(), new Reprezentacja(), new Grupa());
             view.setVisible(false);
         }
     }

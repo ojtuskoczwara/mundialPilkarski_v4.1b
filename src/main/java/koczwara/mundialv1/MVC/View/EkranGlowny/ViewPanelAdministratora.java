@@ -14,11 +14,12 @@ public class ViewPanelAdministratora extends JFrame {
     private JButton dodajZawodnikaButton = new JButton("Dodaj zawodnika");
     private JButton edytujZawodnikaButton = new JButton("Edytuj zawodnika");
     private JButton usunZawodnikaButton = new JButton("Usuń zawodnika");
+    private JButton dodajReprezentacjaDoGrupaButton = new JButton("Dodaj reprezentacje do grup");
     private JButton cofnijButton = new JButton("<<< Cofnij");
 
     public ViewPanelAdministratora() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600,500);
+        setSize(600,700);
         setTitle("Panel administratora");
         setLayout(null);
         setLocationRelativeTo(null);
@@ -58,9 +59,16 @@ public class ViewPanelAdministratora extends JFrame {
         zawodnikPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(),"Zawodnik Panel"));
         this.add(zawodnikPanel);
 
+        JPanel grupaPanel = new JPanel();
+        dodajReprezentacjaDoGrupaButton.setBounds(50,340,150,50);
+        grupaPanel.add(dodajReprezentacjaDoGrupaButton);
+        grupaPanel.setBounds(10,340,450,100);
+        grupaPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(),"Grupa Panel"));
+        this.add(grupaPanel);
 
 
-        cofnijButton.setBounds(10,350,100,30);
+
+        cofnijButton.setBounds(10,500,100,30);
         add(cofnijButton);
     }
 
@@ -99,9 +107,12 @@ public class ViewPanelAdministratora extends JFrame {
         usunZawodnikaButton.addActionListener(listenUsunZawodnikButton);
     }
 
+    public void addDodajReprezentacjaDoGrupaButtonListener(ActionListener listenDodajReprezentacjaDoGrupaButton) {
+        dodajReprezentacjaDoGrupaButton.addActionListener(listenDodajReprezentacjaDoGrupaButton);
+    }
+
     public void addCofnijButtonListener(ActionListener listenCofnijButton) {
         cofnijButton.addActionListener(listenCofnijButton);
     }
-
 
 }
