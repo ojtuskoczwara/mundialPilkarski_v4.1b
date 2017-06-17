@@ -1,7 +1,11 @@
 package koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora;
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 
 public class ViewGrupaDodaj extends JFrame{
     private JButton dodajGrAButton = new JButton("Add A >");
@@ -120,10 +124,97 @@ public class ViewGrupaDodaj extends JFrame{
 
         cofnijButton.setBounds(20,680,100,30);
         add(cofnijButton);
-
-
     }
 
+    public void addCofnijButtonListener(ActionListener listenCofnijButton) {
+        cofnijButton.addActionListener(listenCofnijButton);
+    }
 
+    public void addListModelToMundialList(DefaultListModel mundialListModel) {
+        mundialList.setModel(mundialListModel);
+    }
 
+    public void addListModelToReprezentacjaList(DefaultListModel reprezentacjaListModel) {
+        reprezentacjaList.setModel(reprezentacjaListModel);
+    }
+
+    public void addMundialListMouseListener(MouseAdapter listenMundialList) {
+        mundialList.addMouseListener(listenMundialList);
+    }
+
+    public void addReprezentacjaListMouseListener(MouseAdapter listenReprezentacjaList) {
+        reprezentacjaList.addMouseListener(listenReprezentacjaList);
+    }
+
+    public JList getMundialList() {
+        return mundialList;
+    }
+
+    public JList getReprezentacjaList() {
+        return reprezentacjaList;
+    }
+
+    public void addListModelToGrupaAList(DefaultListModel grupaAListModel) {
+        grupaAList.setModel(grupaAListModel);
+    }
+
+    public void addListModelToGrupaBList(DefaultListModel grupaBListModel) {
+        grupaBList.setModel(grupaBListModel);
+    }
+
+    public void addListModelToGrupaCList(DefaultListModel grupaCListModel) {
+        grupaCList.setModel(grupaCListModel);
+    }
+
+    public void addListModelToGrupaDList(DefaultListModel grupaDListModel) {
+        grupaDList.setModel(grupaDListModel);
+    }
+
+    public void addListModelToGrupaEList(DefaultListModel grupaEListModel) {
+        grupaEList.setModel(grupaEListModel);
+    }
+
+    public void addListModelToGrupaFList(DefaultListModel grupaFListModel) {
+        grupaFList.setModel(grupaFListModel);
+    }
+
+    public void addListModelToGrupaGList(DefaultListModel grupaGListModel) {
+        grupaGList.setModel(grupaGListModel);
+    }
+
+    public void addListModelToGrupaHList(DefaultListModel grupaHListModel) {
+        grupaHList.setModel(grupaHListModel);
+    }
+
+    public void addDodajGrAButtonListener(ActionListener listenDodajGrupaAButton) {
+        dodajGrAButton.addActionListener(listenDodajGrupaAButton);
+    }
+
+    public void addDodajGrBButtonListener(ActionListener listenDodajGrupaBButton) {
+        dodajGrBButton.addActionListener(listenDodajGrupaBButton);
+    }
+
+    public void addDodajGrCButtonListener(ActionListener listenDodajGrupaCButton) {
+        dodajGrCButton.addActionListener(listenDodajGrupaCButton);
+    }
+
+    public void addDodajGrDButtonListener(ActionListener listenDodajGrupaDButton) {
+        dodajGrDButton.addActionListener(listenDodajGrupaDButton);
+    }
+
+    public void addDodajGrEButtonListener(ActionListener listenDodajGrupaEButton) {
+        dodajGrEButton.addActionListener(listenDodajGrupaEButton);
+    }
+
+    public void addDodajGrFButtonListener(ActionListener listenDodajGrupaFButton) {
+        dodajGrFButton.addActionListener(listenDodajGrupaFButton);
+    }
+
+    public void addDodajGrGButtonListener(ActionListener listenDodajGrupaGButton) {
+        dodajGrGButton.addActionListener(listenDodajGrupaGButton);
+    }
+
+    public void addDodajGrHButtonListener(ActionListener listenDodajGrupaHButton) {
+        dodajGrHButton.addActionListener(listenDodajGrupaHButton);
+    }
 }

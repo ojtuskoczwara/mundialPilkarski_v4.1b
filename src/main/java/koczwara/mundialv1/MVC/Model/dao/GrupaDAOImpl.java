@@ -40,11 +40,12 @@ public class GrupaDAOImpl implements GrupaDAO{
 
     @Override
     public Grupa getIdGrupyByIdMundialuNazwaGrupy(Mundial mundial, Grupa grupa) throws Exception {
-        String sql = "SELECT id_grupy FROM t_grupy WHERE id_mundialu = ? AND g.nazwa_grupy = ?";
+        String sql = "SELECT * FROM t_grupy WHERE id_mundialu = ? AND nazwa_grupy = ?";
         Grupa grupa1 = new Grupa();
         ResultSet resultSet = parserSQL.parseQuery(sql, mundial.getIdMundialu(), grupa.getNazwaGrupy()).executeQuery();
-        resultSet.next();
-        grupa1.setIdGrupy(resultSet.getInt("id_grupy"));
+        while (resultSet.next()) {
+            grupa1.setIdGrupy(resultSet.getInt("id_grupy"));
+        }
         ConnectionDB.disconnect(resultSet);
         return grupa1;
     }

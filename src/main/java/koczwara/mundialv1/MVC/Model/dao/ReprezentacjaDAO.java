@@ -12,4 +12,5 @@ public interface ReprezentacjaDAO {
     public void deleteReprezentacja(int id) throws Exception;
     public void updateReprezentacjaById(Reprezentacja reprezentacja) throws Exception;
     public Reprezentacja getIdRepByNazwa(String nazwaRep) throws Exception;
+    public Reprezentacja getIdReprezentacjaByNazwaRep(Reprezentacja reprezentacja) throws Exception;
 }

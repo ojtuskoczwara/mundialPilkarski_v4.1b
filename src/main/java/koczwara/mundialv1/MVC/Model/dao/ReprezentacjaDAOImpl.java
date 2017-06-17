@@ -68,4 +68,17 @@ public class ReprezentacjaDAOImpl implements ReprezentacjaDAO {
         ConnectionDB.disconnect(resultSet);
         return reprezentacja;
     }
+
+    @Override
+    public Reprezentacja getIdReprezentacjaByNazwaRep(Reprezentacja reprezentacja) throws Exception {
+        String sql = "SELECT id_reprezentacji FROM t_reprezentacje WHERE nazwa_reprezentacji = ?";
+        ResultSet resultSet = parserSQL.parseQuery(sql, reprezentacja.getNazwa()).executeQuery();
+        Reprezentacja rep = null;
+        while (resultSet.next()) {
+            rep = new Reprezentacja();
+            rep.setIdReprezentacji(resultSet.getInt("id_reprezentacji"));
+        }
+        ConnectionDB.disconnect(resultSet);
+        return rep;
+    }
 }
