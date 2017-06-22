@@ -26,8 +26,9 @@ public class ViewReprezentacjaUsun extends JFrame {
 
         reprezentacjaListModel = new DefaultListModel();
         reprezentacjaList = new JList();
-        reprezentacjaList.setBounds(30, 20, 120, 200);
-        add(reprezentacjaList);
+        JScrollPane reprezentacjaScrollList = new JScrollPane(reprezentacjaList);
+        reprezentacjaScrollList.setBounds(30,20,160,200);
+        add(reprezentacjaScrollList);
 
         nazwaTextField.setBounds(270, 50, 100, 50);
         add(nazwaTextField);

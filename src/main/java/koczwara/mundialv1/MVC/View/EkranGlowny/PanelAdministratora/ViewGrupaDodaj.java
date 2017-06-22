@@ -53,82 +53,97 @@ public class ViewGrupaDodaj extends JFrame{
 
         reprezentacjaListModel = new DefaultListModel();
         reprezentacjaList = new JList();
-        reprezentacjaList.setBounds(200,20,120,200);
         JScrollPane scrollPaneGrupaAList = new JScrollPane(reprezentacjaList);
-        scrollPaneGrupaAList.setBounds(200,20,120,200);
+        scrollPaneGrupaAList.setBounds(200,20,180,200);
         add(scrollPaneGrupaAList);
 
         grupaAListModel = new DefaultListModel();
         grupaAList = new JList();
-        grupaALabel.setBounds(120, 240, 60, 20);
+        grupaALabel.setBounds(120, 235, 60, 20);
         add(grupaALabel);
-        grupaAList.setBounds(100, 260, 150, 100);
+        grupaAList.setBounds(80, 255, 150, 110);
         add(grupaAList);
-        dodajGrAButton.setBounds(10,280,80,50);
+        dodajGrAButton.setBounds(10,255,60,50);
         add(dodajGrAButton);
+        usunGrAButton.setBounds(10,315,60,50);
+        add(usunGrAButton);
 
         grupaBListModel = new DefaultListModel();
         grupaBList = new JList();
-        grupaBLabel.setBounds(380,240,60,20);
+        grupaBLabel.setBounds(380,235,60,20);
         add(grupaBLabel);
-        grupaBList.setBounds(360,260,150,100);
+        grupaBList.setBounds(340,255,150,110);
         add(grupaBList);
-        dodajGrBButton.setBounds(270,280,80,50);
+        dodajGrBButton.setBounds(270,255,60,50);
         add(dodajGrBButton);
+        usunGrBButton.setBounds(270,315,60,50);
+        add(usunGrBButton);
 
         grupaCListModel = new DefaultListModel();
         grupaCList = new JList();
-        grupaCLabel.setBounds(640, 240, 60, 20);
+        grupaCLabel.setBounds(640, 235, 60, 20);
         add(grupaCLabel);
-        grupaCList.setBounds(620, 260, 150, 100);
+        grupaCList.setBounds(600, 255, 150, 110);
         add(grupaCList);
-        dodajGrCButton.setBounds(530,280,80,50);
+        dodajGrCButton.setBounds(530,255,60,50);
         add(dodajGrCButton);
+        usunGrCButton.setBounds(530,315,60,50);
+        add(usunGrCButton);
 
         grupaDListModel = new DefaultListModel();
         grupaDList = new JList();
-        grupaDLabel.setBounds(120,380,60,20);
+        grupaDLabel.setBounds(120,375,60,20);
         add(grupaDLabel);
-        grupaDList.setBounds(100,400,150,100);
+        grupaDList.setBounds(80,395,150,110);
         add(grupaDList);
-        dodajGrDButton.setBounds(10,420,80,50);
+        dodajGrDButton.setBounds(10,395,60,50);
         add(dodajGrDButton);
+        usunGrDButton.setBounds(10,455,60,50);
+        add(usunGrDButton);
 
         grupaEListModel = new DefaultListModel();
         grupaEList = new JList();
-        grupaELabel.setBounds(380,380,60,20);
+        grupaELabel.setBounds(380,375,60,20);
         add(grupaELabel);
-        grupaEList.setBounds(360,400,150,100);
+        grupaEList.setBounds(340,395,150,110);
         add(grupaEList);
-        dodajGrEButton.setBounds(270,420,80,50);
+        dodajGrEButton.setBounds(270,395,60,50);
         add(dodajGrEButton);
+        usunGrEButton.setBounds(270,455,60,50);
+        add(usunGrEButton);
 
         grupaFListModel = new DefaultListModel();
         grupaFList = new JList();
-        grupaFLabel.setBounds(640,380,60,20);
+        grupaFLabel.setBounds(640,375,60,20);
         add(grupaFLabel);
-        grupaFList.setBounds(620,400,150,100);
+        grupaFList.setBounds(600,395,150,110);
         add(grupaFList);
-        dodajGrFButton.setBounds(530,420,80,50);
+        dodajGrFButton.setBounds(530,395,60,50);
         add(dodajGrFButton);
+        usunGrFButton.setBounds(530,455,60,50);
+        add(usunGrFButton);
 
         grupaGListModel = new DefaultListModel();
         grupaGList = new JList();
-        grupaGLabel.setBounds(120,520,60,20);
+        grupaGLabel.setBounds(120,515,60,20);
         add(grupaGLabel);
-        grupaGList.setBounds(100,540,150,100);
+        grupaGList.setBounds(80,535,150,110);
         add(grupaGList);
-        dodajGrGButton.setBounds(10,560,80,50);
+        dodajGrGButton.setBounds(10,535,60,50);
         add(dodajGrGButton);
+        usunGrGButton.setBounds(10,595,60,50);
+        add(usunGrGButton);
 
         grupaHListModel = new DefaultListModel();
         grupaHList = new JList();
-        grupaHLabel.setBounds(380,520,60,20);
+        grupaHLabel.setBounds(380,515,60,20);
         add(grupaHLabel);
-        grupaHList.setBounds(360,540,150,100);
+        grupaHList.setBounds(340,535,150,110);
         add(grupaHList);
-        dodajGrHButton.setBounds(270,560,80,50);
+        dodajGrHButton.setBounds(270,535,60,50);
         add(dodajGrHButton);
+        usunGrHButton.setBounds(270,595,60,50);
+        add(usunGrHButton);
 
         cofnijButton.setBounds(20,680,100,30);
         add(cofnijButton);
@@ -224,5 +239,37 @@ public class ViewGrupaDodaj extends JFrame{
 
     public void addDodajGrHButtonListener(ActionListener listenDodajGrupaHButton) {
         dodajGrHButton.addActionListener(listenDodajGrupaHButton);
+    }
+
+    public void addUsunGrAButtonListener(ActionListener listenUsunGrupaAButton) {
+        usunGrAButton.addActionListener(listenUsunGrupaAButton);
+    }
+
+    public void addUsunGrBButtonListener(ActionListener listenUsunGrupaBButton) {
+        usunGrBButton.addActionListener(listenUsunGrupaBButton);
+    }
+
+    public void addUsunGrCButtonListener(ActionListener listenUsunGrupaCButton) {
+        usunGrCButton.addActionListener(listenUsunGrupaCButton);
+    }
+
+    public void addUsunGrDButtonListener(ActionListener listenUsunGrupaDButton) {
+        usunGrDButton.addActionListener(listenUsunGrupaDButton);
+    }
+
+    public void addUsunGrEButtonListener(ActionListener listenUsunGrupaEButton) {
+        usunGrEButton.addActionListener(listenUsunGrupaEButton);
+    }
+
+    public void addUsunGrFButtonListener(ActionListener listenUsunGrupaFButton) {
+        usunGrFButton.addActionListener(listenUsunGrupaFButton);
+    }
+
+    public void addUsunGrGButtonListener(ActionListener listenUsunGrupaGButton) {
+        usunGrGButton.addActionListener(listenUsunGrupaGButton);
+    }
+
+    public void addUsunGrHButtonListener(ActionListener listenUsunGrupaHButton) {
+        usunGrHButton.addActionListener(listenUsunGrupaHButton);
     }
 }

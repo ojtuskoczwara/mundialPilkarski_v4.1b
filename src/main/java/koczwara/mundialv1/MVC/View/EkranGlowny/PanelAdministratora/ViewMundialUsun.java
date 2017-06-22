@@ -29,8 +29,9 @@ public class ViewMundialUsun extends JFrame {
 
         mundialeModel = new DefaultListModel();
         mundialeList = new JList(mundialeModel);
-        mundialeList.setBounds(30, 20, 120, 200);
-        add(mundialeList);
+        JScrollPane mundialeScrollList = new JScrollPane(mundialeList);
+        mundialeScrollList.setBounds(30,20,160,200);
+        add(mundialeScrollList);
 
         lokalizacjaTF.setBounds(270, 50, 100, 50);
         rokTF.setBounds(270, 110, 100, 50);

@@ -30,8 +30,9 @@ public class ViewMundialEdytuj extends JFrame {
 
         mundialListModel = new DefaultListModel();
         mundialList = new JList(mundialListModel);
-        mundialList.setBounds(30, 20, 120, 200);
-        add(mundialList);
+        JScrollPane mundialeScrollList = new JScrollPane(mundialList);
+        mundialeScrollList.setBounds(30,20,160,200);
+        add(mundialeScrollList);
 
         edytujButton.setBounds(160, 60, 100, 50);
         add(edytujButton);

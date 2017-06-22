@@ -29,8 +29,9 @@ public class ViewReprezentacjaDodaj extends JFrame {
 
         reprezentacjaListModel = new DefaultListModel();
         reprezentacjaList = new JList();
-        reprezentacjaList.setBounds(350, 20, 120, 200);
-        add(reprezentacjaList);
+        JScrollPane reprezentacjaScrollList = new JScrollPane(reprezentacjaList);
+        reprezentacjaScrollList.setBounds(350,20,160,200);
+        add(reprezentacjaScrollList);
 
         cofnijButton.setBounds(30, 400, 100, 50);
         add(cofnijButton);

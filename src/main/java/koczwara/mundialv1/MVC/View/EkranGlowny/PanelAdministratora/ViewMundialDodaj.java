@@ -40,8 +40,9 @@ public class ViewMundialDodaj extends JFrame {
 
         mundialeModel = new DefaultListModel();
         mundialeList = new JList(mundialeModel);
-        mundialeList.setBounds(350,20,120,200);
-        add(mundialeList);
+        JScrollPane mundialeScrollList = new JScrollPane(mundialeList);
+        mundialeScrollList.setBounds(350,20,160,200);
+        add(mundialeScrollList);
 
         cofnijButton.setBounds(30,400,100,50);
         add(cofnijButton);
