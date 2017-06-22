@@ -17,7 +17,7 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
     @Override
     public List<Zawodnik> getAllZawodnicyAtMundialInRep(String mundialValueFromJList, String repValueFromJList) throws Exception {
         List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
-        String sql = "SELECT z.imie, z.nazwisko FROM t_zawodnicy z, t_mundial m, t_reprezentacje r, t_zawodnicy_w_reprezentacji zwr" +
+        String sql = "SELECT z.imie, z.nazwisko FROM t_zawodnicy z, t_mundiale m, t_reprezentacje r, t_zawodnicy_w_reprezentacji zwr" +
                 " WHERE r.id_reprezentacji = zwr.id_reprezentacji AND m.id_mundialu = zwr.id_mundialu AND z.id_zawodnika = zwr.id_zawodnika" +
                 " AND m.lokalizacja = ? AND r.nazwa_reprezentacji = ?";
         ResultSet resultSet = parserSQL.parseQuery(sql, mundialValueFromJList, repValueFromJList).executeQuery();
@@ -39,7 +39,7 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
     @Override
     public List<Reprezentacja> getAllReprezentacjeAtMundial(String mundialName, int mundialRok) throws Exception {
         List<Reprezentacja> reprezentacjaList = new ArrayList<Reprezentacja>();
-        String sql = "SELECT distinct r.nazwa_reprezentacji FROM t_reprezentacje r, t_mundial m, t_zawodnicy_w_reprezentacji zwr" +
+        String sql = "SELECT distinct r.nazwa_reprezentacji FROM t_reprezentacje r, t_mundiale m, t_zawodnicy_w_reprezentacji zwr" +
                 " WHERE m.id_mundialu = zwr.id_mundialu AND r.id_reprezentacji = zwr.id_reprezentacji AND m.lokalizacja = ? AND m.rok = ?";
         ResultSet resultSet = parserSQL.parseQuery(sql, mundialName, mundialRok).executeQuery();
         while (resultSet.next()) {

@@ -1,9 +1,7 @@
 package koczwara.mundialv1.MVC.Model.utils;
 
-import koczwara.mundialv1.MVC.Model.dao.MundialDAO;
-import koczwara.mundialv1.MVC.Model.dao.MundialDAOImpl;
-import koczwara.mundialv1.MVC.Model.dao.ZawodnikWReprezentacjaDAO;
-import koczwara.mundialv1.MVC.Model.dao.ZawodnikWReprezentacjaDAOImpl;
+import koczwara.mundialv1.MVC.Model.dao.*;
+import koczwara.mundialv1.MVC.Model.entity.Grupa;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
 import koczwara.mundialv1.MVC.Model.entity.Zawodnik;
@@ -14,6 +12,7 @@ import java.util.List;
 public class SetDLM {
     private static MundialDAO mundialDAO = new MundialDAOImpl();
     private ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
+
 
     public DefaultListModel setMundialDLM(DefaultListModel dlm) {
         dlm.removeAllElements();
@@ -49,6 +48,22 @@ public class SetDLM {
             for (Zawodnik z: zawodnikList) {
                 String zawodnikImieNazwisko = z.getImie() +" "+ z.getNazwisko();
                 dlm.addElement(zawodnikImieNazwisko);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dlm;
+    }
+
+    public DefaultListModel setGrupaNazwaDLM(DefaultListModel dlm, Grupa grupa, Mundial mundial) {
+        GrupaDAO grupaDAO = new GrupaDAOImpl();
+        ReprezentacjaWGrupaDAO reprezentacjaWGrupaDAO = new ReprezentacjaWGrupaDAOImpl();
+        dlm.removeAllElements();
+        try {
+            grupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(mundial, grupa);
+            List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(mundial, grupa);
+            for (Reprezentacja r : reprezentacjaList) {
+                dlm.addElement(r.getNazwa());
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -4,6 +4,7 @@ import koczwara.mundialv1.MVC.Model.dao.*;
 import koczwara.mundialv1.MVC.Model.entity.Grupa;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
+import koczwara.mundialv1.MVC.Model.utils.SetDLM;
 import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewGrupaDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
@@ -38,6 +39,14 @@ public class ControllerGrupaDodaj {
     ShowMyMessage showMyMessage = new ShowMyMessage();
     private String valueMundial, valueMundialLokalizacja, valueReprezentacjaNazwa;
     private int valueMundialRok;
+    private SetDLM setDLM1 = new SetDLM();
+    SetDLM setDLM2 = new SetDLM();
+    SetDLM setDLM3 = new SetDLM();
+    SetDLM setDLM4 = new SetDLM();
+    SetDLM setDLM5 = new SetDLM();
+    SetDLM setDLM6 = new SetDLM();
+    SetDLM setDLM7 = new SetDLM();
+    SetDLM setDLM8 = new SetDLM();
 
 
     public ControllerGrupaDodaj(ViewGrupaDodaj view, Mundial modelMundial, Reprezentacja modelReprezentacja, Grupa modelGrupa) {
@@ -92,6 +101,7 @@ public class ControllerGrupaDodaj {
             e.printStackTrace();
         }
     }
+
 
     public void setGrupaA_DLM() {
         if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
@@ -229,6 +239,7 @@ public class ControllerGrupaDodaj {
         }
     }
 
+
     private class PressedOnElementOfMundialList extends MouseAdapter {
         @Override
         public void mousePressed(MouseEvent e) {
@@ -246,6 +257,39 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setReprezentacjaDLM();
+/*
+                modelGrupa.setNazwaGrupy("A");
+                grupaAListModel = setDLM1.setGrupaNazwaDLM(grupaAListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaAList(grupaAListModel);
+
+                modelGrupa.setNazwaGrupy("B");
+                grupaBListModel = setDLM2.setGrupaNazwaDLM(grupaBListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaAList(grupaBListModel);
+
+                modelGrupa.setNazwaGrupy("C");
+                grupaCListModel = setDLM3.setGrupaNazwaDLM(grupaCListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaCList(grupaCListModel);
+
+                modelGrupa.setNazwaGrupy("D");
+                grupaDListModel = setDLM4.setGrupaNazwaDLM(grupaDListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaDList(grupaDListModel);
+
+                modelGrupa.setNazwaGrupy("E");
+                grupaEListModel = setDLM5.setGrupaNazwaDLM(grupaEListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaEList(grupaEListModel);
+
+                modelGrupa.setNazwaGrupy("F");
+                grupaFListModel = setDLM6.setGrupaNazwaDLM(grupaFListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaFList(grupaFListModel);
+
+                modelGrupa.setNazwaGrupy("G");
+                grupaGListModel = setDLM7.setGrupaNazwaDLM(grupaGListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaGList(grupaGListModel);
+
+                modelGrupa.setNazwaGrupy("H");
+                grupaHListModel = setDLM8.setGrupaNazwaDLM(grupaHListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaHList(grupaHListModel);
+*/
                 setGrupaA_DLM();
                 setGrupaB_DLM();
                 setGrupaC_DLM();
@@ -254,6 +298,7 @@ public class ControllerGrupaDodaj {
                 setGrupaF_DLM();
                 setGrupaG_DLM();
                 setGrupaH_DLM();
+
             }
         }
     }
@@ -280,6 +325,8 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setGrupaA_DLM();
+//                grupaAListModel = setDLM1.setGrupaNazwaDLM(grupaAListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaAList(grupaAListModel);
             }
         }
     }
@@ -312,6 +359,8 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setGrupaB_DLM();
+//                grupaBListModel = setDLM2.setGrupaNazwaDLM(grupaBListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaAList(grupaBListModel);
             }
         }
     }
@@ -328,6 +377,8 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setGrupaC_DLM();
+//                grupaCListModel = setDLM3.setGrupaNazwaDLM(grupaCListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaCList(grupaCListModel);
             }
         }
     }
@@ -344,6 +395,8 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setGrupaD_DLM();
+//                grupaDListModel = setDLM4.setGrupaNazwaDLM(grupaDListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaDList(grupaDListModel);
             }
         }
     }
@@ -360,6 +413,8 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setGrupaE_DLM();
+//                grupaEListModel = setDLM5.setGrupaNazwaDLM(grupaEListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaEList(grupaEListModel);
             }
         }
     }
@@ -376,6 +431,8 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setGrupaF_DLM();
+//                grupaFListModel = setDLM6.setGrupaNazwaDLM(grupaFListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaFList(grupaFListModel);
             }
         }
     }
@@ -392,6 +449,8 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setGrupaG_DLM();
+//                grupaGListModel = setDLM7.setGrupaNazwaDLM(grupaGListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaGList(grupaGListModel);
             }
         }
     }
@@ -408,6 +467,8 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setGrupaH_DLM();
+//                grupaHListModel = setDLM8.setGrupaNazwaDLM(grupaHListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaHList(grupaHListModel);
             }
         }
     }

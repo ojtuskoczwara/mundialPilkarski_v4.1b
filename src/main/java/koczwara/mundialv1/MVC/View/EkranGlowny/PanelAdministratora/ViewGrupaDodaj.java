@@ -8,14 +8,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
 public class ViewGrupaDodaj extends JFrame{
-    private JButton dodajGrAButton = new JButton("Add A >");
-    private JButton dodajGrBButton = new JButton("Add B >");
-    private JButton dodajGrCButton = new JButton("Add C >");
-    private JButton dodajGrDButton = new JButton("Add D >");
-    private JButton dodajGrEButton = new JButton("Add E >");
-    private JButton dodajGrFButton = new JButton("Add F >");
-    private JButton dodajGrGButton = new JButton("Add G >");
-    private JButton dodajGrHButton = new JButton("Add H >");
+    private JButton dodajGrAButton = new JButton("A >");
+    private JButton dodajGrBButton = new JButton("B >");
+    private JButton dodajGrCButton = new JButton("C >");
+    private JButton dodajGrDButton = new JButton("D >");
+    private JButton dodajGrEButton = new JButton("E >");
+    private JButton dodajGrFButton = new JButton("F >");
+    private JButton dodajGrGButton = new JButton("G >");
+    private JButton dodajGrHButton = new JButton("H >");
     private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JList mundialList, reprezentacjaList;
     private JList grupaAList, grupaBList, grupaCList, grupaDList, grupaEList, grupaFList, grupaGList, grupaHList;
@@ -29,6 +29,14 @@ public class ViewGrupaDodaj extends JFrame{
     private JLabel grupaFLabel = new JLabel("Grupa F");
     private JLabel grupaGLabel = new JLabel("Grupa G");
     private JLabel grupaHLabel = new JLabel("Grupa H");
+    private JButton usunGrAButton = new JButton("< A");
+    private JButton usunGrBButton = new JButton("< B");
+    private JButton usunGrCButton = new JButton("< C");
+    private JButton usunGrDButton = new JButton("< D");
+    private JButton usunGrEButton = new JButton("< E");
+    private JButton usunGrFButton = new JButton("< F");
+    private JButton usunGrGButton = new JButton("< G");
+    private JButton usunGrHButton = new JButton("< H");
 
     public ViewGrupaDodaj() {
         super("Dodawanie reprezentacji do grup");
