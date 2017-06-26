@@ -2,12 +2,12 @@ package koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class ViewMecz extends JFrame{
     private JList mundialList;
     private JList meczList;
-    private DefaultListModel mundialListModel;
-    private DefaultListModel meczListModel;
+    private DefaultListModel mundialListModel, meczListModel, reprezentacja1ListModel, reprezentacja2ListModel;
     private JButton cofnijButton = new JButton("<< Cofnij");
     private JButton dodajButton = new JButton("Zatwierdź");
     private JLabel dataMeczLabel = new JLabel("Wybierz datę meczu:");
@@ -19,51 +19,48 @@ public class ViewMecz extends JFrame{
     private JTextField goleRep2TextField = new JTextField();
     private JTextField dataMiesiacTextField = new JTextField();
     private JTextField dataDzienTextField = new JTextField();
-    private JLabel zawodnik1Rep1 = new JLabel();
-    private JLabel zawodnik2Rep1 = new JLabel();
-    private JLabel zawodnik3Rep1 = new JLabel();
-    private JLabel zawodnik4Rep1 = new JLabel();
-    private JLabel zawodnik5Rep1 = new JLabel();
-    private JLabel zawodnik6Rep1 = new JLabel();
-    private JLabel zawodnik7Rep1 = new JLabel();
-    private JLabel zawodnik8Rep1 = new JLabel();
-    private JLabel zawodnik9Rep1 = new JLabel();
-    private JLabel zawodnik10Rep1 = new JLabel();
-    private JLabel zawodnik11Rep1 = new JLabel();
-    private JLabel zawodnik12Rep1 = new JLabel();
-    private JLabel zawodnik13Rep1 = new JLabel();
-    private JLabel zawodnik14Rep1 = new JLabel();
-    private JLabel zawodnik15Rep1 = new JLabel();
-    private JLabel zawodnik16Rep1 = new JLabel();
-    private JLabel zawodnik17Rep1 = new JLabel();
-    private JLabel zawodnik18Rep1 = new JLabel();
-    private JLabel zawodnik1Rep2 = new JLabel();
-    private JLabel zawodnik2Rep2 = new JLabel();
-    private JLabel zawodnik3Rep2 = new JLabel();
-    private JLabel zawodnik4Rep2 = new JLabel();
-    private JLabel zawodnik5Rep2 = new JLabel();
-    private JLabel zawodnik6Rep2 = new JLabel();
-    private JLabel zawodnik7Rep2 = new JLabel();
-    private JLabel zawodnik8Rep2 = new JLabel();
-    private JLabel zawodnik9Rep2 = new JLabel();
-    private JLabel zawodnik10Rep2 = new JLabel();
-    private JLabel zawodnik11Rep2 = new JLabel();
-    private JLabel zawodnik12Rep2 = new JLabel();
-    private JLabel zawodnik13Rep2 = new JLabel();
-    private JLabel zawodnik14Rep2 = new JLabel();
-    private JLabel zawodnik15Rep2 = new JLabel();
-    private JLabel zawodnik16Rep2 = new JLabel();
-    private JLabel zawodnik17Rep2 = new JLabel();
-    private JLabel zawodnik18Rep2 = new JLabel();
+    private JComboBox zaw1Rep1ComboBox = new JComboBox();
+    private JComboBox zaw2Rep1ComboBox = new JComboBox();
+    private JComboBox zaw3Rep1ComboBox = new JComboBox();
+    private JComboBox zaw4Rep1ComboBox = new JComboBox();
+    private JComboBox zaw5Rep1ComboBox = new JComboBox();
+    private JComboBox zaw6Rep1ComboBox = new JComboBox();
+    private JComboBox zaw7Rep1ComboBox = new JComboBox();
+    private JComboBox zaw8Rep1ComboBox = new JComboBox();
+    private JComboBox zaw9Rep1ComboBox = new JComboBox();
+    private JComboBox zaw10Rep1ComboBox = new JComboBox();
+    private JComboBox zaw11Rep1ComboBox = new JComboBox();
+    private JComboBox zaw12Rep1ComboBox = new JComboBox();
+    private JComboBox zaw13Rep1ComboBox = new JComboBox();
+    private JComboBox zaw14Rep1ComboBox = new JComboBox();
+    private JComboBox zaw15Rep1ComboBox = new JComboBox();
+    private JComboBox zaw16Rep1ComboBox = new JComboBox();
+    private JComboBox zaw1Rep2ComboBox = new JComboBox();
+    private JComboBox zaw2Rep2ComboBox = new JComboBox();
+    private JComboBox zaw3Rep2ComboBox = new JComboBox();
+    private JComboBox zaw4Rep2ComboBox = new JComboBox();
+    private JComboBox zaw5Rep2ComboBox = new JComboBox();
+    private JComboBox zaw6Rep2ComboBox = new JComboBox();
+    private JComboBox zaw7Rep2ComboBox = new JComboBox();
+    private JComboBox zaw8Rep2ComboBox = new JComboBox();
+    private JComboBox zaw9Rep2ComboBox = new JComboBox();
+    private JComboBox zaw10Rep2ComboBox = new JComboBox();
+    private JComboBox zaw11Rep2ComboBox = new JComboBox();
+    private JComboBox zaw12Rep2ComboBox = new JComboBox();
+    private JComboBox zaw13Rep2ComboBox = new JComboBox();
+    private JComboBox zaw14Rep2ComboBox = new JComboBox();
+    private JComboBox zaw15Rep2ComboBox = new JComboBox();
+    private JComboBox zaw16Rep2ComboBox = new JComboBox();
 
 
     public ViewMecz() {
         super("Aktualizuj mecz");
-        setSize(600,600);
+        setSize(600, 1000);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
+
 
 //Lista rozwijalna Mundiale
         mundialListModel = new DefaultListModel();
@@ -131,58 +128,172 @@ public class ViewMecz extends JFrame{
 
 //Sklady reprezentacji_1
         JLabel lp1Rep1 = new JLabel("1. ");
-         lp1Rep1.setBounds(10,300,20,30);
+         lp1Rep1.setBounds(10,290,20,30);
          add(lp1Rep1);
-         zawodnik1Rep1.setBounds(30,300,180,30);
-         zawodnik1Rep1.setBorder(BorderFactory.createLineBorder(Color.black));
-         add(zawodnik1Rep1);
-        JComboBox pozycjaZaw1Rep1ComboBox = new JComboBox();
-         pozycjaZaw1Rep1ComboBox.setBounds(220,300,50,30);
-         pozycjaZaw1Rep1ComboBox.addItem("N");
-         add(pozycjaZaw1Rep1ComboBox);
-
+         zaw1Rep1ComboBox.setBounds(30,290,200,30);
+         add(zaw1Rep1ComboBox);
         JLabel lp2Rep1 = new JLabel("2. ");
-         lp2Rep1.setBounds(10,340,20,30);
+         lp2Rep1.setBounds(10,325,20,30);
          add(lp2Rep1);
-         zawodnik2Rep1.setBounds(30,340,180,30);
-         zawodnik2Rep1.setBorder(BorderFactory.createLineBorder(Color.black));
-         add(zawodnik2Rep1);
-        JComboBox pozycjaZaw2Rep1ComboBox = new JComboBox();
-         pozycjaZaw2Rep1ComboBox.setBounds(220,340,50,30);
-         add(pozycjaZaw2Rep1ComboBox);
-
+         zaw2Rep1ComboBox.setBounds(30,325,200,30);
+         add(zaw2Rep1ComboBox);
         JLabel lp3Rep1 = new JLabel("3. ");
-         lp3Rep1.setBounds(10,380,20,30);
+         lp3Rep1.setBounds(10,360,20,30);
          add(lp3Rep1);
-         zawodnik3Rep1.setBounds(30,380,180,30);
-         zawodnik3Rep1.setBorder(BorderFactory.createLineBorder(Color.black));
-         add(zawodnik3Rep1);
-        JComboBox pozycjaZaw3Rep1ComboBox = new JComboBox();
-         pozycjaZaw3Rep1ComboBox.setBounds(220,380,50,30);
-         add(pozycjaZaw3Rep1ComboBox);
-
+         zaw3Rep1ComboBox.setBounds(30,360,200,30);
+         add(zaw3Rep1ComboBox);
         JLabel lp4Rep1 = new JLabel("4. ");
-        lp4Rep1.setBounds(10,420,20,30);
-        add(lp4Rep1);
-        zawodnik4Rep1.setBounds(30,420,180,30);
-        zawodnik4Rep1.setBorder(BorderFactory.createLineBorder(Color.black));
-        zawodnik4Rep1.setText("Jan Kowalski");
-        add(zawodnik4Rep1);
-        JComboBox pozycjaZaw4Rep1ComboBox = new JComboBox();
-        pozycjaZaw4Rep1ComboBox.setBounds(220,420,50,30);
-        add(pozycjaZaw4Rep1ComboBox);
+         lp4Rep1.setBounds(10,395,20,30);
+         add(lp4Rep1);
+         zaw4Rep1ComboBox.setBounds(30,395,200,30);
+         add(zaw4Rep1ComboBox);
+        JLabel lp5Rep1 = new JLabel("5. ");
+        lp5Rep1.setBounds(10,430,20,30);
+        add(lp5Rep1);
+        zaw5Rep1ComboBox.setBounds(30,430,200,30);
+        add(zaw5Rep1ComboBox);
+        JLabel lp6Rep1 = new JLabel("6. ");
+        lp6Rep1.setBounds(10,465,20,30);
+        add(lp6Rep1);
+        zaw6Rep1ComboBox.setBounds(30,465,200,30);
+        add(zaw6Rep1ComboBox);
+        JLabel lp7Rep1 = new JLabel("7. ");
+        lp7Rep1.setBounds(10,500,20,30);
+        add(lp7Rep1);
+        zaw7Rep1ComboBox.setBounds(30,500,200,30);
+        add(zaw7Rep1ComboBox);
+        JLabel lp8Rep1 = new JLabel("8. ");
+        lp8Rep1.setBounds(10,535,20,30);
+        add(lp8Rep1);
+        zaw8Rep1ComboBox.setBounds(30,535,200,30);
+        add(zaw8Rep1ComboBox);
+        JLabel lp9Rep1 = new JLabel("9. ");
+        lp9Rep1.setBounds(10,570,20,30);
+        add(lp9Rep1);
+        zaw9Rep1ComboBox.setBounds(30,570,200,30);
+        add(zaw9Rep1ComboBox);
+        JLabel lp10Rep1 = new JLabel("10. ");
+        lp10Rep1.setBounds(10,605,20,30);
+        add(lp10Rep1);
+        zaw10Rep1ComboBox.setBounds(30,605,200,30);
+        add(zaw10Rep1ComboBox);
+        JLabel lp11Rep1 = new JLabel("11. ");
+        lp11Rep1.setBounds(10,640,20,30);
+        add(lp11Rep1);
+        zaw11Rep1ComboBox.setBounds(30,640,200,30);
+        add(zaw11Rep1ComboBox);
+        JLabel lp12Rep1 = new JLabel("12. ");
+        lp12Rep1.setBounds(10,675,20,30);
+        add(lp12Rep1);
+        zaw12Rep1ComboBox.setBounds(30,675,200,30);
+        add(zaw12Rep1ComboBox);
+        JLabel lp13Rep1 = new JLabel("13. ");
+        lp13Rep1.setBounds(10,710,20,30);
+        add(lp13Rep1);
+        zaw13Rep1ComboBox.setBounds(30,710,200,30);
+        add(zaw13Rep1ComboBox);
+        JLabel lp14Rep1 = new JLabel("14. ");
+        lp14Rep1.setBounds(10,745,20,30);
+        add(lp14Rep1);
+        zaw14Rep1ComboBox.setBounds(30,745,200,30);
+        add(zaw14Rep1ComboBox);
+        JLabel lp15Rep1 = new JLabel("15. ");
+        lp15Rep1.setBounds(10,780,20,30);
+        add(lp15Rep1);
+        zaw15Rep1ComboBox.setBounds(30,780,200,30);
+        add(zaw15Rep1ComboBox);
+        JLabel lp16Rep1 = new JLabel("16. ");
+        lp16Rep1.setBounds(10,815,20,30);
+        add(lp16Rep1);
+        zaw16Rep1ComboBox.setBounds(30,815,200,30);
+        add(zaw16Rep1ComboBox);
 
 //Sklady reprezentacji_2
         JLabel lp1Rep2 = new JLabel("1. ");
-         lp1Rep2.setBounds(310, 300,20,30);
+         lp1Rep2.setBounds(310, 290,20,30);
          add(lp1Rep2);
-         zawodnik1Rep2.setBounds(330,300,180,30);
-         zawodnik1Rep2.setBorder(BorderFactory.createLineBorder(Color.black));
-         add(zawodnik1Rep2);
-        JComboBox pozycjaZaw1Rep2ComboBox = new JComboBox();
-         pozycjaZaw1Rep2ComboBox.setBounds(520,300,50,30);
-         pozycjaZaw1Rep2ComboBox.addItem("ŚO");
-         add(pozycjaZaw1Rep2ComboBox);
+         zaw1Rep2ComboBox.setBounds(330,290,200,30);
+         add(zaw1Rep2ComboBox);
+        JLabel lp2Rep2 = new JLabel("2. ");
+        lp2Rep2.setBounds(310,325,20,30);
+        add(lp2Rep2);
+        zaw2Rep2ComboBox.setBounds(330,325,200,30);
+        add(zaw2Rep2ComboBox);
+        JLabel lp3Rep2 = new JLabel("3. ");
+        lp3Rep2.setBounds(310,360,20,30);
+        add(lp3Rep2);
+        zaw3Rep2ComboBox.setBounds(330,360,200,30);
+        add(zaw3Rep2ComboBox);
+        JLabel lp4Rep2 = new JLabel("4. ");
+        lp4Rep2.setBounds(310,395,20,30);
+        add(lp4Rep2);
+        zaw4Rep2ComboBox.setBounds(330,395,200,30);
+        add(zaw4Rep2ComboBox);
+        JLabel lp5Rep2 = new JLabel("5. ");
+        lp5Rep2.setBounds(310,430,20,30);
+        add(lp5Rep2);
+        zaw5Rep2ComboBox.setBounds(330,430,200,30);
+        add(zaw5Rep2ComboBox);
+        JLabel lp6Rep2 = new JLabel("6. ");
+        lp6Rep2.setBounds(310,465,20,30);
+        add(lp6Rep2);
+        zaw6Rep2ComboBox.setBounds(330,465,200,30);
+        add(zaw6Rep2ComboBox);
+        JLabel lp7Rep2 = new JLabel("7. ");
+        lp7Rep2.setBounds(310,500,20,30);
+        add(lp7Rep2);
+        zaw7Rep2ComboBox.setBounds(330,500,200,30);
+        add(zaw7Rep2ComboBox);
+        JLabel lp8Rep2 = new JLabel("8. ");
+        lp8Rep2.setBounds(310,535,20,30);
+        add(lp8Rep2);
+        zaw8Rep2ComboBox.setBounds(330,535,200,30);
+        add(zaw8Rep2ComboBox);
+        JLabel lp9Rep2 = new JLabel("9. ");
+        lp9Rep2.setBounds(310,570,20,30);
+        add(lp9Rep2);
+        zaw9Rep2ComboBox.setBounds(330,570,200,30);
+        add(zaw9Rep2ComboBox);
+        JLabel lp10Rep2 = new JLabel("10. ");
+        lp10Rep2.setBounds(310,605,20,30);
+        add(lp10Rep2);
+        zaw10Rep2ComboBox.setBounds(330,605,200,30);
+        add(zaw10Rep2ComboBox);
+        JLabel lp11Rep2 = new JLabel("11. ");
+        lp11Rep2.setBounds(310,640,20,30);
+        add(lp11Rep2);
+        zaw11Rep2ComboBox.setBounds(330,640,200,30);
+        add(zaw11Rep2ComboBox);
+        JLabel lp12Rep2 = new JLabel("12. ");
+        lp12Rep2.setBounds(310,675,20,30);
+        add(lp12Rep2);
+        zaw12Rep2ComboBox.setBounds(330,675,200,30);
+        add(zaw12Rep2ComboBox);
+        JLabel lp13Rep2 = new JLabel("13. ");
+        lp13Rep2.setBounds(310,710,20,30);
+        add(lp13Rep2);
+        zaw13Rep2ComboBox.setBounds(330,710,200,30);
+        add(zaw13Rep2ComboBox);
+        JLabel lp14Rep2 = new JLabel("14. ");
+        lp14Rep2.setBounds(310,745,20,30);
+        add(lp14Rep2);
+        zaw14Rep2ComboBox.setBounds(330,745,200,30);
+        add(zaw14Rep2ComboBox);
+        JLabel lp15Rep2 = new JLabel("15. ");
+        lp15Rep2.setBounds(310,780,20,30);
+        add(lp15Rep2);
+        zaw15Rep2ComboBox.setBounds(330,780,200,30);
+        add(zaw15Rep2ComboBox);
+        JLabel lp16Rep2 = new JLabel("16. ");
+        lp16Rep2.setBounds(310,815,20,30);
+        add(lp16Rep2);
+        zaw16Rep2ComboBox.setBounds(330,815,200,30);
+        add(zaw16Rep2ComboBox);
+// Przyciski cofnij i zatwierdz
+        cofnijButton.setBounds(10,900,100,50);
+        add(cofnijButton);
+        dodajButton.setBounds(230,870,100,50);
+        add(dodajButton);
     }
 
     public void addListModelToMundialList(DefaultListModel mundialListModel) {
@@ -198,6 +309,19 @@ public class ViewMecz extends JFrame{
     public void addRokToLabel(String rok) { dataRokLabel.setText(rok); }
     public String getMiesiacFromTextField() { return dataMiesiacTextField.getText(); }
     public String getDzienFromTextField() { return dataDzienTextField.getText(); }
+
+    public int getGoleRep1() { return Integer.parseInt(goleRep1TextField.getText()); }
+    public int getGoleRep2() { return Integer.parseInt(goleRep2TextField.getText()); }
+
+    public void setNazwaRep1(String nazwaReprezentacji) {nazwaRep1Label.setText(nazwaReprezentacji); }
+    public void setNazwaRep2(String nazwaReprezentacji) {nazwaRep2Label.setText(nazwaReprezentacji); }
+
+    public void addListModelToZaw1Rep1ComboBox(String zawodnikImieNazwisko) { zaw1Rep1ComboBox.addItem(zawodnikImieNazwisko); }
+
+
+    public void addCofnijButtonListener(ActionListener listenCofnijButton) {cofnijButton.addActionListener(listenCofnijButton); }
+    public void addDodajButtonListener(ActionListener listenDodajButton) {dodajButton.addActionListener(listenDodajButton); }
+
 
 
 }
