@@ -48,13 +48,14 @@ public class ViewGrupaDodaj extends JFrame{
 
         mundialListModel = new DefaultListModel();
         mundialList= new JList();
-        mundialList.setBounds(50,20,120,200);
-        add(mundialList);
+        JScrollPane mundialScrollPane = new JScrollPane(mundialList);
+        mundialScrollPane.setBounds(50,20,160,200);
+        add(mundialScrollPane);
 
         reprezentacjaListModel = new DefaultListModel();
         reprezentacjaList = new JList();
         JScrollPane scrollPaneGrupaAList = new JScrollPane(reprezentacjaList);
-        scrollPaneGrupaAList.setBounds(200,20,180,200);
+        scrollPaneGrupaAList.setBounds(220,20,180,200);
         add(scrollPaneGrupaAList);
 
         grupaAListModel = new DefaultListModel();

@@ -72,6 +72,238 @@ public class ControllerGrupaDodaj {
     }
 
 
+
+    private class PressedOnElementOfMundialList extends MouseAdapter {
+        @Override
+        public void mousePressed(MouseEvent e) {
+            super.mousePressed(e);
+            if (!view.getMundialList().isSelectionEmpty()) {
+                valueMundial = view.getMundialList().getSelectedValue().toString();
+                valueMundialLokalizacja = valueMundial.substring(0, valueMundial.length() - 5);
+                valueMundialRok = Integer.parseInt(valueMundial.substring(valueMundial.length() - 4));
+
+                modelMundial.setLokalizacja(valueMundialLokalizacja);
+                modelMundial.setRok(valueMundialRok);
+                try {
+                    modelMundial = mundialDAO.getIdMundialuByLokalizacjaRok(modelMundial); //set idMundialu
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setReprezentacjaDLM();
+/*
+                modelGrupa.setNazwaGrupy("A");
+                grupaAListModel = setDLM1.setGrupaNazwaDLM(grupaAListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaAList(grupaAListModel);
+
+                modelGrupa.setNazwaGrupy("B");
+                grupaBListModel = setDLM2.setGrupaNazwaDLM(grupaBListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaAList(grupaBListModel);
+
+                modelGrupa.setNazwaGrupy("C");
+                grupaCListModel = setDLM3.setGrupaNazwaDLM(grupaCListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaCList(grupaCListModel);
+
+                modelGrupa.setNazwaGrupy("D");
+                grupaDListModel = setDLM4.setGrupaNazwaDLM(grupaDListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaDList(grupaDListModel);
+
+                modelGrupa.setNazwaGrupy("E");
+                grupaEListModel = setDLM5.setGrupaNazwaDLM(grupaEListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaEList(grupaEListModel);
+
+                modelGrupa.setNazwaGrupy("F");
+                grupaFListModel = setDLM6.setGrupaNazwaDLM(grupaFListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaFList(grupaFListModel);
+
+                modelGrupa.setNazwaGrupy("G");
+                grupaGListModel = setDLM7.setGrupaNazwaDLM(grupaGListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaGList(grupaGListModel);
+
+                modelGrupa.setNazwaGrupy("H");
+                grupaHListModel = setDLM8.setGrupaNazwaDLM(grupaHListModel, modelGrupa, modelMundial);
+                view.addListModelToGrupaHList(grupaHListModel);
+*/
+                setGrupaA_DLM();
+                setGrupaB_DLM();
+                setGrupaC_DLM();
+                setGrupaD_DLM();
+                setGrupaE_DLM();
+                setGrupaF_DLM();
+                setGrupaG_DLM();
+                setGrupaH_DLM();
+
+            }
+        }
+    }
+
+    private class BackToPanelAdmin implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerPanelAdministratora(new ViewPanelAdministratora());
+            view.setVisible(false);
+            view.dispose();
+        }
+    }
+
+    private class PressedOnElementOfReprezentacjaList extends MouseAdapter {
+        @Override
+        public void mousePressed(MouseEvent e) {
+            super.mousePressed(e);
+            if (!view.getReprezentacjaList().isSelectionEmpty()) {
+                valueReprezentacjaNazwa = view.getReprezentacjaList().getSelectedValue().toString();
+                try {
+                    modelReprezentacja = reprezentacjaDAO.getIdRepByNazwa(valueReprezentacjaNazwa);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private class AddReprezentacjaToGrupaA implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("A");
+                try {
+                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
+                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setGrupaA_DLM();
+//                grupaAListModel = setDLM1.setGrupaNazwaDLM(grupaAListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaAList(grupaAListModel);
+            }
+        }
+    }
+
+    private class AddReprezentacjaToGrupaB implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("B");
+                try {
+                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
+                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setGrupaB_DLM();
+//                grupaBListModel = setDLM2.setGrupaNazwaDLM(grupaBListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaAList(grupaBListModel);
+            }
+        }
+    }
+
+    private class AddReprezentacjaToGrupaC implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("C");
+                try {
+                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
+                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setGrupaC_DLM();
+//                grupaCListModel = setDLM3.setGrupaNazwaDLM(grupaCListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaCList(grupaCListModel);
+            }
+        }
+    }
+
+    private class AddReprezentacjaToGrupaD implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("D");
+                try {
+                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
+                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setGrupaD_DLM();
+//                grupaDListModel = setDLM4.setGrupaNazwaDLM(grupaDListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaDList(grupaDListModel);
+            }
+        }
+    }
+
+    private class AddReprezentacjaToGrupaE implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("E");
+                try {
+                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
+                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setGrupaE_DLM();
+//                grupaEListModel = setDLM5.setGrupaNazwaDLM(grupaEListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaEList(grupaEListModel);
+            }
+        }
+    }
+
+    private class AddReprezentacjaToGrupaF implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("F");
+                try {
+                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
+                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setGrupaF_DLM();
+//                grupaFListModel = setDLM6.setGrupaNazwaDLM(grupaFListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaFList(grupaFListModel);
+            }
+        }
+    }
+
+    private class AddReprezentacjaToGrupaG implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("G");
+                try {
+                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
+                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setGrupaG_DLM();
+//                grupaGListModel = setDLM7.setGrupaNazwaDLM(grupaGListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaGList(grupaGListModel);
+            }
+        }
+    }
+
+    private class AddReprezentacjaToGrupaH implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("H");
+                try {
+                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
+                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                setGrupaH_DLM();
+//                grupaHListModel = setDLM8.setGrupaNazwaDLM(grupaHListModel, modelGrupa, modelMundial);
+//                view.addListModelToGrupaHList(grupaHListModel);
+            }
+        }
+    }
+
     public void setMundialDLM() {
         // Wstrzyknięcie danych do modeluMundialu który później jest argumentem JListMundiale
         mundialListModel.removeAllElements();
@@ -235,240 +467,6 @@ public class ControllerGrupaDodaj {
                 this.view.addListModelToGrupaHList(grupaHListModel);
             } catch (Exception e) {
                 e.printStackTrace();
-            }
-        }
-    }
-
-
-    private class PressedOnElementOfMundialList extends MouseAdapter {
-        @Override
-        public void mousePressed(MouseEvent e) {
-            super.mousePressed(e);
-            if (!view.getMundialList().isSelectionEmpty()) {
-                valueMundial = view.getMundialList().getSelectedValue().toString();
-                valueMundialLokalizacja = valueMundial.substring(0, valueMundial.length() - 5);
-                valueMundialRok = Integer.parseInt(valueMundial.substring(valueMundial.length() - 4));
-
-                modelMundial.setLokalizacja(valueMundialLokalizacja);
-                modelMundial.setRok(valueMundialRok);
-                try {
-                    modelMundial = mundialDAO.getIdMundialuByLokalizacjaRok(modelMundial); //set idMundialu
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setReprezentacjaDLM();
-/*
-                modelGrupa.setNazwaGrupy("A");
-                grupaAListModel = setDLM1.setGrupaNazwaDLM(grupaAListModel, modelGrupa, modelMundial);
-                view.addListModelToGrupaAList(grupaAListModel);
-
-                modelGrupa.setNazwaGrupy("B");
-                grupaBListModel = setDLM2.setGrupaNazwaDLM(grupaBListModel, modelGrupa, modelMundial);
-                view.addListModelToGrupaAList(grupaBListModel);
-
-                modelGrupa.setNazwaGrupy("C");
-                grupaCListModel = setDLM3.setGrupaNazwaDLM(grupaCListModel, modelGrupa, modelMundial);
-                view.addListModelToGrupaCList(grupaCListModel);
-
-                modelGrupa.setNazwaGrupy("D");
-                grupaDListModel = setDLM4.setGrupaNazwaDLM(grupaDListModel, modelGrupa, modelMundial);
-                view.addListModelToGrupaDList(grupaDListModel);
-
-                modelGrupa.setNazwaGrupy("E");
-                grupaEListModel = setDLM5.setGrupaNazwaDLM(grupaEListModel, modelGrupa, modelMundial);
-                view.addListModelToGrupaEList(grupaEListModel);
-
-                modelGrupa.setNazwaGrupy("F");
-                grupaFListModel = setDLM6.setGrupaNazwaDLM(grupaFListModel, modelGrupa, modelMundial);
-                view.addListModelToGrupaFList(grupaFListModel);
-
-                modelGrupa.setNazwaGrupy("G");
-                grupaGListModel = setDLM7.setGrupaNazwaDLM(grupaGListModel, modelGrupa, modelMundial);
-                view.addListModelToGrupaGList(grupaGListModel);
-
-                modelGrupa.setNazwaGrupy("H");
-                grupaHListModel = setDLM8.setGrupaNazwaDLM(grupaHListModel, modelGrupa, modelMundial);
-                view.addListModelToGrupaHList(grupaHListModel);
-*/
-                setGrupaA_DLM();
-                setGrupaB_DLM();
-                setGrupaC_DLM();
-                setGrupaD_DLM();
-                setGrupaE_DLM();
-                setGrupaF_DLM();
-                setGrupaG_DLM();
-                setGrupaH_DLM();
-
-            }
-        }
-    }
-
-    private class BackToPanelAdmin implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            new ControllerPanelAdministratora(new ViewPanelAdministratora());
-            view.setVisible(false);
-            view.dispose();
-        }
-    }
-
-
-    private class AddReprezentacjaToGrupaA implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-                modelGrupa.setNazwaGrupy("A");
-                try {
-                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setGrupaA_DLM();
-//                grupaAListModel = setDLM1.setGrupaNazwaDLM(grupaAListModel, modelGrupa, modelMundial);
-//                view.addListModelToGrupaAList(grupaAListModel);
-            }
-        }
-    }
-
-    private class PressedOnElementOfReprezentacjaList extends MouseAdapter {
-        @Override
-        public void mousePressed(MouseEvent e) {
-            super.mousePressed(e);
-            if (!view.getReprezentacjaList().isSelectionEmpty()) {
-                valueReprezentacjaNazwa = view.getReprezentacjaList().getSelectedValue().toString();
-                try {
-                    modelReprezentacja = reprezentacjaDAO.getIdRepByNazwa(valueReprezentacjaNazwa);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-            }
-        }
-    }
-
-
-    private class AddReprezentacjaToGrupaB implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-                modelGrupa.setNazwaGrupy("B");
-                try {
-                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setGrupaB_DLM();
-//                grupaBListModel = setDLM2.setGrupaNazwaDLM(grupaBListModel, modelGrupa, modelMundial);
-//                view.addListModelToGrupaAList(grupaBListModel);
-            }
-        }
-    }
-
-    private class AddReprezentacjaToGrupaC implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-                modelGrupa.setNazwaGrupy("C");
-                try {
-                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setGrupaC_DLM();
-//                grupaCListModel = setDLM3.setGrupaNazwaDLM(grupaCListModel, modelGrupa, modelMundial);
-//                view.addListModelToGrupaCList(grupaCListModel);
-            }
-        }
-    }
-
-    private class AddReprezentacjaToGrupaD implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-                modelGrupa.setNazwaGrupy("D");
-                try {
-                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setGrupaD_DLM();
-//                grupaDListModel = setDLM4.setGrupaNazwaDLM(grupaDListModel, modelGrupa, modelMundial);
-//                view.addListModelToGrupaDList(grupaDListModel);
-            }
-        }
-    }
-
-    private class AddReprezentacjaToGrupaE implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-                modelGrupa.setNazwaGrupy("E");
-                try {
-                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setGrupaE_DLM();
-//                grupaEListModel = setDLM5.setGrupaNazwaDLM(grupaEListModel, modelGrupa, modelMundial);
-//                view.addListModelToGrupaEList(grupaEListModel);
-            }
-        }
-    }
-
-    private class AddReprezentacjaToGrupaF implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-                modelGrupa.setNazwaGrupy("F");
-                try {
-                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setGrupaF_DLM();
-//                grupaFListModel = setDLM6.setGrupaNazwaDLM(grupaFListModel, modelGrupa, modelMundial);
-//                view.addListModelToGrupaFList(grupaFListModel);
-            }
-        }
-    }
-
-    private class AddReprezentacjaToGrupaG implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-                modelGrupa.setNazwaGrupy("G");
-                try {
-                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setGrupaG_DLM();
-//                grupaGListModel = setDLM7.setGrupaNazwaDLM(grupaGListModel, modelGrupa, modelMundial);
-//                view.addListModelToGrupaGList(grupaGListModel);
-            }
-        }
-    }
-
-    private class AddReprezentacjaToGrupaH implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-                modelGrupa.setNazwaGrupy("H");
-                try {
-                    modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                    reprezentacjaWGrupaDAO.addReprezentacjeToGrupa(modelReprezentacja,modelGrupa, modelMundial);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                setGrupaH_DLM();
-//                grupaHListModel = setDLM8.setGrupaNazwaDLM(grupaHListModel, modelGrupa, modelMundial);
-//                view.addListModelToGrupaHList(grupaHListModel);
             }
         }
     }

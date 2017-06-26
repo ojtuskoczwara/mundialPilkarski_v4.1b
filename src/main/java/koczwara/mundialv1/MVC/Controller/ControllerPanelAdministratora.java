@@ -25,6 +25,7 @@ public class ControllerPanelAdministratora {
         this.view.addEdytujZawodnikButtonListener(new EdytujZawodnikListener());
         this.view.addUsunZawodnikButtonListener(new UsunZawodnikListener());
         this.view.addDodajReprezentacjaDoGrupaButtonListener(new DodajReprezentacjeDoGrupyListener());
+        this.view.addDodajWynikMeczuButtonListener(new DodajWynikMeczuListener());
 
 
     }
@@ -116,6 +117,14 @@ public class ControllerPanelAdministratora {
         @Override
         public void actionPerformed(ActionEvent e) {
             new ControllerGrupaDodaj(new ViewGrupaDodaj(), new Mundial(), new Reprezentacja(), new Grupa());
+            view.setVisible(false);
+        }
+    }
+
+    private class DodajWynikMeczuListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerMecz(new ViewMecz());
             view.setVisible(false);
         }
     }
