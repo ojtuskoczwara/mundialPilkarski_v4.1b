@@ -96,4 +96,20 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
         String sql = "DELETE FROM t_zawodnicy_w_reprezentacji WHERE id_reprezentacji = ?";
         parserSQL.parseQuery(sql, reprezentacja.getIdReprezentacji()).executeUpdate();
     }
+
+    @Override
+    public List<Zawodnik> getImieNazwiskoZawodnikaByIdMundialuIdReprezentacji(int mundialId, int reprezentacjaId) throws Exception {
+        List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
+        String sql = "SELECT z.imie, z.nazwisko FROM t_zawodnicy z, t_mundiale m, t_reprezentacje r, t_zawodnicy_w_reprezentacji zwr" +
+                " WHERE r.id_reprezentacji = zwr.id_reprezentacji AND m.id_mundialu = zwr.id_mundialu AND z.id_zawodnika = zwr.id_zawodnika" +
+                " AND m.id_mundialu = ? AND r.id_reprezentacji = ?";
+        ResultSet resultSet = parserSQL.parseQuery(sql, mundialId, reprezentacjaId).executeQuery();
+        while (resultSet.next()) {
+            Zawodnik z = new Zawodnik();
+            z.setImie(resultSet.getString("imie"));
+            z.setNazwisko(resultSet.getString("nazwisko"));
+            zawodnikList.add(z);
+        }
+        return zawodnikList;
+    }
 }

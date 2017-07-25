@@ -18,8 +18,8 @@ public class ReprezentacjaDAOImpl implements ReprezentacjaDAO {
     }
 
     @Override
-    public Reprezentacja getReprezentacjaById(int id) throws Exception {
-        String sql = "SELECT * FROM t_reprezentacje WHERE id_reprezentacji = ?";
+    public Reprezentacja getNazwaReprezentacjaByIdReprezentacja(int id) throws Exception {
+        String sql = "SELECT nazwa_reprezentacji FROM t_reprezentacje WHERE id_reprezentacji = ?";
         Reprezentacja reprezentacja = null;
         ResultSet resultSet = parserSQL.parseQuery(sql, id).executeQuery();
         while (resultSet.next()) {

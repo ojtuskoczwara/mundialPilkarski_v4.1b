@@ -2,9 +2,6 @@ package koczwara.mundialv1.MVC.Model.entity;
 
 public class Rozgrywka {
     private int idRozgrywki;
-
-
-
     private int idGrupy;
     private int idGrupy1;
     private int idReprezentacji1;

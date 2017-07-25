@@ -124,7 +124,7 @@ public class ControllerPanelAdministratora {
     private class DodajWynikMeczuListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            new ControllerMecz(new ViewMecz());
+            new ControllerGrupaMecz(new ViewMecz(), new Mundial(), new Rozgrywka(), new TypGrupy(), new Grupa(), new Reprezentacja());
             view.setVisible(false);
         }
     }

@@ -12,4 +12,7 @@ public interface RozgrywkaDAO {
     public Rozgrywka getFazaJednaCzwartaByIdMundialu(Mundial mundial) throws Exception;
     public Rozgrywka getFazaJednaDrugaByIdMundialu(Mundial mundial) throws Exception;
     public Rozgrywka getFazaFinalByIdMundialu(Mundial mundial) throws Exception;
+    public List<Rozgrywka> getAllRozgrywkaByIdMundialu(int mundialId) throws Exception;
+    public Rozgrywka getIdReprezentacji1ByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception;
+    public Rozgrywka getIdReprezentacji2ByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception;
 }

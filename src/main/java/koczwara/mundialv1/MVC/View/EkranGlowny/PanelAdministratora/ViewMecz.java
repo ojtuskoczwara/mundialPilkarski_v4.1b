@@ -3,6 +3,7 @@ package koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 
 public class ViewMecz extends JFrame{
     private JList mundialList;
@@ -55,7 +56,7 @@ public class ViewMecz extends JFrame{
 
     public ViewMecz() {
         super("Aktualizuj mecz");
-        setSize(600, 1000);
+        setSize(800, 1000);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
@@ -73,7 +74,7 @@ public class ViewMecz extends JFrame{
         meczListModel = new DefaultListModel();
         meczList= new JList();
         JScrollPane meczScrollList = new JScrollPane(meczList);
-        meczScrollList.setBounds(410,20,160,200);
+        meczScrollList.setBounds(410,20,365,200);
         add(meczScrollList);
 
 //Wszystko dotyczace ustawienia daty meczu
@@ -81,7 +82,6 @@ public class ViewMecz extends JFrame{
         add(dataMeczLabel);
 
         dataRokLabel.setBounds(220,90,30,30);
-        dataRokLabel.setText("2014");
         dataRokLabel.setBorder(BorderFactory.createLineBorder(Color.black));
         add(dataRokLabel);
 
@@ -115,13 +115,11 @@ public class ViewMecz extends JFrame{
 
 //nazwaRep1 nazwaRep2 label
         nazwaRep1Label.setBounds(10,230,160,50);
-        nazwaRep1Label.setText("Polska");
         nazwaRep1Label.setHorizontalAlignment(SwingConstants.CENTER);
         nazwaRep1Label.setBorder(BorderFactory.createLineBorder(Color.black));
         add(nazwaRep1Label);
 
         nazwaRep2Label.setBounds(410,230,160,50);
-        nazwaRep2Label.setText("Wybrzeże Kości Słoniowej");
         nazwaRep2Label.setHorizontalAlignment(SwingConstants.CENTER);
         nazwaRep2Label.setBorder(BorderFactory.createLineBorder(Color.black));
         add(nazwaRep2Label);
@@ -302,11 +300,17 @@ public class ViewMecz extends JFrame{
     public JList getMundialList() {
         return mundialList;
     }
+    public void addMundialListMouseListener(MouseAdapter listenMundialList) {
+        mundialList.addMouseListener(listenMundialList);
+    }
 
     public void addListModelToMeczList(DefaultListModel meczListModel) { meczList.setModel(meczListModel);}
     public JList getMeczList() { return meczList; }
+    public void addMeczListMouseListener(MouseAdapter listenMeczList) {
+        meczList.addMouseListener(listenMeczList);
+    }
 
-    public void addRokToLabel(String rok) { dataRokLabel.setText(rok); }
+    public void setRokToLabel(String rok) { dataRokLabel.setText(rok); }
     public String getMiesiacFromTextField() { return dataMiesiacTextField.getText(); }
     public String getDzienFromTextField() { return dataDzienTextField.getText(); }
 
@@ -316,8 +320,39 @@ public class ViewMecz extends JFrame{
     public void setNazwaRep1(String nazwaReprezentacji) {nazwaRep1Label.setText(nazwaReprezentacji); }
     public void setNazwaRep2(String nazwaReprezentacji) {nazwaRep2Label.setText(nazwaReprezentacji); }
 
-    public void addListModelToZaw1Rep1ComboBox(String zawodnikImieNazwisko) { zaw1Rep1ComboBox.addItem(zawodnikImieNazwisko); }
+    public void addComboBoxModelToZawodnik1Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw1Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik2Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw2Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik3Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw3Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik4Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw4Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik5Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw5Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik6Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw6Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik7Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw7Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik8Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw8Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik9Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw9Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik10Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw10Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik11Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw11Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik12Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw12Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik13Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw13Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik14Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw14Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik15Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw15Rep1ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik16Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw16Rep1ComboBox.setModel(zawodnikComboBoxModel);}
 
+    public void addComboBoxModelToZawodnik1Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw1Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik2Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw2Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik3Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw3Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik4Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw4Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik5Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw5Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik6Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw6Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik7Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw7Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik8Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw8Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik9Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw9Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik10Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw10Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik11Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw11Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik12Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw12Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik13Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw13Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik14Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw14Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik15Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw15Rep2ComboBox.setModel(zawodnikComboBoxModel);}
+    public void addComboBoxModelToZawodnik16Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw16Rep2ComboBox.setModel(zawodnikComboBoxModel);}
 
     public void addCofnijButtonListener(ActionListener listenCofnijButton) {cofnijButton.addActionListener(listenCofnijButton); }
     public void addDodajButtonListener(ActionListener listenDodajButton) {dodajButton.addActionListener(listenDodajButton); }

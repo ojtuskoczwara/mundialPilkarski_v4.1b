@@ -16,5 +16,6 @@ public interface ZawodnikWReprezentacjaDAO {
     public void deleteRowsByMundialIdReprezentacjaIdZawodnikId(Mundial mundial, Reprezentacja reprezentacja, Zawodnik zawodnik) throws Exception;
     public void deleteRowsByIdMundialu(Mundial mundial) throws Exception;
     public void deleteRowsByIdReprezentacji(Reprezentacja reprezentacja) throws Exception;
+    public List<Zawodnik> getImieNazwiskoZawodnikaByIdMundialuIdReprezentacji(int mundialId, int reprezentacjaId) throws Exception;
 
 }

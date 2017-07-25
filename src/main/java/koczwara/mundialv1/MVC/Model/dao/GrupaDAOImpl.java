@@ -61,4 +61,18 @@ public class GrupaDAOImpl implements GrupaDAO{
         String sql = "DELETE FROM t_grupy WHERE id_grupy = ?";
         parserSQL.parseQuery(sql, grupa.getIdGrupy()).executeUpdate();
     }
+
+    @Override
+    public Grupa getNazwaByIdGrupyIdMundialu(int grupaId, int mundialId) throws Exception {
+        String sql = "SELECT nazwa_grupy FROM t_grupy WHERE id_grupy = ? AND id_mundialu = ?";
+        ResultSet result = parserSQL.parseQuery(sql, grupaId, mundialId).executeQuery();
+        Grupa grupa = new Grupa();
+        while (result.next()) {
+            grupa.setNazwaGrupy(result.getString("nazwa_grupy"));
+        }
+        ConnectionDB.disconnect(result);
+        return grupa;
+    }
+
+
 }

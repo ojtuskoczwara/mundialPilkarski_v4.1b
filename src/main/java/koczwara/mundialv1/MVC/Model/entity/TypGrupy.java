@@ -6,6 +6,7 @@ public class TypGrupy {
     private String nazwaTypu;
     private int maksLiczbaReprezentacji;
 
+    public TypGrupy(){}
 
     public TypGrupy(int idTypuGrupy, String nazwaTypu, int maksLiczbaReprezentacji){
         this.idTypuGrupy = idTypuGrupy;
