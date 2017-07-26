@@ -319,6 +319,8 @@ public class ViewMecz extends JFrame{
 
     public void setNazwaRep1(String nazwaReprezentacji) {nazwaRep1Label.setText(nazwaReprezentacji); }
     public void setNazwaRep2(String nazwaReprezentacji) {nazwaRep2Label.setText(nazwaReprezentacji); }
+    public String getNazwaReprezentacji1FromLabel() { return nazwaRep1Label.getText(); }
+    public String getNazwaReprezentacji2FromLabel() { return nazwaRep2Label.getText(); }
 
     public void addComboBoxModelToZawodnik1Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw1Rep1ComboBox.setModel(zawodnikComboBoxModel);}
     public void addComboBoxModelToZawodnik2Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw2Rep1ComboBox.setModel(zawodnikComboBoxModel);}

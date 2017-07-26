@@ -112,4 +112,18 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
         }
         return zawodnikList;
     }
+
+    @Override
+    public Zawodnik getZawodnikIdByMundialIdReprezentacjaIdImieNazwisko(int mundialId, int reprezentacjaId, String imie, String nazwisko) throws Exception {
+        String sql = "SELECT z.id_zawodnika FROM t_zawodnicy z, t_reprezentacje r, t_mundiale m, t_zawodnicy_w_reprezentacji zwr" +
+                " WHERE m.id_mundialu = zwr.id_mundialu AND r.id_reprezentacji = zwr.id_reprezentacji AND z.id_zawodnika = zwr.id_zawodnika" +
+                " AND m.id_mundialu = ? AND r.id_reprezentacji = ? AND z.imie = ? AND z.nazwisko = ?";
+        ResultSet resultSet = parserSQL.parseQuery(sql, mundialId, reprezentacjaId, imie, nazwisko).executeQuery();
+        Zawodnik z = new Zawodnik();
+        while (resultSet.next()){
+            z.setIdZawodnika(resultSet.getInt("id_zawodnika"));
+        }
+        ConnectionDB.disconnect(resultSet);
+        return z;
+    }
 }
