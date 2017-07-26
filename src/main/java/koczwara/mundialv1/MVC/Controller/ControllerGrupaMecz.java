@@ -72,6 +72,7 @@ public class ControllerGrupaMecz {
     private ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
     private ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
     private MeczDAO meczDAO = new MeczDAOImpl();
+    private SkladReprezentacjaDAO skladReprezentacjaDAO = new SkladReprezentacjaDAOImpl();
     private String valueMundialLokalizacja, valueMundial, valueRep1, valueRep2;
     private int valueMundialRok;
 
@@ -377,8 +378,15 @@ public class ControllerGrupaMecz {
                                                 } catch (Exception e1) {
                                                     e1.printStackTrace();
                                                 }
-                                                // Dodawanie danych do t_sklady_rep_1
-
+                                                // Dodawanie danych do t_sklady_rep_1 ORAZ t_sklady_rep_2, w petli FOR
+                                                for (int i=0; i<=15; i++) {
+                                                    try {
+                                                        skladReprezentacjaDAO.addSkladReprezentacja1(modelMecz.getIdReprezentacji1(), modelMecz.getIdReprezentacji2(), modelMecz.getIdGrupy(), modelMecz.getIdMundialu(), zawodnicyRep1Id[i], modelMecz.getIdMeczu());
+                                                        skladReprezentacjaDAO.addSkladReprezentacja2(modelMecz.getIdReprezentacji1(), modelMecz.getIdReprezentacji2(), modelMecz.getIdGrupy(), modelMecz.getIdMundialu(), zawodnicyRep2Id[i], modelMecz.getIdMeczu());
+                                                    } catch (Exception e1) {
+                                                        e1.printStackTrace();
+                                                    }
+                                                }
                                             } else {
                                                 showMyMessage.errorMessage("Jeden lub więcej zawodników powtarza się w składzie reprezentacji gospodarzy. Zawodnicy nie mogą się powtarzać!", "SKŁAD "+view.getNazwaReprezentacji2FromLabel()+": błąd podczas wyboru zawodnika");
                                             }
