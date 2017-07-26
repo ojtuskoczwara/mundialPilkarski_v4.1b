@@ -2,6 +2,7 @@ package koczwara.mundialv1.MVC.Controller;
 
 import koczwara.mundialv1.MVC.Model.dao.*;
 import koczwara.mundialv1.MVC.Model.entity.*;
+import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMecz;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
 
@@ -10,7 +11,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ControllerGrupaMecz {
     private ViewMecz view;
@@ -40,7 +46,6 @@ public class ControllerGrupaMecz {
     private DefaultComboBoxModel zaw14Rep1ComboBoxModel = new DefaultComboBoxModel();
     private DefaultComboBoxModel zaw15Rep1ComboBoxModel = new DefaultComboBoxModel();
     private DefaultComboBoxModel zaw16Rep1ComboBoxModel = new DefaultComboBoxModel();
-
     private DefaultComboBoxModel zaw1Rep2ComboBoxModel = new DefaultComboBoxModel();
     private DefaultComboBoxModel zaw2Rep2ComboBoxModel = new DefaultComboBoxModel();
     private DefaultComboBoxModel zaw3Rep2ComboBoxModel = new DefaultComboBoxModel();
@@ -57,6 +62,7 @@ public class ControllerGrupaMecz {
     private DefaultComboBoxModel zaw14Rep2ComboBoxModel = new DefaultComboBoxModel();
     private DefaultComboBoxModel zaw15Rep2ComboBoxModel = new DefaultComboBoxModel();
     private DefaultComboBoxModel zaw16Rep2ComboBoxModel = new DefaultComboBoxModel();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
 
     MundialDAO mundialDAO = new MundialDAOImpl();
     ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
@@ -68,18 +74,21 @@ public class ControllerGrupaMecz {
     private String valueMundialLokalizacja, valueMundial, valueRep1, valueRep2;
     private int valueMundialRok;
 
-    public ControllerGrupaMecz(ViewMecz view, Mundial modelMundial, Rozgrywka modelRozgrywka, TypGrupy modelTypGrupy, Grupa modelGrupa, Reprezentacja modelReprezentacja) {
+    public ControllerGrupaMecz(ViewMecz view, Mundial modelMundial, Rozgrywka modelRozgrywka, TypGrupy modelTypGrupy, Grupa modelGrupa,
+                               Reprezentacja modelReprezentacja, Mecz modelMecz) {
         this.view = view;
         this.modelMundial = modelMundial;
         this.modelRozgrywka = modelRozgrywka;
         this.modelTypGrupy = modelTypGrupy;
         this.modelGrupa = modelGrupa;
         this.modelReprezentacja = modelReprezentacja;
+        this.modelMecz = modelMecz;
 
         setMundialDLM();
         this.view.addCofnijButtonListener(new BackToAdminPanel());
         this.view.addMundialListMouseListener(new PressedOnElementOfMundialList());
         this.view.addMeczListMouseListener(new PressedOnElementOfMeczList());
+        this.view.addDodajButtonListener(new AddMeczButton());
 
     }
 
@@ -280,34 +289,187 @@ public class ControllerGrupaMecz {
             super.mousePressed(e);
             // ComboBoxy
             int valueIndeks = view.getMeczList().getSelectedIndex(); // Przypisanie do zmiennej valueIndeks wartosci indeksu(pozycji na ktorej znajduje sie zaznaczony element) JListMecz
-            int valueIdRep1 = 0,valueIdRep2 = 0;
             try { //Przypisanie zmiennym valueIdRep1 i valueIdRep2 wartosci(IdRep1 i IdRep2 danego meczu - aktualnie zaznaczonego elementu JListMecz)
                  modelRozgrywka = rozgrywkaDAO.getIdReprezentacji1ByIndexMeczuIdMundialu(valueIndeks,modelMundial.getIdMundialu());
-                 valueIdRep1 = modelRozgrywka.getIdReprezentacji1();
+                 //modelMecz.setIdReprezentacji1(modelRozgrywka.getIdReprezentacji1());
                  modelRozgrywka = rozgrywkaDAO.getIdReprezentacji2ByIndexMeczuIdMundialu(valueIndeks, modelMundial.getIdMundialu());
-                 valueIdRep2 = modelRozgrywka.getIdReprezentacji2();
+                 //modelMecz.setIdReprezentacji2(modelRozgrywka.getIdReprezentacji2());
+                 modelRozgrywka = rozgrywkaDAO.getIdGrupyByIndexMeczuIdMundialu(valueIndeks, modelMundial.getIdMundialu());
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
-            setZawodnicyComboBoxModel(modelMundial.getIdMundialu(), valueIdRep1, valueIdRep2); // Wywolanie metody, która wstawia zawodnikow w ComboBoxy
+            setZawodnicyComboBoxModel(modelMundial.getIdMundialu(), modelRozgrywka.getIdReprezentacji1(), modelRozgrywka.getIdReprezentacji2()); // Wywolanie metody, która wstawia zawodnikow w ComboBoxy
             // Label Reprezentacja1
             try {
-                modelReprezentacja = reprezentacjaDAO.getNazwaReprezentacjaByIdReprezentacja(valueIdRep1);
+                modelReprezentacja = reprezentacjaDAO.getNazwaReprezentacjaByIdReprezentacja(modelRozgrywka.getIdReprezentacji1());
                 view.setNazwaRep1(modelReprezentacja.getNazwa()); //Ustawienie nazwy LabelReprezentacja1
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
             // Label Reprezentacja2
             try {
-                modelReprezentacja = reprezentacjaDAO.getNazwaReprezentacjaByIdReprezentacja(valueIdRep2);
+                modelReprezentacja = reprezentacjaDAO.getNazwaReprezentacjaByIdReprezentacja(modelRozgrywka.getIdReprezentacji2());
                 view.setNazwaRep2(modelReprezentacja.getNazwa());
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
-            // TextField Data Miesiac
-
-
-
         }
     }
+
+    private class AddMeczButton implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() & !view.getMeczList().isSelectionEmpty() & !view.getMiesiacFromTextField().isEmpty()
+                    & !view.getDzienFromTextField().isEmpty() & !view.getGoleRep1().isEmpty() & !view.getGoleRep2().isEmpty()) {
+                //Przypisanie modelMecz danych idRep1, idRep2, idGrupy, idMundialu - te dane już mamy
+                modelMecz.setIdReprezentacji1(modelRozgrywka.getIdReprezentacji1());
+                modelMecz.setIdReprezentacji2(modelRozgrywka.getIdReprezentacji2());
+                modelMecz.setIdGrupy(modelRozgrywka.getIdGrupy());
+                modelMecz.setIdMundialu(modelMundial.getIdMundialu());
+/*
+                // Sprawdza czy gole sa cyfra czy litera i parsuje do int
+                String wyrazenieRegularneGole = "\\d{1,2}"; // Wyrazenie regularne: 1 lub 2 cyfry 0-9
+                Pattern pattern = Pattern.compile(wyrazenieRegularneGole);
+                Matcher matcher = pattern.matcher(view.getGoleRep1());
+                if (matcher.matches() == true) {
+                    int wynikReprezentacja1 = Integer.parseInt(view.getGoleRep1()); // zamiast zmiennej wstawic modelMecz(goleR1);
+                    matcher = pattern.matcher(view.getGoleRep2());
+                    if (matcher.matches() == true) {
+                        int wynikReprezentacja2 = Integer.parseInt(view.getGoleRep2()); // zamiast zmiennej wstawic modelMecz(goleR2);
+                        modelMecz.setGoleRep1(Integer.parseInt(view.getGoleRep1()));
+                        modelMecz.setGoleRep2(Integer.parseInt(view.getGoleRep2()));
+
+                    } else showMyMessage.errorMessage("Wprowadź jedną lub dwie cyfry 0-9", "GOLE GOŚCI: Podane dane są nieprawidłowe");
+                } else showMyMessage.errorMessage("Wprowadź jedną lub dwie cyfry 0-9", "GOLE GOSPODARZY: Podane dane są nieprawidłowe");
+
+                // Sprawdza czy data jest dobrze zapisana i parsuje do int
+                pattern = Pattern.compile("\\d{2}");
+                matcher = pattern.matcher(view.getMiesiacFromTextField());
+                if (matcher.matches() == true) { // jezeli wprowadzone dane do miesiac to cyfry
+                    int tempMiesiac = (Integer.parseInt(view.getMiesiacFromTextField())); // parsowanie String na int
+                    if (tempMiesiac > 0 & tempMiesiac <= 12) { // jesli  miesiac ma wartosc 1-12 to ...
+                        matcher = pattern.matcher(view.getDzienFromTextField());
+                        if (matcher.matches() == true) { //jezeli wprowadzone dane do dzien to cyfry
+                            int tempDzien = (Integer.parseInt(view.getDzienFromTextField()));
+                            if (tempDzien > 0 & tempDzien <= 31) { // jesli dzien ma wartosc 1-31 to ..
+                                String tempData = String.valueOf(valueMundialRok) +"-"+ view.getMiesiacFromTextField() +"-"+ view.getDzienFromTextField();
+                                SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+                                Date parsed = null;
+                                try {
+                                    parsed = format.parse(tempData);
+                                } catch (ParseException e1) {
+                                    e1.printStackTrace();
+                                }
+                                modelMecz.setDataMeczu(new java.sql.Date(parsed.getTime()));
+                            } else showMyMessage.errorMessage("Wprowadź cyfry 01-31 do kolumny dzien, np. 07 - siódmy", "DATA DZIEŃ: niepoprawnie wprowadzone dane");
+                        } else showMyMessage.errorMessage("Wprowadź dwie cyfry (0-9) do kolumny dzień, np. 03 - trzeci", "DATA DZIEŃ: niepoprawnie wprowadzone dane");
+                    } else showMyMessage.errorMessage("Wprowadź date 01-12 dla kolumny miesiąc, np. 02 - luty", "DATA MIESIĄC: niepoprawnie wprowadzone dane");
+                } else showMyMessage.errorMessage("Wprowadź dwie cyfry 0-9", "DATA MIESIĄC: niepoprawnie wprowadzone dane");
+*/
+                // Sprawdza czy zawodnik nie jest wpisany wiecej niz jedne raz
+                //if (view.getZawodnik1Rep1ComboBox().getSelectedItem().toString() == )
+                String tabZawodnikRep1ComboBox[] = new String[15];
+                tabZawodnikRep1ComboBox[0] = zaw1Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[1] = zaw2Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[2] = zaw3Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[3] = zaw4Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[4] = zaw5Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[5] = zaw6Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[6] = zaw7Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[7] = zaw8Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[8] = zaw9Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[9] = zaw10Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[10] = zaw11Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[11] = zaw12Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[12] = zaw13Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[13] = zaw14Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[14] = zaw15Rep1ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep1ComboBox[15] = zaw16Rep1ComboBoxModel.getSelectedItem().toString();
+
+                String tabZawodnikRep2ComboBox[] = new String[15];
+                tabZawodnikRep2ComboBox[0] = zaw1Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[1] = zaw2Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[2] = zaw3Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[3] = zaw4Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[4] = zaw5Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[5] = zaw6Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[6] = zaw7Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[7] = zaw8Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[8] = zaw9Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[9] = zaw10Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[10] = zaw11Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[11] = zaw12Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[12] = zaw13Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[13] = zaw14Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[14] = zaw15Rep2ComboBoxModel.getSelectedItem().toString();
+                tabZawodnikRep2ComboBox[15] = zaw16Rep2ComboBoxModel.getSelectedItem().toString();
+
+                for (int i=0; i<15; i++) {
+                    for (int j=i+1; j<=15; j++) {
+                        if (tabZawodnikRep1ComboBox[i].equals(tabZawodnikRep1ComboBox[j]) == true) {
+                            showMyMessage.errorMessage("Jeden lub więcej zawodników powtarza się w składzie reprezentacji gospodarzy. Zawodnicy nie mogą się powtarzać!", "SKŁAD GOSPODARZY: błąd podczas wyboru zawodnika");
+                        }
+                        else {
+                            for (int k=0; k<15; k++) {
+                                for (int l=k+1; l<=15; l++) {
+                                    if (tabZawodnikRep2ComboBox[k].equals(tabZawodnikRep2ComboBox[l]) == true) {
+                                        showMyMessage.errorMessage("Jeden lub więcej zawodników powtarza się w składzie reprezentacji gości. Zawodnicy nie mogą się powtarzać!", "SKŁAD GOŚCI: błąd podczas wyboru zawodnika");
+                                    }
+                                    else {
+                                        // Sprawdza czy GOLE sa cyfra czy litera i parsuje do int
+                                        String wyrazenieRegularneGole = "\\d{1,2}"; // Wyrazenie regularne: 1 lub 2 cyfry 0-9
+                                        Pattern pattern = Pattern.compile(wyrazenieRegularneGole);
+                                        Matcher matcher = pattern.matcher(view.getGoleRep1());
+                                        if (matcher.matches() == true) {
+                                            int wynikReprezentacja1 = Integer.parseInt(view.getGoleRep1()); // zamiast zmiennej wstawic modelMecz(goleR1);
+                                            matcher = pattern.matcher(view.getGoleRep2());
+                                            if (matcher.matches() == true) {
+                                                int wynikReprezentacja2 = Integer.parseInt(view.getGoleRep2()); // zamiast zmiennej wstawic modelMecz(goleR2);
+                                                modelMecz.setGoleRep1(Integer.parseInt(view.getGoleRep1()));
+                                                modelMecz.setGoleRep2(Integer.parseInt(view.getGoleRep2()));
+
+                                                // Sprawdza czy DATA jest dobrze zapisana i parsuje do int
+                                                pattern = Pattern.compile("\\d{2}");
+                                                matcher = pattern.matcher(view.getMiesiacFromTextField());
+                                                if (matcher.matches() == true) { // jezeli wprowadzone dane do miesiac to cyfry
+                                                    int tempMiesiac = (Integer.parseInt(view.getMiesiacFromTextField())); // parsowanie String na int
+                                                    if (tempMiesiac > 0 & tempMiesiac <= 12) { // jesli  miesiac ma wartosc 1-12 to ...
+                                                        matcher = pattern.matcher(view.getDzienFromTextField());
+                                                        if (matcher.matches() == true) { //jezeli wprowadzone dane do dzien to cyfry
+                                                            int tempDzien = (Integer.parseInt(view.getDzienFromTextField()));
+                                                            if (tempDzien > 0 & tempDzien <= 31) { // jesli dzien ma wartosc 1-31 to ..
+                                                                String tempData = String.valueOf(valueMundialRok) +"-"+ view.getMiesiacFromTextField() +"-"+ view.getDzienFromTextField();
+                                                                SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+                                                                Date parsed = null;
+                                                                try {
+                                                                    parsed = format.parse(tempData);
+                                                                } catch (ParseException e1) {
+                                                                    e1.printStackTrace();
+                                                                }
+                                                                modelMecz.setDataMeczu(new java.sql.Date(parsed.getTime()));
+
+                                                                    // Wstawić metode wyszukujaca id_zawodnika(modelSkladyRep1) na podstawie idMundialu,idRep,imie,nazwisko
+
+                                                                    // Wstawić dodawanie danych do tabeli t_mecz, t_sklady_rep_1, t_sklady_rep_2
+
+                                                            } else showMyMessage.errorMessage("Wprowadź cyfry 01-31 do kolumny dzien, np. 07 - siódmy", "DATA DZIEŃ: niepoprawnie wprowadzone dane");
+                                                        } else showMyMessage.errorMessage("Wprowadź dwie cyfry (0-9) do kolumny dzień, np. 03 - trzeci", "DATA DZIEŃ: niepoprawnie wprowadzone dane");
+                                                    } else showMyMessage.errorMessage("Wprowadź date 01-12 dla kolumny miesiąc, np. 02 - luty", "DATA MIESIĄC: niepoprawnie wprowadzone dane");
+                                                } else showMyMessage.errorMessage("Wprowadź dwie cyfry 0-9", "DATA MIESIĄC: niepoprawnie wprowadzone dane");
+                                               // Koniec kodu DATA
+
+                                            } else showMyMessage.errorMessage("Wprowadź jedną lub dwie cyfry 0-9", "GOLE GOŚCI: Podane dane są nieprawidłowe");
+                                        } else showMyMessage.errorMessage("Wprowadź jedną lub dwie cyfry 0-9", "GOLE GOSPODARZY: Podane dane są nieprawidłowe");
+                                        // Koniec kodu GOLE
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }

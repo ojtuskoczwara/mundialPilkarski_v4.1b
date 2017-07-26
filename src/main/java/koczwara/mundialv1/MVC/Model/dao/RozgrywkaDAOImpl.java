@@ -100,4 +100,16 @@ public class RozgrywkaDAOImpl implements RozgrywkaDAO{
         ConnectionDB.disconnect(result);
         return rozgrywka;
     }
+
+    @Override
+    public Rozgrywka getIdGrupyByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception {
+        String sql = "SELECT id_grupy FROM t_rozgrywki WHERE id_mundialu = ? ORDER BY id_rozgrywki LIMIT 1 OFFSET ?";
+        ResultSet result = parserSQL.parseQuery(sql, mundialId, meczIndex).executeQuery();
+        Rozgrywka rozgrywka = new Rozgrywka();
+        while (result.next()) {
+            rozgrywka.setIdGrupy(result.getInt("id_grupy"));
+        }
+        ConnectionDB.disconnect(result);
+        return rozgrywka;
+    }
 }
