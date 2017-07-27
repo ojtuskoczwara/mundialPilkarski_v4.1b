@@ -17,5 +17,7 @@ public class AppMVC {
         ControllerEkranGlowny controller = new ControllerEkranGlowny(view);
         view.setVisible(true);
 
+
+
     }
 }

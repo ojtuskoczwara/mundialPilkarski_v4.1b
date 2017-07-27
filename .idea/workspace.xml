@@ -7,10 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0f75e14-39a8-47d4-9fd7-e01ebbd0b59e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacja2DAOImpl.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacja1DAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacja1DAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacja2DAOImpl.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/AppMVC.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/AppMVC.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$AddMeczButton.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$AddMeczButton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$PressedOnElementOfMeczList.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$PressedOnElementOfMeczList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$PressedOnElementOfMundialList.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$PressedOnElementOfMundialList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajWynikMeczuListener.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajWynikMeczuListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,8 +47,8 @@
       <file leaf-file-name="ViewMecz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="322" column="88" lean-forward="true" selection-start-line="322" selection-start-column="88" selection-end-line="322" selection-end-column="88" />
+            <state relative-caret-position="221">
+              <caret line="322" column="88" lean-forward="false" selection-start-line="322" selection-start-column="88" selection-end-line="322" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,11 +56,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerGrupaMecz.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControllerGrupaMecz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="389" column="45" lean-forward="false" selection-start-line="389" selection-start-column="45" selection-end-line="389" selection-end-column="45" />
+            <state relative-caret-position="406">
+              <caret line="392" column="167" lean-forward="false" selection-start-line="392" selection-start-column="167" selection-end-line="392" selection-end-column="167" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SkladReprezentacjaDAOImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="28" column="72" lean-forward="false" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppMVC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,8 +156,6 @@
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.java" />
@@ -127,8 +164,10 @@
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -167,8 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -531,7 +569,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1044,16 +1083,17 @@
       <workItem from="1498690770601" duration="70000" />
       <workItem from="1500924941877" duration="4810000" />
       <workItem from="1500985378817" duration="19177000" />
-      <workItem from="1501074846947" duration="26394000" />
+      <workItem from="1501074846947" duration="27169000" />
+      <workItem from="1501189798441" duration="4542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159761000" />
+    <option name="totallyTimeSpent" value="165078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1065,14 +1105,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29865772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29865772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24938875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25244498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1084,6 +1123,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1094,7 +1134,69 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="177" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>294</line>
+          <properties />
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>295</line>
+          <properties />
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>296</line>
+          <properties />
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>298</line>
+          <properties />
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>306</line>
+          <properties />
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>307</line>
+          <properties />
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>293</line>
+          <properties />
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>292</line>
+          <properties />
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>297</line>
+          <properties />
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java</url>
+          <line>299</line>
+          <properties />
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="189" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1358,14 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerMundialDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1398,14 +1492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="126" column="144" lean-forward="false" selection-start-line="126" selection-start-column="144" selection-end-line="126" selection-end-column="144" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaUsun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="823">
@@ -1419,16 +1505,6 @@
         <state relative-caret-position="51">
           <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1453,16 +1529,6 @@
         <state relative-caret-position="636">
           <caret line="123" column="63" lean-forward="false" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="63" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="322" column="88" lean-forward="true" selection-start-line="322" selection-start-column="88" selection-end-line="322" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1506,6 +1572,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="126" column="159" lean-forward="false" selection-start-line="126" selection-start-column="159" selection-end-line="126" selection-end-column="159" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="322" column="88" lean-forward="false" selection-start-line="322" selection-start-column="88" selection-end-line="322" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="392" column="167" lean-forward="false" selection-start-line="392" selection-start-column="167" selection-end-line="392" selection-end-column="167" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1516,19 +1628,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="105" lean-forward="false" selection-start-line="29" selection-start-column="105" selection-end-line="29" selection-end-column="105" />
+        <state relative-caret-position="425">
+          <caret line="28" column="72" lean-forward="false" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="389" column="45" lean-forward="false" selection-start-line="389" selection-start-column="45" selection-end-line="389" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
