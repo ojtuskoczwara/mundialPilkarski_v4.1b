@@ -7,27 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0f75e14-39a8-47d4-9fd7-e01ebbd0b59e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacja1DAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacja2DAOImpl.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/AppMVC.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/AppMVC.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$AddMeczButton.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$AddMeczButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$PressedOnElementOfMeczList.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$PressedOnElementOfMeczList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$PressedOnElementOfMundialList.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz$PressedOnElementOfMundialList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajWynikMeczuListener.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajWynikMeczuListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaA.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaB.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaB.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaC.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaC.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaD.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaE.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaE.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaF.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaF.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaG.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaG.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaH.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaH.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$BackToPanelAdmin.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$BackToPanelAdmin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$PressedOnElementOfMundialList.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$PressedOnElementOfMundialList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$PressedOnElementOfReprezentacjaList.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$PressedOnElementOfReprezentacjaList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.class" afterPath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,10 +54,16 @@
       <file leaf-file-name="ViewMecz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="5321">
               <caret line="322" column="88" lean-forward="false" selection-start-line="322" selection-start-column="88" selection-end-line="322" selection-end-column="88" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#11768#11769#0" expanded="false" />
+                <element signature="e#11822#11823#0" expanded="false" />
+                <element signature="e#11858#11859#0" expanded="false" />
+                <element signature="e#11892#11893#0" expanded="false" />
+                <element signature="e#12266#12267#0" expanded="false" />
+                <element signature="e#12323#12324#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,30 +72,53 @@
       <file leaf-file-name="ControllerGrupaMecz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="6392">
               <caret line="392" column="167" lean-forward="false" selection-start-line="392" selection-start-column="167" selection-end-line="392" selection-end-column="167" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkladReprezentacjaDAOImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java">
+      <file leaf-file-name="ControllerGrupaDodaj.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="28" column="72" lean-forward="false" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+            <state relative-caret-position="656">
+              <caret line="515" column="111" lean-forward="false" selection-start-line="515" selection-start-column="111" selection-end-line="515" selection-end-column="111" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppMVC.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ViewGrupaDodaj.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4216">
+              <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReprezentacjaDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1377">
+              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1394#1409#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppMVC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/enums/enumGrupy.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Grupa.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/MundialDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Mecz.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/SkladyReprezentacji1.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/SkladReprezentacja2.java" />
@@ -133,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/test/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/Connection/ConnectionDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/utils/SetDLM.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMundialDodaj.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMundialEdytuj.java" />
@@ -144,18 +178,12 @@
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewZawodnikDodaj.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewZawodnikUsun.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewZawodnikEdytuj.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/ViewPanelAdministratora.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerMecz.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Rozgrywka.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/TypGrupyDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/TypGrupy.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/TypGrupyDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.java" />
@@ -165,9 +193,17 @@
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java" />
+        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" />
       </list>
     </option>
   </component>
@@ -207,6 +243,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -570,7 +607,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1084,12 +1120,16 @@
       <workItem from="1500924941877" duration="4810000" />
       <workItem from="1500985378817" duration="19177000" />
       <workItem from="1501074846947" duration="27169000" />
-      <workItem from="1501189798441" duration="4542000" />
+      <workItem from="1501189798441" duration="5002000" />
+      <workItem from="1501246513099" duration="4360000" />
+      <workItem from="1501251156347" duration="2741000" />
+      <workItem from="1501254428619" duration="724000" />
+      <workItem from="1501257560211" duration="3552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165078000" />
+    <option name="totallyTimeSpent" value="176915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1110,7 +1150,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25244498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26466992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1196,20 +1236,15 @@
           <option name="timeStamp" value="188" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="189" />
+      <option name="time" value="225" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="e" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/Mun.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/Connection/ConnectionDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1243,13 +1278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/utils/SetDLM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1292,7 +1320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,7 +1327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="34" column="44" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1315,53 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
           <caret line="72" column="5" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="72" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2688#2689#0" expanded="false" />
-            <element signature="e#2742#2743#0" expanded="false" />
-            <element signature="e#3532#3533#0" expanded="false" />
-            <element signature="e#3578#3579#0" expanded="false" />
-            <element signature="e#3622#3623#0" expanded="false" />
-            <element signature="e#3672#3673#0" expanded="false" />
-            <element signature="e#3709#3710#0" expanded="false" />
-            <element signature="e#3743#3744#0" expanded="false" />
-            <element signature="e#3786#3787#0" expanded="false" />
-            <element signature="e#3826#3827#0" expanded="false" />
-            <element signature="e#3864#3865#0" expanded="false" />
-            <element signature="e#3899#3900#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="166" column="5" lean-forward="false" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#6226#6227#0" expanded="false" />
-            <element signature="e#6280#6281#0" expanded="false" />
-            <element signature="e#6783#6784#0" expanded="false" />
-            <element signature="e#6817#6818#0" expanded="false" />
-            <element signature="e#6860#6861#0" expanded="false" />
-            <element signature="e#6900#6901#0" expanded="false" />
-            <element signature="e#6978#6979#0" expanded="false" />
-            <element signature="e#7030#7031#0" expanded="false" />
-            <element signature="e#7108#7109#0" expanded="false" />
-            <element signature="e#7160#7161#0" expanded="false" />
-            <element signature="e#7238#7239#0" expanded="false" />
-            <element signature="e#7290#7291#0" expanded="false" />
-            <element signature="e#7368#7369#0" expanded="false" />
-            <element signature="e#7420#7421#0" expanded="false" />
-            <element signature="e#7498#7499#0" expanded="false" />
-            <element signature="e#7550#7551#0" expanded="false" />
-            <element signature="e#7628#7629#0" expanded="false" />
-            <element signature="e#7680#7681#0" expanded="false" />
-            <element signature="e#7758#7759#0" expanded="false" />
-            <element signature="e#7810#7811#0" expanded="false" />
-            <element signature="e#7888#7889#0" expanded="false" />
-            <element signature="e#7940#7941#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1383,7 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,7 +1383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,47 +1393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/MundialDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="871">
           <caret line="81" column="56" lean-forward="false" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1480,7 +1420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1488,7 +1427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1504,7 +1442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1512,7 +1449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1520,7 +1456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="155" lean-forward="false" selection-start-line="19" selection-start-column="155" selection-end-line="19" selection-end-column="155" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,7 +1463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="636">
           <caret line="123" column="63" lean-forward="false" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1536,7 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" column="149" lean-forward="false" selection-start-line="11" selection-start-column="149" selection-end-line="11" selection-end-column="149" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1544,7 +1477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="125" lean-forward="false" selection-start-line="24" selection-start-column="125" selection-end-line="24" selection-end-column="125" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1552,7 +1484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="18" column="105" lean-forward="false" selection-start-line="18" selection-start-column="105" selection-end-line="18" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1568,7 +1499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="733">
           <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1580,40 +1510,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewMecz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="5321">
           <caret line="322" column="88" lean-forward="false" selection-start-line="322" selection-start-column="88" selection-end-line="322" selection-end-column="88" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="392" column="167" lean-forward="false" selection-start-line="392" selection-start-column="167" selection-end-line="392" selection-end-column="167" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#11768#11769#0" expanded="false" />
+            <element signature="e#11822#11823#0" expanded="false" />
+            <element signature="e#11858#11859#0" expanded="false" />
+            <element signature="e#11892#11893#0" expanded="false" />
+            <element signature="e#12266#12267#0" expanded="false" />
+            <element signature="e#12323#12324#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1622,7 +1530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1630,7 +1537,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="28" column="72" lean-forward="false" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaMecz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6392">
+          <caret line="392" column="167" lean-forward="false" selection-start-line="392" selection-start-column="167" selection-end-line="392" selection-end-column="167" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="98" lean-forward="false" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="98" lean-forward="false" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1394#1409#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="84" column="5" lean-forward="false" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#993#1000#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/utils/SetDLM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="116" lean-forward="false" selection-start-line="12" selection-start-column="116" selection-end-line="12" selection-end-column="116" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+          <folding>
+            <element signature="e#2495#2510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/PanelAdministratora/ViewGrupaDodaj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4216">
+          <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="515" column="111" lean-forward="false" selection-start-line="515" selection-start-column="111" selection-end-line="515" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

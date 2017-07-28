@@ -60,6 +60,7 @@ public class ControllerGrupaDodaj {
         this.view.addReprezentacjaListMouseListener(new PressedOnElementOfReprezentacjaList());
         this.view.addCofnijButtonListener(new BackToPanelAdmin());
         this.view.addDodajGrAButtonListener(new AddReprezentacjaToGrupaA());
+        this.view.addUsunGrAButtonListener(new DeleteReprezentacjaFromGrupaA());
         this.view.addDodajGrBButtonListener(new AddReprezentacjaToGrupaB());
         this.view.addDodajGrCButtonListener(new AddReprezentacjaToGrupaC());
         this.view.addDodajGrDButtonListener(new AddReprezentacjaToGrupaD());
@@ -470,4 +471,95 @@ public class ControllerGrupaDodaj {
             }
         }
     }
+
+    private void setGrupaDLM(String grupaNazwa, int grupaId, int mundialId) {
+        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+            DefaultListModel dlm = new DefaultListModel();
+            dlm.removeAllElements();
+            try {
+                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getReprezentacjeNazwaByGrupaIdMundialId(grupaId, mundialId);
+                for (Reprezentacja r: reprezentacjaList)
+                    dlm.addElement(r.getNazwa());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (grupaNazwa.equals("A"))
+                this.view.addListModelToGrupaAList(dlm);
+            if (grupaNazwa.equals("B"))
+                this.view.addListModelToGrupaBList(dlm);
+            if (grupaNazwa.equals("C"))
+                this.view.addListModelToGrupaCList(dlm);
+            if (grupaNazwa.equals("D"))
+                this.view.addListModelToGrupaDList(dlm);
+            if (grupaNazwa.equals("E"))
+                this.view.addListModelToGrupaEList(dlm);
+            if (grupaNazwa.equals("F"))
+                this.view.addListModelToGrupaFList(dlm);
+            if (grupaNazwa.equals("G"))
+                this.view.addListModelToGrupaGList(dlm);
+            else
+                this.view.addListModelToGrupaHList(dlm);
+
+        } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
+    }
+
+    private class DeleteReprezentacjaFromGrupaA implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
+                modelGrupa.setNazwaGrupy("A");
+                // setIdRep, idRep = idRep zaznaczonego elementu w JList
+                modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
+                // usuwanie zaznaczonej rep / setIdGrupy, idGrupy = idGrupy usunietego elementu
+                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
+                // wyswietlenie reprezentacji w JListGrupa nalezacych do jednej grupy,mundialu
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                //setGrupaA_DLM();
+            }
+        }
+    }
+
+    private int getIdReprezentacjiFromJListGrupa(String nazwaGrupy) {
+        String nazwaReprezentacji;
+        int reprezentacjaId =0;
+        if (nazwaGrupy.equals("A"))
+            nazwaReprezentacji = this.view.getGrupaAList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("B"))
+            nazwaReprezentacji = this.view.getGrupaBList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("C"))
+            nazwaReprezentacji = this.view.getGrupaCList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("D"))
+            nazwaReprezentacji = this.view.getGrupaDList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("E"))
+            nazwaReprezentacji = this.view.getGrupaEList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("F"))
+            nazwaReprezentacji = this.view.getGrupaFList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("G"))
+            nazwaReprezentacji = this.view.getGrupaGList().getSelectedValue().toString();
+        else
+            nazwaReprezentacji = this.view.getGrupaHList().getSelectedValue().toString();
+        try {
+            reprezentacjaId = reprezentacjaDAO.getReprezentacjaIdByReprezentacjaNazwa(nazwaReprezentacji);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return reprezentacjaId;
+    }
+
+    private int deleteReprezentacjaFromGrupa(String nazwaGrupy, int mundialId, int reprezentacjaId) {
+        int grupaId =0;
+        try {
+            grupaId = grupaDAO.getGrupaIdByMundialIdGrupaNazwa(mundialId, nazwaGrupy);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            reprezentacjaWGrupaDAO.deleteReprezentacjaFromGrupa(reprezentacjaId, grupaId, mundialId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return grupaId;
+    }
+
+
 }

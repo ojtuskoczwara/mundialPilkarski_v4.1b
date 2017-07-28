@@ -74,5 +74,15 @@ public class GrupaDAOImpl implements GrupaDAO{
         return grupa;
     }
 
+    @Override
+    public int getGrupaIdByMundialIdGrupaNazwa(int mundialId, String grupaNazwa) throws Exception {
+        String sql = "SELECT id_grupy FROM t_grupy WHERE id_mundialu = ? AND nazwa_grupy = ?";
+        ResultSet resultSet = parserSQL.parseQuery(sql, mundialId, grupaNazwa).executeQuery();
+        resultSet.next();
+        int grupaId = resultSet.getInt("id_grupy");
+        ConnectionDB.disconnect(resultSet);
+        return grupaId;
+    }
+
 
 }

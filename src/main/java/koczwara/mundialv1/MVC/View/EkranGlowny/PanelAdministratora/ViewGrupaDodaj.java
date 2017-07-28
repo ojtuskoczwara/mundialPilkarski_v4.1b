@@ -273,4 +273,13 @@ public class ViewGrupaDodaj extends JFrame{
     public void addUsunGrHButtonListener(ActionListener listenUsunGrupaHButton) {
         usunGrHButton.addActionListener(listenUsunGrupaHButton);
     }
+
+    public JList getGrupaAList() { return grupaAList; }
+    public JList getGrupaBList() { return grupaBList; }
+    public JList getGrupaCList() { return grupaCList; }
+    public JList getGrupaDList() { return grupaDList; }
+    public JList getGrupaEList() { return grupaEList; }
+    public JList getGrupaFList() { return grupaFList; }
+    public JList getGrupaGList() { return grupaGList; }
+    public JList getGrupaHList() { return grupaHList; }
 }
