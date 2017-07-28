@@ -15,4 +15,6 @@ public interface GrupaDAO {
     public void deleteGrupaByIdGrupy(Grupa grupa) throws Exception;
     public Grupa getNazwaByIdGrupyIdMundialu(int grupaId, int mundialId) throws Exception;
     public int getGrupaIdByMundialIdGrupaNazwa(int mundialId, String grupaNazwa) throws Exception;
+
+
 }

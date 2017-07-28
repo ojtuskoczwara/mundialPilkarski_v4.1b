@@ -11,5 +11,6 @@ public interface ReprezentacjaWGrupaDAO {
     public List<Reprezentacja> getAllReprezentacjeInGrupaByIdMundialuIdGrupy(Mundial mundial, Grupa grupa) throws Exception;
     public void deleteReprezentacjaFromGrupa(int reprezentacjaId, int grupaId, int mundialId) throws Exception;
     public List<Reprezentacja> getReprezentacjeNazwaByGrupaIdMundialId(int grupaId, int mundialId) throws Exception;
+    public void addReprezentacjaToGrupa(int reprezentacjaId, int grupaId, int mundialId) throws Exception;
 
 }

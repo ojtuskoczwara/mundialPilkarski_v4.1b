@@ -54,4 +54,10 @@ public class ReprezentacjaWGrupaDAOImpl implements ReprezentacjaWGrupaDAO{
         ConnectionDB.disconnect(resultSet);
         return reprezentacjaList;
     }
+
+    @Override
+    public void addReprezentacjaToGrupa(int reprezentacjaId, int grupaId, int mundialId) throws Exception {
+        String sql = "INSERT INTO t_reprezentacje_w_grupach VALUES(?, ?, ?)";
+        parserSQL.parseQuery(sql, reprezentacjaId, grupaId, mundialId).executeUpdate();
+    }
 }
