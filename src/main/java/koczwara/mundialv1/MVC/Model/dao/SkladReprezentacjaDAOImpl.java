@@ -26,7 +26,7 @@ public class SkladReprezentacjaDAOImpl implements SkladReprezentacjaDAO{
 
     @Override
     public void addSkladReprezentacja2(int rep1Id, int rep2Id, int grupaId, int mundialId, int zawodnikId, int meczId) throws Exception {
-        String sql = "INSERT INTO t_sklady_rep_1 VALUES(?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO t_sklady_rep_2 VALUES(?, ?, ?, ?, ?, ?)";
         parserSQL.parseQuery(sql,rep1Id, rep2Id, grupaId, mundialId, zawodnikId, meczId).executeUpdate();
     }
 }

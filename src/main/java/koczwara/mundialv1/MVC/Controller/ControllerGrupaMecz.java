@@ -353,14 +353,9 @@ public class ControllerGrupaMecz {
                                     int tempDzien = (Integer.parseInt(view.getDzienFromTextField()));
                                     if (tempDzien > 0 & tempDzien <= 31) { // jesli dzien ma wartosc 1-31 to ..
                                         String tempData = String.valueOf(valueMundialRok) +"-"+ view.getMiesiacFromTextField() +"-"+ view.getDzienFromTextField();
-                                        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
                                         Date parsed = null;
-                                        try {
-                                            parsed = format.parse(tempData);
-                                        } catch (ParseException e1) {
-                                            e1.printStackTrace();
-                                        }
-                                        modelMecz.setDataMeczu(new java.sql.Date(parsed.getTime()));
+                                        parsed = java.sql.Date.valueOf(tempData);
+                                        modelMecz.setDataMeczu((java.sql.Date) parsed);
                                         // Sprawdzenie czy zawodnicy w ComboBoxach sie powtarzaja dla obu reprezentacji
                                         String[] tablicaZawodnikowReprezentacja1 = dodanieZawodnikReprezentacja1ComboBoxDoTablicy();
                                         String[] tablicaZawodnikowReprezentacja2 = dodanieZawodnikReprezentacja2ComboBoxDoTablicy();
@@ -381,6 +376,10 @@ public class ControllerGrupaMecz {
                                                 for (int i=0; i<16; i++) {
                                                     try {
                                                         skladReprezentacjaDAO.addSkladReprezentacja1(modelMecz.getIdReprezentacji1(), modelMecz.getIdReprezentacji2(), modelMecz.getIdGrupy(), modelMecz.getIdMundialu(), zawodnicyRep1Id[i], modelMecz.getIdMeczu());
+                                                    } catch (Exception e1) {
+                                                        e1.printStackTrace();
+                                                    }
+                                                    try {
                                                         skladReprezentacjaDAO.addSkladReprezentacja2(modelMecz.getIdReprezentacji1(), modelMecz.getIdReprezentacji2(), modelMecz.getIdGrupy(), modelMecz.getIdMundialu(), zawodnicyRep2Id[i], modelMecz.getIdMeczu());
                                                     } catch (Exception e1) {
                                                         e1.printStackTrace();

@@ -3,6 +3,7 @@ package koczwara.mundialv1.MVC.Model.utils;
 import koczwara.mundialv1.MVC.Model.Connection.ConnectionDB;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -26,6 +27,9 @@ public class ParserSQL {
                 }
                 else if (arg instanceof Boolean){
                     statement.setBoolean(i, (Boolean) arg);
+                }
+                else if (arg instanceof Date){
+                    statement.setDate(i, (Date) arg);
                 }
                 else {
                     throw new NotImplement("Nie obsługiwany format zaimplementuj go!!!");
