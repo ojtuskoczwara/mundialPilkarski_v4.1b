@@ -4,11 +4,9 @@ import koczwara.mundialv1.MVC.Model.dao.*;
 import koczwara.mundialv1.MVC.Model.entity.Grupa;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
-import koczwara.mundialv1.MVC.Model.utils.SetDLM;
 import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewGrupaDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
-
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -24,14 +22,6 @@ public class ControllerGrupaDodaj {
     private Grupa modelGrupa;
     private DefaultListModel mundialListModel = new DefaultListModel();
     private DefaultListModel reprezentacjaListModel = new DefaultListModel();
-    private DefaultListModel grupaAListModel = new DefaultListModel();
-    private DefaultListModel grupaBListModel = new DefaultListModel();
-    private DefaultListModel grupaCListModel = new DefaultListModel();
-    private DefaultListModel grupaDListModel = new DefaultListModel();
-    private DefaultListModel grupaEListModel = new DefaultListModel();
-    private DefaultListModel grupaFListModel = new DefaultListModel();
-    private DefaultListModel grupaGListModel = new DefaultListModel();
-    private DefaultListModel grupaHListModel = new DefaultListModel();
     MundialDAO mundialDAO = new MundialDAOImpl();
     ReprezentacjaWGrupaDAO reprezentacjaWGrupaDAO = new ReprezentacjaWGrupaDAOImpl();
     ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
@@ -39,14 +29,6 @@ public class ControllerGrupaDodaj {
     ShowMyMessage showMyMessage = new ShowMyMessage();
     private String valueMundial, valueMundialLokalizacja, valueReprezentacjaNazwa;
     private int valueMundialRok;
-    private SetDLM setDLM1 = new SetDLM();
-    SetDLM setDLM2 = new SetDLM();
-    SetDLM setDLM3 = new SetDLM();
-    SetDLM setDLM4 = new SetDLM();
-    SetDLM setDLM5 = new SetDLM();
-    SetDLM setDLM6 = new SetDLM();
-    SetDLM setDLM7 = new SetDLM();
-    SetDLM setDLM8 = new SetDLM();
 
 
     public ControllerGrupaDodaj(ViewGrupaDodaj view, Mundial modelMundial, Reprezentacja modelReprezentacja, Grupa modelGrupa) {
@@ -77,7 +59,108 @@ public class ControllerGrupaDodaj {
         this.view.addUsunGrHButtonListener(new DeleteReprezentacjaFromGrupaH());
     }
 
+    public void setMundialDLM() {
+        // Wstrzyknięcie danych do modeluMundialu który później jest argumentem JListMundiale
+        mundialListModel.removeAllElements();
+        try {
+            List<Mundial> mundialList = mundialDAO.getAllMundial();
+            for (Mundial m : mundialList) {
+                String valueLokalizacjaRok = m.getLokalizacja() + " " + m.getRok();
+                mundialListModel.addElement(valueLokalizacjaRok);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        this.view.addListModelToMundialList(mundialListModel); // Wywołanie metody, która ustawia modelMundiale w widoku
+    }
 
+    public void setReprezentacjaDLM() {
+        // Wstrzyknięcie danych do modeluRep który później jest argumentem JListRep
+        reprezentacjaListModel.removeAllElements();
+        try {
+            List<Reprezentacja> reprezentacjaList = reprezentacjaDAO.getAllReprezentacja();
+            for (Reprezentacja r : reprezentacjaList)
+                reprezentacjaListModel.addElement(r.getNazwa());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        this.view.addListModelToReprezentacjaList(reprezentacjaListModel); // Wywołanie metody, która ustawia modelRep w widoku
+    }
+
+    private void setGrupaDLM(String grupaNazwa, int mundialId) {
+        DefaultListModel dlm = new DefaultListModel();
+        dlm.removeAllElements();
+        try {
+            modelGrupa.setIdGrupy(grupaDAO.getGrupaIdByMundialIdGrupaNazwa(mundialId, grupaNazwa));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getReprezentacjeNazwaByGrupaIdMundialId(modelGrupa.getIdGrupy(), mundialId);
+            for (Reprezentacja r: reprezentacjaList)
+                dlm.addElement(r.getNazwa());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (grupaNazwa.equals("A"))
+            this.view.addListModelToGrupaAList(dlm);
+        else if (grupaNazwa.equals("B"))
+            this.view.addListModelToGrupaBList(dlm);
+        else if (grupaNazwa.equals("C"))
+            this.view.addListModelToGrupaCList(dlm);
+        else if (grupaNazwa.equals("D"))
+            this.view.addListModelToGrupaDList(dlm);
+        else if (grupaNazwa.equals("E"))
+            this.view.addListModelToGrupaEList(dlm);
+        else if (grupaNazwa.equals("F"))
+            this.view.addListModelToGrupaFList(dlm);
+        else if (grupaNazwa.equals("G"))
+            this.view.addListModelToGrupaGList(dlm);
+        else if (grupaNazwa.equals("H"))
+            this.view.addListModelToGrupaHList(dlm);
+
+    }
+
+    private int getIdReprezentacjiFromJListGrupa(String nazwaGrupy) {
+        String nazwaReprezentacji = null;
+        int reprezentacjaId = 0;
+        if (nazwaGrupy.equals("A"))
+            nazwaReprezentacji = this.view.getGrupaAList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("B"))
+            nazwaReprezentacji = this.view.getGrupaBList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("C"))
+            nazwaReprezentacji = this.view.getGrupaCList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("D"))
+            nazwaReprezentacji = this.view.getGrupaDList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("E"))
+            nazwaReprezentacji = this.view.getGrupaEList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("F"))
+            nazwaReprezentacji = this.view.getGrupaFList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("G"))
+            nazwaReprezentacji = this.view.getGrupaGList().getSelectedValue().toString();
+        else if (nazwaGrupy.equals("H"))
+            nazwaReprezentacji = this.view.getGrupaHList().getSelectedValue().toString();
+        try {
+            reprezentacjaId = reprezentacjaDAO.getReprezentacjaIdByReprezentacjaNazwa(nazwaReprezentacji);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return reprezentacjaId;
+    }
+
+    private void deleteReprezentacjaFromGrupa(String nazwaGrupy, int mundialId, int reprezentacjaId) {
+        int grupaId =0;
+        try {
+            grupaId = grupaDAO.getGrupaIdByMundialIdGrupaNazwa(mundialId, nazwaGrupy);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            reprezentacjaWGrupaDAO.deleteReprezentacjaFromGrupa(reprezentacjaId, grupaId, mundialId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     private class PressedOnElementOfMundialList extends MouseAdapter {
         @Override
@@ -96,14 +179,14 @@ public class ControllerGrupaDodaj {
                     e1.printStackTrace();
                 }
                 setReprezentacjaDLM();
-                setGrupaA_DLM();
-                setGrupaB_DLM();
-                setGrupaC_DLM();
-                setGrupaD_DLM();
-                setGrupaE_DLM();
-                setGrupaF_DLM();
-                setGrupaG_DLM();
-                setGrupaH_DLM();
+                setGrupaDLM("A",modelMundial.getIdMundialu());
+                setGrupaDLM("B",modelMundial.getIdMundialu());
+                setGrupaDLM("C",modelMundial.getIdMundialu());
+                setGrupaDLM("D",modelMundial.getIdMundialu());
+                setGrupaDLM("E",modelMundial.getIdMundialu());
+                setGrupaDLM("F",modelMundial.getIdMundialu());
+                setGrupaDLM("G",modelMundial.getIdMundialu());
+                setGrupaDLM("H",modelMundial.getIdMundialu());
             }
         }
     }
@@ -143,7 +226,7 @@ public class ControllerGrupaDodaj {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                setGrupaDLM(modelGrupa.getNazwaGrupy(),modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -159,7 +242,7 @@ public class ControllerGrupaDodaj {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                setGrupaDLM(modelGrupa.getNazwaGrupy(),modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -175,7 +258,7 @@ public class ControllerGrupaDodaj {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                setGrupaDLM(modelGrupa.getNazwaGrupy(),modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -191,7 +274,7 @@ public class ControllerGrupaDodaj {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                setGrupaDLM(modelGrupa.getNazwaGrupy(),modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -207,7 +290,7 @@ public class ControllerGrupaDodaj {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                setGrupaDLM(modelGrupa.getNazwaGrupy(),modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -223,7 +306,7 @@ public class ControllerGrupaDodaj {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                setGrupaDLM(modelGrupa.getNazwaGrupy(),modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -239,7 +322,7 @@ public class ControllerGrupaDodaj {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                setGrupaDLM(modelGrupa.getNazwaGrupy(),modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -255,247 +338,9 @@ public class ControllerGrupaDodaj {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                setGrupaDLM(modelGrupa.getNazwaGrupy(),modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz dodać do grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
-    }
-
-    public void setMundialDLM() {
-        // Wstrzyknięcie danych do modeluMundialu który później jest argumentem JListMundiale
-        mundialListModel.removeAllElements();
-        try {
-            List<Mundial> mundialList = mundialDAO.getAllMundial();
-            for (Mundial m : mundialList) {
-                String valueLokalizacjaRok = m.getLokalizacja() + " " + m.getRok();
-                mundialListModel.addElement(valueLokalizacjaRok);
-            }
-            this.view.addListModelToMundialList(mundialListModel); // Wywołanie metody, która ustawia modelMundiale w widoku
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void setReprezentacjaDLM() {
-        // Wstrzyknięcie danych do modeluRep który później jest argumentem JListRep
-        reprezentacjaListModel.removeAllElements();
-        try {
-            // Pobranie wartości z JListMundial, elementu który jest zaznaczony
-            List<Reprezentacja> reprezentacjaList = reprezentacjaDAO.getAllReprezentacja();
-            for (Reprezentacja r : reprezentacjaList) {
-                reprezentacjaListModel.addElement(r.getNazwa());
-            }
-            this.view.addListModelToReprezentacjaList(reprezentacjaListModel); // Wywołanie metody, która ustawia modelRep w widoku
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public void setGrupaA_DLM() {
-        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-            grupaAListModel.removeAllElements();
-            modelGrupa.setNazwaGrupy("A");
-            try {
-                modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(modelMundial, modelGrupa);
-                for (Reprezentacja r : reprezentacjaList) {
-                    grupaAListModel.addElement(r.getNazwa());
-                }
-                this.view.addListModelToGrupaAList(grupaAListModel);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void setGrupaB_DLM() {
-        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-            grupaBListModel.removeAllElements();
-            modelGrupa.setNazwaGrupy("B");
-            try {
-                modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(modelMundial, modelGrupa);
-                for (Reprezentacja r : reprezentacjaList) {
-                    grupaBListModel.addElement(r.getNazwa());
-                }
-                this.view.addListModelToGrupaBList(grupaBListModel);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void setGrupaC_DLM() {
-        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-            grupaCListModel.removeAllElements();
-            modelGrupa.setNazwaGrupy("C");
-            try {
-                modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(modelMundial, modelGrupa);
-                for (Reprezentacja r : reprezentacjaList) {
-                    grupaCListModel.addElement(r.getNazwa());
-                }
-                this.view.addListModelToGrupaCList(grupaCListModel);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void setGrupaD_DLM() {
-        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-            grupaDListModel.removeAllElements();
-            modelGrupa.setNazwaGrupy("D");
-            try {
-                modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(modelMundial, modelGrupa);
-                for (Reprezentacja r : reprezentacjaList) {
-                    grupaDListModel.addElement(r.getNazwa());
-                }
-                this.view.addListModelToGrupaDList(grupaDListModel);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void setGrupaE_DLM() {
-        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-            grupaEListModel.removeAllElements();
-            modelGrupa.setNazwaGrupy("E");
-            try {
-                modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(modelMundial, modelGrupa);
-                for (Reprezentacja r : reprezentacjaList) {
-                    grupaEListModel.addElement(r.getNazwa());
-                }
-                this.view.addListModelToGrupaEList(grupaEListModel);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void setGrupaF_DLM() {
-        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-            grupaFListModel.removeAllElements();
-            modelGrupa.setNazwaGrupy("F");
-            try {
-                modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(modelMundial, modelGrupa);
-                for (Reprezentacja r : reprezentacjaList) {
-                    grupaFListModel.addElement(r.getNazwa());
-                }
-                this.view.addListModelToGrupaFList(grupaFListModel);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void setGrupaG_DLM() {
-        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-            grupaGListModel.removeAllElements();
-            modelGrupa.setNazwaGrupy("G");
-            try {
-                modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(modelMundial, modelGrupa);
-                for (Reprezentacja r : reprezentacjaList) {
-                    grupaGListModel.addElement(r.getNazwa());
-                }
-                this.view.addListModelToGrupaGList(grupaGListModel);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void setGrupaH_DLM() {
-        if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
-            grupaHListModel.removeAllElements();
-            modelGrupa.setNazwaGrupy("H");
-            try {
-                modelGrupa = grupaDAO.getIdGrupyByIdMundialuNazwaGrupy(modelMundial, modelGrupa);
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getAllReprezentacjeInGrupaByIdMundialuIdGrupy(modelMundial, modelGrupa);
-                for (Reprezentacja r : reprezentacjaList) {
-                    grupaHListModel.addElement(r.getNazwa());
-                }
-                this.view.addListModelToGrupaHList(grupaHListModel);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private void setGrupaDLM(String grupaNazwa, int grupaId, int mundialId) {
-            DefaultListModel dlm = new DefaultListModel();
-            dlm.removeAllElements();
-            try {
-                List<Reprezentacja> reprezentacjaList = reprezentacjaWGrupaDAO.getReprezentacjeNazwaByGrupaIdMundialId(grupaId, mundialId);
-                for (Reprezentacja r: reprezentacjaList)
-                    dlm.addElement(r.getNazwa());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            if (grupaNazwa.equals("A"))
-                this.view.addListModelToGrupaAList(dlm);
-            else if (grupaNazwa.equals("B"))
-                this.view.addListModelToGrupaBList(dlm);
-            else if (grupaNazwa.equals("C"))
-                this.view.addListModelToGrupaCList(dlm);
-            else if (grupaNazwa.equals("D"))
-                this.view.addListModelToGrupaDList(dlm);
-            else if (grupaNazwa.equals("E"))
-                this.view.addListModelToGrupaEList(dlm);
-            else if (grupaNazwa.equals("F"))
-                this.view.addListModelToGrupaFList(dlm);
-            else if (grupaNazwa.equals("G"))
-                this.view.addListModelToGrupaGList(dlm);
-            else if (grupaNazwa.equals("H"))
-                this.view.addListModelToGrupaHList(dlm);
-
-    }
-
-    private int getIdReprezentacjiFromJListGrupa(String nazwaGrupy) {
-        String nazwaReprezentacji = null;
-        int reprezentacjaId =0;
-        if (nazwaGrupy.equals("A"))
-            nazwaReprezentacji = this.view.getGrupaAList().getSelectedValue().toString();
-        else if (nazwaGrupy.equals("B"))
-            nazwaReprezentacji = this.view.getGrupaBList().getSelectedValue().toString();
-        else if (nazwaGrupy.equals("C"))
-            nazwaReprezentacji = this.view.getGrupaCList().getSelectedValue().toString();
-        else if (nazwaGrupy.equals("D"))
-            nazwaReprezentacji = this.view.getGrupaDList().getSelectedValue().toString();
-        else if (nazwaGrupy.equals("E"))
-            nazwaReprezentacji = this.view.getGrupaEList().getSelectedValue().toString();
-        else if (nazwaGrupy.equals("F"))
-            nazwaReprezentacji = this.view.getGrupaFList().getSelectedValue().toString();
-        else if (nazwaGrupy.equals("G"))
-            nazwaReprezentacji = this.view.getGrupaGList().getSelectedValue().toString();
-        else if (nazwaGrupy.equals("H"))
-            nazwaReprezentacji = this.view.getGrupaHList().getSelectedValue().toString();
-        try {
-            reprezentacjaId = reprezentacjaDAO.getReprezentacjaIdByReprezentacjaNazwa(nazwaReprezentacji);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return reprezentacjaId;
-    }
-
-    private int deleteReprezentacjaFromGrupa(String nazwaGrupy, int mundialId, int reprezentacjaId) {
-        int grupaId =0;
-        try {
-            grupaId = grupaDAO.getGrupaIdByMundialIdGrupaNazwa(mundialId, nazwaGrupy);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            reprezentacjaWGrupaDAO.deleteReprezentacjaFromGrupa(reprezentacjaId, grupaId, mundialId);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return grupaId;
     }
 
     private class DeleteReprezentacjaFromGrupaA implements ActionListener {
@@ -506,9 +351,9 @@ public class ControllerGrupaDodaj {
                 // setIdRep, idRep = idRep zaznaczonego elementu w JList
                 modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
                 // usuwanie zaznaczonej rep / setIdGrupy, idGrupy = idGrupy usunietego elementu
-                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
+                deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
                 // wyswietlenie reprezentacji w JListGrupa nalezacych do jednej grupy,mundialu
-                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -520,8 +365,8 @@ public class ControllerGrupaDodaj {
             if (!view.getMundialList().isSelectionEmpty() || !view.getGrupaBList().isSelectionEmpty()) {
                 modelGrupa.setNazwaGrupy("B");
                 modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
-                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
-                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -532,8 +377,8 @@ public class ControllerGrupaDodaj {
             if (!view.getMundialList().isSelectionEmpty() || !view.getGrupaCList().isSelectionEmpty()) {
                 modelGrupa.setNazwaGrupy("C");
                 modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
-                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
-                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -544,8 +389,8 @@ public class ControllerGrupaDodaj {
             if (!view.getMundialList().isSelectionEmpty() || !view.getGrupaDList().isSelectionEmpty()) {
                 modelGrupa.setNazwaGrupy("D");
                 modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
-                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
-                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -556,8 +401,8 @@ public class ControllerGrupaDodaj {
             if (!view.getMundialList().isSelectionEmpty() || !view.getGrupaEList().isSelectionEmpty()) {
                 modelGrupa.setNazwaGrupy("E");
                 modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
-                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
-                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -568,8 +413,8 @@ public class ControllerGrupaDodaj {
             if (!view.getMundialList().isSelectionEmpty() || !view.getGrupaFList().isSelectionEmpty()) {
                 modelGrupa.setNazwaGrupy("F");
                 modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
-                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
-                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -580,8 +425,8 @@ public class ControllerGrupaDodaj {
             if (!view.getMundialList().isSelectionEmpty() || !view.getGrupaGList().isSelectionEmpty()) {
                 modelGrupa.setNazwaGrupy("G");
                 modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
-                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
-                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
@@ -592,8 +437,8 @@ public class ControllerGrupaDodaj {
             if (!view.getMundialList().isSelectionEmpty() & !view.getGrupaHList().isSelectionEmpty()) {
                 modelGrupa.setNazwaGrupy("H");
                 modelReprezentacja.setIdReprezentacji(getIdReprezentacjiFromJListGrupa(modelGrupa.getNazwaGrupy()));
-                modelGrupa.setIdGrupy(deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji()));
-                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelGrupa.getIdGrupy(), modelMundial.getIdMundialu());
+                deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
         }
     }
