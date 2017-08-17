@@ -316,6 +316,22 @@ public class ControllerGrupaMecz {
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
+            // Wyswietlenie wyniku i daty - jezeli mecz zostal juz wczesniej edytowany wyswietla sie dane, jezeli nie to bd puste pola
+            Mecz mecz2 = new Mecz();
+            try {
+                mecz2 = meczDAO.getDataGoleR1GoleR2ByIdMeczu(modelMecz.getIdMeczu());
+                view.setMiesiacToTF(String.valueOf(mecz2.getDataMeczu()).substring(5,7));
+                view.setDzienToTF(String.valueOf(mecz2.getDataMeczu()).substring(8));
+                view.setGoleRep1(mecz2.getGoleRep1());
+                view.setGoleRep2(mecz2.getGoleRep2());
+            } catch (NullPointerException ex) {
+                view.setMiesiacToTF("");
+                view.setDzienToTF("");
+                view.setGoleRep1("");
+                view.setGoleRep2("");
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
         }
     }
 

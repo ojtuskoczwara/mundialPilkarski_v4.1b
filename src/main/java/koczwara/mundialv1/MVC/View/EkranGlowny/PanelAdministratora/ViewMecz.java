@@ -312,10 +312,14 @@ public class ViewMecz extends JFrame{
 
     public void setRokToLabel(String rok) { dataRokLabel.setText(rok); }
     public String getMiesiacFromTextField() { return dataMiesiacTextField.getText(); }
+    public void setMiesiacToTF(Object miesiac) { dataMiesiacTextField.setText(String.valueOf(miesiac));}
     public String getDzienFromTextField() { return dataDzienTextField.getText(); }
+    public void setDzienToTF(Object dzien) { dataDzienTextField.setText(String.valueOf(dzien));}
 
     public String getGoleRep1() { return goleRep1TextField.getText(); }
+    public void setGoleRep1(Object gole) { goleRep1TextField.setText(String.valueOf(gole));}
     public String getGoleRep2() { return goleRep2TextField.getText(); }
+    public void setGoleRep2(Object gole) {goleRep2TextField.setText(String.valueOf(gole));}
 
     public void setNazwaRep1(String nazwaReprezentacji) {nazwaRep1Label.setText(nazwaReprezentacji); }
     public void setNazwaRep2(String nazwaReprezentacji) {nazwaRep2Label.setText(nazwaReprezentacji); }

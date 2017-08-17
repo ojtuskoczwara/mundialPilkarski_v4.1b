@@ -79,7 +79,7 @@ public class RozgrywkaDAOImpl implements RozgrywkaDAO{
 
     @Override
     public Rozgrywka getIdReprezentacji1ByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception {
-        String sql = "SELECT id_reprezentacji_1 FROM t_rozgrywki WHERE id_mundialu = ? ORDER BY id_rozgrywki LIMIT 1 OFFSET ?";
+        String sql = "SELECT id_reprezentacji_1 FROM t_rozgrywki WHERE id_mundialu = ? LIMIT 1 OFFSET ?";
         ResultSet result = parserSQL.parseQuery(sql, mundialId, meczIndex).executeQuery();
         Rozgrywka rozgrywka = new Rozgrywka();
         while (result.next()) {
@@ -91,7 +91,7 @@ public class RozgrywkaDAOImpl implements RozgrywkaDAO{
 
     @Override
     public Rozgrywka getIdReprezentacji2ByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception {
-        String sql = "SELECT id_reprezentacji_2 FROM t_rozgrywki WHERE id_mundialu = ? ORDER BY id_rozgrywki LIMIT 1 OFFSET ?";
+        String sql = "SELECT id_reprezentacji_2 FROM t_rozgrywki WHERE id_mundialu = ? LIMIT 1 OFFSET ?";
         ResultSet result = parserSQL.parseQuery(sql, mundialId, meczIndex).executeQuery();
         Rozgrywka rozgrywka = new Rozgrywka();
         while (result.next()) {
@@ -103,7 +103,7 @@ public class RozgrywkaDAOImpl implements RozgrywkaDAO{
 
     @Override
     public Rozgrywka getIdGrupyByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception {
-        String sql = "SELECT id_grupy FROM t_rozgrywki WHERE id_mundialu = ? ORDER BY id_rozgrywki LIMIT 1 OFFSET ?";
+        String sql = "SELECT id_grupy FROM t_rozgrywki WHERE id_mundialu = ? LIMIT 1 OFFSET ?";
         ResultSet result = parserSQL.parseQuery(sql, mundialId, meczIndex).executeQuery();
         Rozgrywka rozgrywka = new Rozgrywka();
         while (result.next()) {
@@ -115,7 +115,7 @@ public class RozgrywkaDAOImpl implements RozgrywkaDAO{
 
     @Override
     public Rozgrywka getIdRozgrywkiByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception {
-        String sql = "SELECT id_rozgrywki FROM t_rozgrywki WHERE id_mundialu = ? ORDER BY id_rozgrywki LIMIT 1 OFFSET ?";
+        String sql = "SELECT id_rozgrywki FROM t_rozgrywki WHERE id_mundialu = ? LIMIT 1 OFFSET ?";
         ResultSet result = parserSQL.parseQuery(sql, mundialId, meczIndex).executeQuery();
         Rozgrywka rozgrywka = new Rozgrywka();
         while (result.next()) {
