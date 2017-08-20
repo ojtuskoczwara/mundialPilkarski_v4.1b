@@ -290,14 +290,13 @@ public class ControllerGrupaMecz {
             // ComboBoxy
             int valueIndeks = view.getMeczList().getSelectedIndex(); // Przypisanie do zmiennej valueIndeks wartosci indeksu(pozycji na ktorej znajduje sie zaznaczony element) JListMecz
             try { //Przypisanie zmiennym valueIdRep1 i valueIdRep2 wartosci(IdRep1 i IdRep2 danego meczu - aktualnie zaznaczonego elementu JListMecz)
-                 modelRozgrywka = rozgrywkaDAO.getIdReprezentacji1ByIndexMeczuIdMundialu(valueIndeks,modelMundial.getIdMundialu());
-                  modelMecz.setIdReprezentacji1(modelRozgrywka.getIdReprezentacji1());
-                 modelRozgrywka = rozgrywkaDAO.getIdReprezentacji2ByIndexMeczuIdMundialu(valueIndeks, modelMundial.getIdMundialu());
-                  modelMecz.setIdReprezentacji2(modelRozgrywka.getIdReprezentacji2());
-                 modelRozgrywka = rozgrywkaDAO.getIdGrupyByIndexMeczuIdMundialu(valueIndeks, modelMundial.getIdMundialu());
-                  modelMecz.setIdGrupy(modelRozgrywka.getIdGrupy());
-                 modelRozgrywka = rozgrywkaDAO.getIdRozgrywkiByIndexMeczuIdMundialu(valueIndeks, modelMundial.getIdMundialu());
-                  modelMecz.setIdMeczu(modelRozgrywka.getIdRozgrywki());
+                modelRozgrywka = rozgrywkaDAO.getAllByMundialIdMeczIndex(modelMundial.getIdMundialu(), valueIndeks);
+                modelMecz.setIdReprezentacji1(modelRozgrywka.getIdReprezentacji1());
+                modelMecz.setIdReprezentacji2(modelRozgrywka.getIdReprezentacji2());
+                modelMecz.setIdGrupy(modelRozgrywka.getIdGrupy());
+                modelMecz.setIdMeczu(modelRozgrywka.getIdRozgrywki());
+
+
             } catch (Exception e1) {
                 e1.printStackTrace();
             }

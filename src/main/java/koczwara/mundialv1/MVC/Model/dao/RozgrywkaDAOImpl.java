@@ -57,7 +57,7 @@ public class RozgrywkaDAOImpl implements RozgrywkaDAO{
 
     @Override
     public List<Rozgrywka> getAllRozgrywkaByIdMundialu(int mundialId) throws Exception {
-        String sql = "SELECT * FROM t_rozgrywki WHERE id_mundialu = ?";
+        String sql = "SELECT * FROM t_rozgrywki WHERE id_mundialu = ? ORDER BY id_mundialu,id_typu_grupy,id_grupy,id_rozgrywki";
         List<Rozgrywka> rozgrywkaList = new ArrayList<Rozgrywka>();
 
         ResultSet resultSet = parserSQL.parseQuery(sql, mundialId).executeQuery();
@@ -120,6 +120,23 @@ public class RozgrywkaDAOImpl implements RozgrywkaDAO{
         Rozgrywka rozgrywka = new Rozgrywka();
         while (result.next()) {
             rozgrywka.setIdRozgrywki(result.getInt("id_rozgrywki"));
+        }
+        ConnectionDB.disconnect(result);
+        return rozgrywka;
+    }
+
+    @Override
+    public Rozgrywka getAllByMundialIdMeczIndex(int mundialId, int meczIndex) throws Exception {
+        String sql = "SELECT * FROM t_rozgrywki WHERE id_mundialu= ? ORDER BY id_mundialu,id_typu_grupy,id_grupy,id_rozgrywki LIMIT 1 OFFSET ?";
+        ResultSet result = parserSQL.parseQuery(sql, mundialId, meczIndex).executeQuery();
+        Rozgrywka rozgrywka = new Rozgrywka();
+        while (result.next()){
+            rozgrywka.setIdRozgrywki(result.getInt("id_rozgrywki"));
+            rozgrywka.setIdGrupy(result.getInt("id_grupy"));
+            rozgrywka.setIdReprezentacji1(result.getInt("id_reprezentacji_1"));
+            rozgrywka.setIdReprezentacji2(result.getInt("id_reprezentacji_2"));
+            rozgrywka.setIdMundialu(result.getInt("id_mundialu"));
+            rozgrywka.setIdTypuGrupy(result.getInt("id_typu_grupy"));
         }
         ConnectionDB.disconnect(result);
         return rozgrywka;

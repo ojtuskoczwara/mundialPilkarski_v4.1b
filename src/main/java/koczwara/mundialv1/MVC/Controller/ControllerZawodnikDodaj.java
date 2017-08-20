@@ -27,6 +27,7 @@ public class ControllerZawodnikDodaj {
     private DefaultListModel mundialListModel = new DefaultListModel();
     private DefaultListModel reprezentacjaListModel = new DefaultListModel();
     private DefaultListModel zawodnikListModel = new DefaultListModel();
+    private DefaultListModel mundial2ListModel = new DefaultListModel();
     ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
     ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
     MundialDAO mundialDAO = new MundialDAOImpl();
@@ -48,6 +49,8 @@ public class ControllerZawodnikDodaj {
         this.view.addMundialListMouseListener(new WybranieElementuMundialList());
         this.view.addReprezentacjaListMouseListener(new WybranieElementuReprezentacjaList());
         this.view.addDodajZawodnikaButtonListener(new DodajZawodnikaButton());
+        this.view.addCheckBoxIstniejacyZawodnikActionListener(new WybranieIstniejacyZawodnikDoNowyMundial());
+        this.view.addCheckBoxNowyZawodnikActionListener(new WybranieNowyZawodnikDoNowyMundial());
     }
 
 
@@ -70,6 +73,34 @@ public class ControllerZawodnikDodaj {
                 mundialListModel.addElement(valueLokalizacjaRok);
             }
             this.view.addListModelToMundialList(mundialListModel); // Wywołanie metody, która ustawia modelMundiale w widoku
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setMundial2DLMWithoutSomeMundial() {
+        mundial2ListModel.removeAllElements();
+
+        try {
+            if (!view.getMundialList().isSelectionEmpty()) {
+                valueMundial = view.getMundialList().getSelectedValue().toString();
+                valueMundialLokalizacja = valueMundial.substring(0, valueMundial.length() - 5);
+                valueMundialRok = Integer.parseInt(valueMundial.substring(valueMundial.length() - 4));
+                modelMundial = mundialDAO.getIdMundialByLokalizacjaRok(valueMundialLokalizacja,valueMundialRok);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            showMyMessage.errorMessage("Nie można odczytać danych mundialu", "Błąd odczytu danych");
+        }
+        try {
+            if (modelMundial.getIdMundialu() != 0){
+                List<Mundial> mundial2List = mundialDAO.getMundialWithoutSomeMundialByMundialId(modelMundial.getIdMundialu());
+                for (Mundial m: mundial2List) {
+                    String valueMundial = m.getLokalizacja() + " " + m.getRok();
+                    mundial2ListModel.addElement(valueMundial);
+                }
+                this.view.addListModelToMundial2List(mundial2ListModel); // Dodanie do listy mundial2 wszystkich mundiali procz wybranego w listMundial1
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -177,5 +208,44 @@ public class ControllerZawodnikDodaj {
             }
         }
 
+    }
+
+    private class WybranieIstniejacyZawodnikDoNowyMundial implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                if(view.getValueSelectedCheckBoxIstniejacyZawodnik() == true) {
+                    view.setCheckBoxNowyZawodnik(false);
+                    setMundial2DLMWithoutSomeMundial();
+                    view.setVisibleJScrollMundial2(true);
+                    view.setVisibleImieNazwiskoTextField(false);
+                }
+            } catch (Exception e1) {
+                e1.printStackTrace();
+                view.setCheckBoxNowyZawodnik(true);
+                view.setVisibleJScrollMundial2(false);
+                view.setVisibleImieNazwiskoTextField(true);
+                mundial2ListModel.removeAllElements();
+                view.addListModelToMundial2List(mundial2ListModel);
+            }
+        }
+    }
+
+    private class WybranieNowyZawodnikDoNowyMundial implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                if (view.getValueSelectedCheckBoxNowyZawodnik() == true){
+                    view.setCheckBoxIstniejacyZawodnik(false);
+                    view.setVisibleImieNazwiskoTextField(true);
+                    view.setVisibleJScrollMundial2(false);
+                }
+            } catch (Exception e1) {
+                e1.printStackTrace();
+                view.setCheckBoxIstniejacyZawodnik(true);
+                view.setVisibleImieNazwiskoTextField(false);
+                view.setVisibleJScrollMundial2(true);
+            }
+        }
     }
 }

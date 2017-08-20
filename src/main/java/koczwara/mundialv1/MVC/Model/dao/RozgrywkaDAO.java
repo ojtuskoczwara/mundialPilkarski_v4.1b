@@ -17,4 +17,5 @@ public interface RozgrywkaDAO {
     public Rozgrywka getIdReprezentacji2ByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception;
     public Rozgrywka getIdGrupyByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception;
     public Rozgrywka getIdRozgrywkiByIndexMeczuIdMundialu(int meczIndex, int mundialId) throws Exception;
+    public Rozgrywka getAllByMundialIdMeczIndex(int mundialId, int meczIndex) throws Exception;
 }

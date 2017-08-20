@@ -87,4 +87,19 @@ public class MundialDAOImpl implements MundialDAO{
         return id;
     }
 
+    @Override
+    public List<Mundial> getMundialWithoutSomeMundialByMundialId(int mundialId) throws Exception {
+        List<Mundial> mundiale = new ArrayList<Mundial>();
+        String sql = "SELECT lokalizacja, rok FROM t_mundiale WHERE id_mundialu NOT IN(?)";
+        ResultSet resultSet = parserSQL.parseQuery(sql, mundialId).executeQuery();
+        while (resultSet.next()){
+            Mundial mundial = new Mundial();
+            mundial.setLokalizacja(resultSet.getString("lokalizacja"));
+            mundial.setRok(resultSet.getInt("rok"));
+            mundiale.add(mundial);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return mundiale;
+    }
+
 }

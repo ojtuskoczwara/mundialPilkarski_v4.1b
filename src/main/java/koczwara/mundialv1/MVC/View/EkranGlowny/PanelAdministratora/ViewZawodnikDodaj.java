@@ -1,6 +1,7 @@
 package koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
@@ -14,14 +15,15 @@ public class ViewZawodnikDodaj extends JFrame {
     private JTextField nazwiskoTextField = new JTextField();
     private JButton dodajZawodnikaButton = new JButton("Dodaj");
     private JButton cofnijButton = new JButton("<< Cofnij <<");
-    private JList mundialList;
-    private JList reprezentacjaList;
-    private JList zawodnikList;
+    private JList mundialList, reprezentacjaList, zawodnikList, mundial2List;
+    private JScrollPane mundial2ScrollList;
+    private JCheckBox checkBoxIstniejacyZawodnik, checkBoxNowyZawodnik;
+    private JPanel panelIstniejacyZawodnik, panelNowyZawodnik;
 
 
     public ViewZawodnikDodaj() {
         super("Dodawanie reprezentacji");
-        setSize(600,500);
+        setSize(600,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
@@ -43,18 +45,37 @@ public class ViewZawodnikDodaj extends JFrame {
         zawodnikScrollList.setBounds(350,20,160,200);
         add(zawodnikScrollList);
 
-        imieLabel.setBounds(50,250,50,30);
+        imieLabel.setBounds(330,260,50,30);
         add(imieLabel);
-        imieTextField.setBounds(90,250,150,30);
+        imieTextField.setBounds(360,260,150,30);
         add(imieTextField);
-        nazwiskoLabel.setBounds(250,250,60,30);
+        nazwiskoLabel.setBounds(300,310,60,30);
         add(nazwiskoLabel);
-        nazwiskoTextField.setBounds(320,250,150,30);
+        nazwiskoTextField.setBounds(360,310,150,30);
         add(nazwiskoTextField);
-        dodajZawodnikaButton.setBounds(250,400,100,30);
+        dodajZawodnikaButton.setBounds(250,520,100,30);
         add(dodajZawodnikaButton);
-        cofnijButton.setBounds(20,400,100,30);
+        cofnijButton.setBounds(20,520,100,30);
         add(cofnijButton);
+
+        checkBoxIstniejacyZawodnik = new JCheckBox("Dodanie zawodnika istniejącego już w bazie");
+        checkBoxIstniejacyZawodnik.setBounds(10,240,20,20);
+        add(checkBoxIstniejacyZawodnik);
+        checkBoxNowyZawodnik = new JCheckBox("Dodanie nowego zawodnika");
+        checkBoxNowyZawodnik.setSelected(true);
+        checkBoxNowyZawodnik.setBounds(270,240,20,20);
+        add(checkBoxNowyZawodnik);
+
+        JLabel istniejacyZawodnikLabel = new JLabel("Dodanie zawodnika istniejącego już w bazie");
+        istniejacyZawodnikLabel.setBounds(30,240,120,30);
+        add(istniejacyZawodnikLabel);
+
+        mundial2List = new JList();
+        mundial2ScrollList = new JScrollPane(mundial2List);
+        mundial2ScrollList.setBounds(30,260,160,200);
+        add(mundial2ScrollList);
+        mundial2ScrollList.setVisible(false);
+
     }
 
     public void addDodajZawodnikaButtonListener(ActionListener listenDodajZawodnikaButton) {
@@ -85,6 +106,8 @@ public class ViewZawodnikDodaj extends JFrame {
         return zawodnikList;
     }
 
+    public JList getMundial2List() { return mundial2List; }
+
     public void addListModelToMundialList(DefaultListModel mundialListModel) {
         mundialList.setModel(mundialListModel);
     }
@@ -97,6 +120,8 @@ public class ViewZawodnikDodaj extends JFrame {
         zawodnikList.setModel(zawodnikListModel);
     }
 
+    public void addListModelToMundial2List(DefaultListModel mundial2ListModel) { mundial2List.setModel(mundial2ListModel); }
+
     public void addMundialListMouseListener(MouseAdapter listenMundialList) {
         mundialList.addMouseListener(listenMundialList);
     }
@@ -105,4 +130,25 @@ public class ViewZawodnikDodaj extends JFrame {
         reprezentacjaList.addMouseListener(listenReprezentacjaList);
     }
 
+    public void setVisibleJScrollMundial2(boolean visibleTrueFalse) { mundial2ScrollList.setVisible(visibleTrueFalse); }
+    public void setVisibleImieNazwiskoTextField(boolean visibleTrueFalse) {
+        imieTextField.setVisible(visibleTrueFalse);
+        nazwiskoTextField.setVisible(visibleTrueFalse);
+        imieLabel.setVisible(visibleTrueFalse);
+        nazwiskoLabel.setVisible(visibleTrueFalse);
+    }
+
+    public void addCheckBoxIstniejacyZawodnikActionListener(ActionListener listenChechBoxIstniejacyZawodnik) {
+        checkBoxIstniejacyZawodnik.addActionListener(listenChechBoxIstniejacyZawodnik);
+    }
+
+    public void addCheckBoxNowyZawodnikActionListener(ActionListener listenCheckBoxNowyZawodnik) {
+        checkBoxNowyZawodnik.addActionListener(listenCheckBoxNowyZawodnik);
+    }
+
+    public boolean getValueSelectedCheckBoxIstniejacyZawodnik() { return checkBoxIstniejacyZawodnik.isSelected(); }
+    public boolean getValueSelectedCheckBoxNowyZawodnik() {return checkBoxNowyZawodnik.isSelected(); }
+
+    public void setCheckBoxIstniejacyZawodnik(boolean trueFalse) { checkBoxIstniejacyZawodnik.setSelected(trueFalse); }
+    public void setCheckBoxNowyZawodnik(boolean trueFalse) { checkBoxNowyZawodnik.setSelected(trueFalse); }
 }
