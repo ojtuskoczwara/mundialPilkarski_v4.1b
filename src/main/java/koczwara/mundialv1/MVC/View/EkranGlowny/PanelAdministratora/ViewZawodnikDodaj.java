@@ -15,10 +15,9 @@ public class ViewZawodnikDodaj extends JFrame {
     private JTextField nazwiskoTextField = new JTextField();
     private JButton dodajZawodnikaButton = new JButton("Dodaj");
     private JButton cofnijButton = new JButton("<< Cofnij <<");
-    private JList mundialList, reprezentacjaList, zawodnikList, mundial2List;
-    private JScrollPane mundial2ScrollList;
+    private JList mundialList, reprezentacjaList, zawodnikList, mundial2List, zawodnik2PodgladList;
+    private JScrollPane mundial2ScrollList, zawodnik2PodgladScrollList;
     private JCheckBox checkBoxIstniejacyZawodnik, checkBoxNowyZawodnik;
-    private JPanel panelIstniejacyZawodnik, panelNowyZawodnik;
 
 
     public ViewZawodnikDodaj() {
@@ -45,36 +44,47 @@ public class ViewZawodnikDodaj extends JFrame {
         zawodnikScrollList.setBounds(350,20,160,200);
         add(zawodnikScrollList);
 
-        imieLabel.setBounds(330,260,50,30);
+        imieLabel.setBounds(380,260,50,30);
         add(imieLabel);
-        imieTextField.setBounds(360,260,150,30);
+        imieTextField.setBounds(410,260,150,30);
         add(imieTextField);
-        nazwiskoLabel.setBounds(300,310,60,30);
+        nazwiskoLabel.setBounds(350,310,60,30);
         add(nazwiskoLabel);
-        nazwiskoTextField.setBounds(360,310,150,30);
+        nazwiskoTextField.setBounds(410,310,150,30);
         add(nazwiskoTextField);
+
         dodajZawodnikaButton.setBounds(250,520,100,30);
         add(dodajZawodnikaButton);
         cofnijButton.setBounds(20,520,100,30);
         add(cofnijButton);
 
-        checkBoxIstniejacyZawodnik = new JCheckBox("Dodanie zawodnika istniejącego już w bazie");
+        checkBoxIstniejacyZawodnik = new JCheckBox();
         checkBoxIstniejacyZawodnik.setBounds(10,240,20,20);
         add(checkBoxIstniejacyZawodnik);
-        checkBoxNowyZawodnik = new JCheckBox("Dodanie nowego zawodnika");
+        checkBoxNowyZawodnik = new JCheckBox();
         checkBoxNowyZawodnik.setSelected(true);
-        checkBoxNowyZawodnik.setBounds(270,240,20,20);
+        checkBoxNowyZawodnik.setBounds(350,240,20,20);
         add(checkBoxNowyZawodnik);
 
-        JLabel istniejacyZawodnikLabel = new JLabel("Dodanie zawodnika istniejącego już w bazie");
-        istniejacyZawodnikLabel.setBounds(30,240,120,30);
+        JLabel istniejacyZawodnikLabel = new JLabel("Zawodnik z bazy danych");
+        istniejacyZawodnikLabel.setBounds(30,235,150,30);
         add(istniejacyZawodnikLabel);
+
+        JLabel nowyZawodnikLabel = new JLabel("Nowy zawodnik");
+        nowyZawodnikLabel.setBounds(370,235,150,30);
+        add(nowyZawodnikLabel);
 
         mundial2List = new JList();
         mundial2ScrollList = new JScrollPane(mundial2List);
-        mundial2ScrollList.setBounds(30,260,160,200);
+        mundial2ScrollList.setBounds(10,260,160,200);
         add(mundial2ScrollList);
         mundial2ScrollList.setVisible(false);
+
+        zawodnik2PodgladList = new JList();
+        zawodnik2PodgladScrollList = new JScrollPane(zawodnik2PodgladList);
+        zawodnik2PodgladScrollList.setBounds(180,260,160,200);
+        add(zawodnik2PodgladScrollList);
+        zawodnik2PodgladScrollList.setVisible(false);
 
     }
 
@@ -122,15 +132,23 @@ public class ViewZawodnikDodaj extends JFrame {
 
     public void addListModelToMundial2List(DefaultListModel mundial2ListModel) { mundial2List.setModel(mundial2ListModel); }
 
+    public void setListModelToZawodnik2PodgladList(DefaultListModel dlmZawodnik2) { zawodnik2PodgladList.setModel(dlmZawodnik2);}
+
     public void addMundialListMouseListener(MouseAdapter listenMundialList) {
         mundialList.addMouseListener(listenMundialList);
     }
+
+    public void addMundial2ListMouseListener(MouseAdapter listenClickMundial2List) { mundial2List.addMouseListener(listenClickMundial2List);}
 
     public void addReprezentacjaListMouseListener(MouseAdapter listenReprezentacjaList) {
         reprezentacjaList.addMouseListener(listenReprezentacjaList);
     }
 
-    public void setVisibleJScrollMundial2(boolean visibleTrueFalse) { mundial2ScrollList.setVisible(visibleTrueFalse); }
+    public void setVisibleJScrollMundial2(boolean visibleTrueFalse) {
+        mundial2ScrollList.setVisible(visibleTrueFalse);
+        zawodnik2PodgladScrollList.setVisible(visibleTrueFalse);
+    }
+
     public void setVisibleImieNazwiskoTextField(boolean visibleTrueFalse) {
         imieTextField.setVisible(visibleTrueFalse);
         nazwiskoTextField.setVisible(visibleTrueFalse);

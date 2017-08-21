@@ -18,5 +18,6 @@ public interface ZawodnikWReprezentacjaDAO {
     public void deleteRowsByIdReprezentacji(Reprezentacja reprezentacja) throws Exception;
     public List<Zawodnik> getImieNazwiskoZawodnikaByIdMundialuIdReprezentacji(int mundialId, int reprezentacjaId) throws Exception;
     public Zawodnik getZawodnikIdByMundialIdReprezentacjaIdImieNazwisko(int mundialId, int reprezentacjaId, String imie, String nazwisko) throws Exception;
-
+    public List<Zawodnik> getZawodnikImieNazwiskoByMundialIdRepId(int mundialId, int reprezentacjaId) throws Exception;
+    public int getIdZawodnikaAtMundialRepByMundialIdRepIdIndexValue(int mundialId, int repId, int indexValue) throws Exception;
 }

@@ -6,6 +6,8 @@ import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
 import koczwara.mundialv1.MVC.Model.entity.Zawodnik;
 import koczwara.mundialv1.MVC.Model.entity.ZawodnikWReprezentacja;
+import koczwara.mundialv1.MVC.Model.utils.exceptions.CheckBoxUnchecked;
+import koczwara.mundialv1.MVC.Model.utils.exceptions.MundialNotSelected;
 import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewZawodnikDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
@@ -27,6 +29,7 @@ public class ControllerZawodnikDodaj {
     private DefaultListModel mundialListModel = new DefaultListModel();
     private DefaultListModel reprezentacjaListModel = new DefaultListModel();
     private DefaultListModel zawodnikListModel = new DefaultListModel();
+    private DefaultListModel zawodnik2ListModel = new DefaultListModel();
     private DefaultListModel mundial2ListModel = new DefaultListModel();
     ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
     ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
@@ -51,6 +54,7 @@ public class ControllerZawodnikDodaj {
         this.view.addDodajZawodnikaButtonListener(new DodajZawodnikaButton());
         this.view.addCheckBoxIstniejacyZawodnikActionListener(new WybranieIstniejacyZawodnikDoNowyMundial());
         this.view.addCheckBoxNowyZawodnikActionListener(new WybranieNowyZawodnikDoNowyMundial());
+        this.view.addMundial2ListMouseListener(new WybranieElementuMundial2List() );
     }
 
 
@@ -120,6 +124,21 @@ public class ControllerZawodnikDodaj {
         }
     }
 
+    private DefaultListModel setZawodnikDLM(int mundialId, int reprezentacjaId){
+        DefaultListModel dlm = new DefaultListModel();
+        dlm.removeAllElements();
+        try {
+            List<Zawodnik> zawodnikList = zawodnikWReprezentacjaDAO.getZawodnikImieNazwiskoByMundialIdRepId(mundialId, reprezentacjaId);
+            for (Zawodnik z: zawodnikList){
+                String zaw = z.getImie() + " " + z.getNazwisko();
+                dlm.addElement(zaw);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dlm;
+    }
+
 //Wyswietlenie listy reprezentacji oraz wyczyszczenie listy zawodnikow po kliknieciu na ktorykolwiek element listy mundial
     private class WybranieElementuMundialList extends MouseAdapter {
         @Override
@@ -128,6 +147,9 @@ public class ControllerZawodnikDodaj {
             if (!view.getMundialList().isSelectionEmpty())
                 setReprezentacjaDLM();
             zawodnikListModel.removeAllElements();
+            if (view.getValueSelectedCheckBoxIstniejacyZawodnik()==true) {
+                setMundial2DLMWithoutSomeMundial();
+            }
         }
     }
 
@@ -160,51 +182,61 @@ public class ControllerZawodnikDodaj {
     private class DodajZawodnikaButton implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (view.getImieZawodnika().isEmpty() || view.getNazwiskoZawodnika().isEmpty()) {
-                showMyMessage.errorMessage("Wypełnij pola IMIĘ i NAZWISKO!", "Uzupełnij brakujące pola");
-            }
-            else {
-                //Dodanie zawodnika do tabeli Zawodnik
-                modelZawodnik.setImie(view.getImieZawodnika());
-                modelZawodnik.setNazwisko(view.getNazwiskoZawodnika());
-                try {
-                    zawodnikDAO.addZawodnik(modelZawodnik);
-                } catch (SQLException e1) {
-                    e1.printStackTrace();
-                }
-
-                //Pobranie idMundialu z tabeli t_Mundial automatycznie po dodaniu nowego uzytkownika, idMundialu == zaznaczony element z JList mundialList
+            if (view.getValueSelectedCheckBoxIstniejacyZawodnik() == true & view.getValueSelectedCheckBoxNowyZawodnik() == false & !view.getMundialList().isSelectionEmpty() & !view.getReprezentacjaList().isSelectionEmpty()
+                    & !view.getZawodnikList().isSelectionEmpty() & !view.getMundial2List().isSelectionEmpty()) {
+                int zawodnikIndeksValue = view.getZawodnikList().getSelectedIndex();
+                String mundial2SelectedValue = view.getMundial2List().getSelectedValue().toString();
+                String[] lokalizacjaRok = mundial2SelectedValue.split(" ");
+                Mundial mundial2 = new Mundial();
+                mundial2.setLokalizacja(lokalizacjaRok[0]);
+                mundial2.setRok(Integer.parseInt(lokalizacjaRok[1]));
                 try {
                     modelMundial = mundialDAO.getIdMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-
-                //Pobranie idReprezentacji z tabeli t_Reprezentacja, idReprezentacja == zaznaczony element z JList reprezentacjaList
-                try {
+                    mundial2 = mundialDAO.getIdMundialByLokalizacjaRok(mundial2.getLokalizacja(), mundial2.getRok());
                     modelReprezentacja = reprezentacjaDAO.getIdRepByNazwa(valueReprezentacjaNazwa);
+                    modelZawodnik.setIdZawodnika(zawodnikWReprezentacjaDAO.getIdZawodnikaAtMundialRepByMundialIdRepIdIndexValue(modelMundial.getIdMundialu(),modelReprezentacja.getIdReprezentacji(), zawodnikIndeksValue));
+                    zawodnikWReprezentacjaDAO.addZawodnikRepMundial(modelZawodnik.getIdZawodnika(), modelReprezentacja.getIdReprezentacji(), mundial2.getIdMundialu());
+                    // Pobranie zawodnikow z DB do JListZawodnik
+                    zawodnik2ListModel = setZawodnikDLM(mundial2.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                    view.setListModelToZawodnik2PodgladList(zawodnik2ListModel);
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-
-                //Pobranie idZawodnika z tabeli t_Zawodnik, idZawodnika == ostatni dodany zawodnik
-                try {
-                    modelZawodnik = zawodnikDAO.getLastZawodnik();
-                } catch (Exception e1) {
-                    e1.printStackTrace();
+            }
+            else {
+                if (view.getValueSelectedCheckBoxIstniejacyZawodnik() == true & (view.getMundialList().isSelectionEmpty() ||
+                        view.getReprezentacjaList().isSelectionEmpty() || view.getZawodnikList().isSelectionEmpty() || view.getMundial2List().isSelectionEmpty())) {
+                    showMyMessage.informationMessage("Wybierz mundial,reprezentacje,zawodnika oraz mundial do którego chcesz go dodać.","Nie wybrano zawodnika");
                 }
-
-                //Dodanie zawodnika,reprezentacji,mundialu do tabeli t_Zawodnik_W_Reprezentacja
-                try {
-                    zawodnikWReprezentacjaDAO.addZawodnikRepMundial(modelZawodnik.getIdZawodnika(), modelReprezentacja.getIdReprezentacji(), modelMundial.getIdMundialu());
-                } catch (Exception e1) {
-                    e1.printStackTrace();
+                else if (view.getValueSelectedCheckBoxIstniejacyZawodnik() == false & view.getValueSelectedCheckBoxNowyZawodnik() == true & !view.getMundialList().isSelectionEmpty() & !view.getReprezentacjaList().isSelectionEmpty()
+                         & !view.getImieZawodnika().isEmpty() & !view.getNazwiskoZawodnika().isEmpty()) {
+                    //Dodanie zawodnika do tabeli Zawodnik
+                    modelZawodnik.setImie(view.getImieZawodnika());
+                    modelZawodnik.setNazwisko(view.getNazwiskoZawodnika());
+                    try {
+                        //Dodanie zawodnika do tabeli Zawodnik
+                        zawodnikDAO.addZawodnik(modelZawodnik);
+                        //Pobranie idMundialu z tabeli t_Mundial automatycznie po dodaniu nowego uzytkownika, idMundialu == zaznaczony element z JList mundialList
+                        modelMundial = mundialDAO.getIdMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
+                        //Pobranie idReprezentacji z tabeli t_Reprezentacja, idReprezentacja == zaznaczony element z JList reprezentacjaList
+                        modelReprezentacja = reprezentacjaDAO.getIdRepByNazwa(valueReprezentacjaNazwa);
+                        //Pobranie idZawodnika z tabeli t_Zawodnik, idZawodnika == ostatni dodany zawodnik
+                        modelZawodnik = zawodnikDAO.getLastZawodnik();
+                        //Dodanie zawodnika,reprezentacji,mundialu do tabeli t_Zawodnik_W_Reprezentacja
+                        zawodnikWReprezentacjaDAO.addZawodnikRepMundial(modelZawodnik.getIdZawodnika(), modelReprezentacja.getIdReprezentacji(), modelMundial.getIdMundialu());
+                        // Pobranie zawodnikow z DB do JListZawodnik
+                        zawodnikListModel = setZawodnikDLM(modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                        view.addListModelToZawodnikList(zawodnikListModel);
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    } catch (Exception e2) {
+                        e2.printStackTrace();
+                    }
                 }
-
-                //Dodanie zawodnika do JList zawodnikListModel ale bez uzycia metody pobierajacej z DB danych
-                //Po wybraniu innej reprezentacji lista wczyta juz z DB dane zawodnikow
-                String zawodnikDodajDoJListBezBazyDanych = modelZawodnik.getImie() +" "+ modelZawodnik.getNazwisko();
-                zawodnikListModel.addElement(zawodnikDodajDoJListBezBazyDanych);
+                else if (view.getValueSelectedCheckBoxNowyZawodnik() == true & (view.getMundialList().isSelectionEmpty() ||
+                        view.getReprezentacjaList().isSelectionEmpty() || view.getZawodnikList().isSelectionEmpty() || view.getMundial2List().isSelectionEmpty() || view.getImieZawodnika().isEmpty() || view.getNazwiskoZawodnika().isEmpty())) {
+                    showMyMessage.informationMessage("Wybierz mundial,reprezentacje oraz wypełnij pola IMIE i NAZWISKO.","Nie wybrano zawodnika");
+                }
             }
         }
 
@@ -214,19 +246,27 @@ public class ControllerZawodnikDodaj {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                if(view.getValueSelectedCheckBoxIstniejacyZawodnik() == true) {
+                if (view.getValueSelectedCheckBoxIstniejacyZawodnik() == true) {
                     view.setCheckBoxNowyZawodnik(false);
-                    setMundial2DLMWithoutSomeMundial();
                     view.setVisibleJScrollMundial2(true);
                     view.setVisibleImieNazwiskoTextField(false);
+                    try {
+                        if (!view.getMundialList().isSelectionEmpty()) {
+                            setMundial2DLMWithoutSomeMundial();
+                        } else
+                            throw new MundialNotSelected("Nie wybrano mundialu z listy powyżej");
+                    } catch (MundialNotSelected mns) {
+                        showMyMessage.warningMessage("Wybierz mundial z listy powyżej!", "Nie wybrano mundialu");
+                    }
+                }else {
+                    throw new CheckBoxUnchecked("Istniejacy zawodnik unchecked");
                 }
-            } catch (Exception e1) {
-                e1.printStackTrace();
+            } catch (CheckBoxUnchecked ec) {
                 view.setCheckBoxNowyZawodnik(true);
                 view.setVisibleJScrollMundial2(false);
                 view.setVisibleImieNazwiskoTextField(true);
-                mundial2ListModel.removeAllElements();
-                view.addListModelToMundial2List(mundial2ListModel);
+                mundial2ListModel.removeAllElements(); //usuniecie pozostaosci po wczesniejszym select na liscie mundial2
+                view.addListModelToMundial2List(mundial2ListModel); //wyswietlenie powyzszego modelu
             }
         }
     }
@@ -239,13 +279,40 @@ public class ControllerZawodnikDodaj {
                     view.setCheckBoxIstniejacyZawodnik(false);
                     view.setVisibleImieNazwiskoTextField(true);
                     view.setVisibleJScrollMundial2(false);
-                }
-            } catch (Exception e1) {
-                e1.printStackTrace();
+                } else
+                    throw new CheckBoxUnchecked("Nowy zawodnik unchecked");
+            } catch (CheckBoxUnchecked ec) {
                 view.setCheckBoxIstniejacyZawodnik(true);
                 view.setVisibleImieNazwiskoTextField(false);
                 view.setVisibleJScrollMundial2(true);
             }
+        }
+    }
+
+    private class WybranieElementuMundial2List extends MouseAdapter {
+        @Override
+        public void mousePressed(MouseEvent e) {
+            super.mousePressed(e);
+            if (view.getValueSelectedCheckBoxIstniejacyZawodnik() == true &  !view.getMundialList().isSelectionEmpty() & !view.getReprezentacjaList().isSelectionEmpty()
+                     & !view.getMundial2List().isSelectionEmpty()) {
+                int zawodnikIndeksValue = view.getZawodnikList().getSelectedIndex();
+                String mundial2SelectedValue = view.getMundial2List().getSelectedValue().toString();
+                String[] lokalizacjaRok = mundial2SelectedValue.split(" ");
+                Mundial mundial2 = new Mundial();
+                mundial2.setLokalizacja(lokalizacjaRok[0]);
+                mundial2.setRok(Integer.parseInt(lokalizacjaRok[1]));
+                try {
+                    mundial2 = mundialDAO.getIdMundialByLokalizacjaRok(mundial2.getLokalizacja(), mundial2.getRok());
+                    modelReprezentacja = reprezentacjaDAO.getIdRepByNazwa(valueReprezentacjaNazwa);
+                    // Pobranie zawodnikow z DB do JListZawodnik
+                    zawodnik2ListModel = setZawodnikDLM(mundial2.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
+                    view.setListModelToZawodnik2PodgladList(zawodnik2ListModel);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+            }
+            else
+                showMyMessage.informationMessage("Wybierz mundial,reprezentacje,zawodnika aby wyświetlić zawodników w nowym mundialu.","Nie wybrano mundialu,reprezentacji i zawodnika");
         }
     }
 }

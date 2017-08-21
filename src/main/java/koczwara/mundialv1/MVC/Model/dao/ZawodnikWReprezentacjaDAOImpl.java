@@ -126,4 +126,33 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
         ConnectionDB.disconnect(resultSet);
         return z;
     }
+
+    @Override
+    public List<Zawodnik> getZawodnikImieNazwiskoByMundialIdRepId(int mundialId, int reprezentacjaId) throws Exception {
+        List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
+        String sql = "SELECT z.imie, z.nazwisko FROM t_zawodnicy z INNER JOIN t_zawodnicy_w_reprezentacji zwr USING(id_zawodnika) " +
+                "WHERE id_mundialu = ? AND id_reprezentacji = ?";
+        ResultSet resultSet = parserSQL.parseQuery(sql, mundialId, reprezentacjaId).executeQuery();
+        while (resultSet.next()) {
+            Zawodnik zawodnik = new Zawodnik();
+            zawodnik.setImie(resultSet.getString("imie"));
+            zawodnik.setNazwisko(resultSet.getString("nazwisko"));
+            zawodnikList.add(zawodnik);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return zawodnikList;
+    }
+
+    @Override
+    public int getIdZawodnikaAtMundialRepByMundialIdRepIdIndexValue(int mundialId, int repId, int indexValue) throws Exception {
+        String sql = "SELECT z.id_zawodnika FROM t_zawodnicy z INNER JOIN t_zawodnicy_w_reprezentacji USING(id_zawodnika) " +
+                "WHERE id_reprezentacji = ? AND id_mundialu = ? ORDER BY id_zawodnika LIMIT 1 OFFSET ?";
+        ResultSet resultSet = parserSQL.parseQuery(sql, repId, mundialId, indexValue).executeQuery();
+        int idZawodnika = 0;
+        while (resultSet.next()) {
+            idZawodnika = resultSet.getInt("id_zawodnika");
+        }
+        ConnectionDB.disconnect(resultSet);
+        return idZawodnika;
+    }
 }
