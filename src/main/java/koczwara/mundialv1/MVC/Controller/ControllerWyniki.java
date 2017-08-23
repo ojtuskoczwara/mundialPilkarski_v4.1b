@@ -2,6 +2,7 @@ package koczwara.mundialv1.MVC.Controller;
 
 import koczwara.mundialv1.MVC.Model.dao.*;
 import koczwara.mundialv1.MVC.Model.entity.*;
+import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewWyniki;
 import koczwara.mundialv1.MVC.View.ViewEkranGlowny;
 
@@ -34,6 +35,7 @@ public class ControllerWyniki {
     private SkladReprezentacjaDAO skladReprezentacjaDAO = new SkladReprezentacjaDAOImpl();
     private String valueMundialLokalizacja;
     private int valueMundialRok;
+    ShowMyMessage showMyMessage = new ShowMyMessage();
 
 
     public ControllerWyniki( ViewWyniki view, Mundial modelMundial, Rozgrywka modelRozgrywka, TypGrupy modelTypGrupy, Grupa modelGrupa,
@@ -201,6 +203,7 @@ public class ControllerWyniki {
                 view.setNazwaRep2(modelReprezentacja.getNazwa());
             } catch (Exception e1) {
                 e1.printStackTrace();
+
             }
         }
     }

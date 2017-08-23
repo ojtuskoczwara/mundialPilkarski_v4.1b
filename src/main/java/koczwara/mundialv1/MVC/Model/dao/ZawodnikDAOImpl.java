@@ -103,7 +103,7 @@ public class ZawodnikDAOImpl implements ZawodnikDAO {
 
     @Override
     public List<Zawodnik> getZawodnicyImieNazwiskoSklad1ByMeczIdRep1Id(int meczId) throws Exception {
-        String sql = "SELECT imie,nazwisko FROM v_wyniki_i_sklady_rep_1_view2 WHERE id_meczu=?";
+        String sql = "SELECT imie,nazwisko FROM v_sklady_rep_1_view5 WHERE id_meczu=?";
         List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
         ResultSet resultSet = parserSQL.parseQuery(sql,meczId).executeQuery();
         while (resultSet.next()) {
@@ -118,7 +118,7 @@ public class ZawodnikDAOImpl implements ZawodnikDAO {
 
     @Override
     public List<Zawodnik> getZawodnicyImieNazwiskoSklad2ByMeczIdRep1Id(int meczId) throws Exception {
-        String sql = "SELECT imie,nazwisko FROM v_wyniki_i_sklady_rep_2_view3 WHERE id_meczu=?";
+        String sql = "SELECT imie,nazwisko FROM v_sklady_rep_2_view5 WHERE id_meczu=?";
         List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
         ResultSet resultSet = parserSQL.parseQuery(sql,meczId).executeQuery();
         while (resultSet.next()) {

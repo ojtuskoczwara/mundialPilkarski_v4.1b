@@ -7,6 +7,8 @@ import koczwara.mundialv1.MVC.Model.utils.ParserSQL;
 
 import java.sql.Date;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MeczDAOImpl implements MeczDAO{
@@ -40,6 +42,27 @@ public class MeczDAOImpl implements MeczDAO{
         }
         ConnectionDB.disconnect(resultSet);
         return mecz;
+    }
+
+    @Override
+    public List<Mecz> getAllByMundialId(int mundialId) throws Exception {
+        List<Mecz> meczList = new ArrayList<Mecz>();
+        String sql = "SELECT * FROM t_mecz WHERE id_mundialu= ? ORDER BY id_mundialu,id_grupy,id_meczu";
+        ResultSet resultSet = parserSQL.parseQuery(sql, mundialId).executeQuery();
+        while (resultSet.next()) {
+            Mecz mecz = new Mecz();
+            mecz.setIdMeczu(resultSet.getInt("id_meczu"));
+            mecz.setDataMeczu(resultSet.getDate("data_meczu"));
+            mecz.setIdReprezentacji1(resultSet.getInt("id_reprezentacji_1"));
+            mecz.setIdReprezentacji2(resultSet.getInt("id_reprezentacji_2"));
+            mecz.setIdGrupy(resultSet.getInt("id_grupy"));
+            mecz.setIdMundialu(resultSet.getInt("id_mundialu"));
+            mecz.setGoleRep1(resultSet.getInt("gole_r1"));
+            mecz.setGoleRep2(resultSet.getInt("gole_r2"));
+            meczList.add(mecz);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return meczList;
     }
 
 }
