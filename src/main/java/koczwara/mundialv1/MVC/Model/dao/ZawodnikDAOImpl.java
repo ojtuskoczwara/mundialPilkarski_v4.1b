@@ -100,4 +100,34 @@ public class ZawodnikDAOImpl implements ZawodnikDAO {
         String sql = "UPDATE t_zawodnicy SET imie=?, nazwisko=? WHERE id_zawodnika=?";
         parserSQL.parseQuery(sql, imie, nazwisko, zawodnik.getIdZawodnika()).executeUpdate();
     }
+
+    @Override
+    public List<Zawodnik> getZawodnicyImieNazwiskoSklad1ByMeczIdRep1Id(int meczId) throws Exception {
+        String sql = "SELECT imie,nazwisko FROM v_wyniki_i_sklady_rep_1_view2 WHERE id_meczu=?";
+        List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
+        ResultSet resultSet = parserSQL.parseQuery(sql,meczId).executeQuery();
+        while (resultSet.next()) {
+            Zawodnik zawodnik = new Zawodnik();
+            zawodnik.setImie(resultSet.getString("imie"));
+            zawodnik.setNazwisko(resultSet.getString("nazwisko"));
+            zawodnikList.add(zawodnik);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return zawodnikList;
+    }
+
+    @Override
+    public List<Zawodnik> getZawodnicyImieNazwiskoSklad2ByMeczIdRep1Id(int meczId) throws Exception {
+        String sql = "SELECT imie,nazwisko FROM v_wyniki_i_sklady_rep_2_view3 WHERE id_meczu=?";
+        List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
+        ResultSet resultSet = parserSQL.parseQuery(sql,meczId).executeQuery();
+        while (resultSet.next()) {
+            Zawodnik zawodnik = new Zawodnik();
+            zawodnik.setImie(resultSet.getString("imie"));
+            zawodnik.setNazwisko(resultSet.getString("nazwisko"));
+            zawodnikList.add(zawodnik);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return zawodnikList;
+    }
 }

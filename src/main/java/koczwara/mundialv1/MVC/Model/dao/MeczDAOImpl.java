@@ -41,4 +41,5 @@ public class MeczDAOImpl implements MeczDAO{
         ConnectionDB.disconnect(resultSet);
         return mecz;
     }
+
 }

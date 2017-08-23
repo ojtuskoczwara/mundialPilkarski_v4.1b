@@ -130,9 +130,6 @@ public class ControllerGrupaMecz {
                 valueRep1 = modelReprezentacja.getNazwa();
                 modelReprezentacja = reprezentacjaDAO.getNazwaReprezentacjaByIdReprezentacja(r.getIdReprezentacji2());
                 valueRep2 = modelReprezentacja.getNazwa();
-//                String valueDaneRozgrywki = r.getIdRozgrywki() +"/ "+ r.getIdGrupy() +"/ "+ r.getIdGrupy1() +"/ "+ r.getIdReprezentacji1()
-//                        +"/ "+ r.getIdGrupy2() +"/ "+ r.getIdReprezentacji2() +"/ "+ r.getIdMundialu() +"/ "+ r.getIdTypuGrupy();
-//                String valueDaneRozgrywki = modelTypGrupy.getNazwaTypu() +"/ "+ modelGrupa.getNazwaGrupy() +"/ "+ valueRep1 +" - "+ valueRep2;
                 String valueDaneRozgrywki = valueRep1 +" - "+ valueRep2 +" (grupa: "+ modelGrupa.getNazwaGrupy() +") ["+ modelTypGrupy.getNazwaTypu() +"]";
                 meczListModel.addElement(valueDaneRozgrywki);
             }
@@ -295,8 +292,6 @@ public class ControllerGrupaMecz {
                 modelMecz.setIdReprezentacji2(modelRozgrywka.getIdReprezentacji2());
                 modelMecz.setIdGrupy(modelRozgrywka.getIdGrupy());
                 modelMecz.setIdMeczu(modelRozgrywka.getIdRozgrywki());
-
-
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
@@ -391,14 +386,17 @@ public class ControllerGrupaMecz {
                                                 for (int i=0; i<16; i++) {
                                                     try {
                                                         skladReprezentacjaDAO.addSkladReprezentacja1(modelMecz.getIdReprezentacji1(), modelMecz.getIdReprezentacji2(), modelMecz.getIdGrupy(), modelMecz.getIdMundialu(), zawodnicyRep1Id[i], modelMecz.getIdMeczu());
+                                                        skladReprezentacjaDAO.addSkladReprezentacja2(modelMecz.getIdReprezentacji1(), modelMecz.getIdReprezentacji2(), modelMecz.getIdGrupy(), modelMecz.getIdMundialu(), zawodnicyRep2Id[i], modelMecz.getIdMeczu());
                                                     } catch (Exception e1) {
                                                         e1.printStackTrace();
                                                     }
+                                                    /*
                                                     try {
                                                         skladReprezentacjaDAO.addSkladReprezentacja2(modelMecz.getIdReprezentacji1(), modelMecz.getIdReprezentacji2(), modelMecz.getIdGrupy(), modelMecz.getIdMundialu(), zawodnicyRep2Id[i], modelMecz.getIdMeczu());
                                                     } catch (Exception e1) {
                                                         e1.printStackTrace();
                                                     }
+                                                    */
                                                 }
                                             } else {
                                                 showMyMessage.errorMessage("Jeden lub więcej zawodników powtarza się w składzie reprezentacji "+view.getNazwaReprezentacji2FromLabel()+". Zawodnicy nie mogą się powtarzać!", "SKŁAD "+view.getNazwaReprezentacji2FromLabel()+": błąd podczas wyboru zawodnika");

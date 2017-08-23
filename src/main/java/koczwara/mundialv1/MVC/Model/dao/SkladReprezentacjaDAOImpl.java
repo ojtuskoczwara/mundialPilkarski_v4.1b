@@ -2,8 +2,11 @@ package koczwara.mundialv1.MVC.Model.dao;
 
 import koczwara.mundialv1.MVC.Model.entity.Rozgrywka;
 import koczwara.mundialv1.MVC.Model.entity.SkladReprezentacja1;
+import koczwara.mundialv1.MVC.Model.entity.SkladReprezentacja2;
 import koczwara.mundialv1.MVC.Model.entity.Zawodnik;
 import koczwara.mundialv1.MVC.Model.utils.ParserSQL;
+
+import java.util.List;
 
 public class SkladReprezentacjaDAOImpl implements SkladReprezentacjaDAO{
     private ParserSQL parserSQL = new ParserSQL();
@@ -29,4 +32,5 @@ public class SkladReprezentacjaDAOImpl implements SkladReprezentacjaDAO{
         String sql = "INSERT INTO t_sklady_rep_2 VALUES(?, ?, ?, ?, ?, ?)";
         parserSQL.parseQuery(sql,rep1Id, rep2Id, grupaId, mundialId, zawodnikId, meczId).executeUpdate();
     }
+
 }
