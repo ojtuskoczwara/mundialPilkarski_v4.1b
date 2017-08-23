@@ -154,4 +154,5 @@ public class ZawodnikWReprezentacjaDAOImpl implements ZawodnikWReprezentacjaDAO 
         ConnectionDB.disconnect(resultSet);
         return idZawodnika;
     }
+
 }

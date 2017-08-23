@@ -14,4 +14,5 @@ public interface MeczDAO {
     public Mecz getDataGoleR1GoleR2ByIdMeczu(int meczId) throws Exception;
     public List<Mecz> getAllByMundialId(int mundialId) throws Exception;
 
+
 }

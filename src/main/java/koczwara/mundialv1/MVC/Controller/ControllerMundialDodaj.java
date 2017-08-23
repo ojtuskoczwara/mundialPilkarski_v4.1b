@@ -3,6 +3,7 @@ package koczwara.mundialv1.MVC.Controller;
 import koczwara.mundialv1.MVC.Model.dao.MundialDAO;
 import koczwara.mundialv1.MVC.Model.dao.MundialDAOImpl;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
+import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMundialDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
 
@@ -15,7 +16,8 @@ public class ControllerMundialDodaj {
     private ViewMundialDodaj view;
     private Mundial model;
     private DefaultListModel dlm = new DefaultListModel();
-    MundialDAO mundialDAO = new MundialDAOImpl();
+    private MundialDAO mundialDAO = new MundialDAOImpl();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
 
     public ControllerMundialDodaj(ViewMundialDodaj view, Mundial model) {
         this.view = view;
@@ -34,9 +36,7 @@ public class ControllerMundialDodaj {
                 model.setRok(Integer.parseInt(view.getRokMundialu()));
                 mundialDAO.addMundial(model);
                 setDLM(); // odświeżenie listy mundiali w Jlist
-                String info = null;
-                info = "Dodawanie mundialu zakończone powodzeniem.";
-                view.setInfoJLabel(info);
+                showMyMessage.informationMessage("Dodanie mundialu zakończone pomyślnie", "Success");
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
@@ -52,7 +52,7 @@ public class ControllerMundialDodaj {
         }
     }
 
-    public void setDLM() {
+    private void setDLM() {
         // Wstrzyknięcie danych do modeluMundialu który później jest argumentem JListMundiale
         dlm.removeAllElements();
         try {

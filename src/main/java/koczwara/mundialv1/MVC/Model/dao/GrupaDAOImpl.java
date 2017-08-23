@@ -84,5 +84,17 @@ public class GrupaDAOImpl implements GrupaDAO{
         return grupaId;
     }
 
+    @Override
+    public int getIdTypuGrByGrupaId(int grupaId) throws Exception {
+        String sql = "SELECT id_typu_grupy FROM t_grupy WHERE id_grupy= ?";
+        int idTypuGrupy = 0;
+        ResultSet resultSet = parserSQL.parseQuery(sql,grupaId).executeQuery();
+        while (resultSet.next()) {
+            idTypuGrupy = resultSet.getInt("id_typu_grupy");
+        }
+        ConnectionDB.disconnect(resultSet);
+        return idTypuGrupy;
+    }
+
 
 }

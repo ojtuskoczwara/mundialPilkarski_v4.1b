@@ -6,6 +6,7 @@ import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMecz;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewWyniki;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewWynikiDrabinka;
+import koczwara.mundialv1.MVC.View.EkranGlowny.ViewZawodnicy;
 import koczwara.mundialv1.MVC.View.ViewEkranGlowny;
 
 import java.awt.event.ActionEvent;
@@ -19,6 +20,7 @@ public class ControllerEkranGlowny {
         this.view.addPanelAdministratoraButtonListener(new PanelAdministratoraListener());
         //this.view.addWynikiButtonListener(new WynikiDrabinkaListener());
         this.view.addWynikiButtonListener(new WynikiListener());
+        this.view.addZawodnicyButtonListener(new ZawodnicyListener());
     }
 
     private class PanelAdministratoraListener implements ActionListener {
@@ -41,6 +43,14 @@ public class ControllerEkranGlowny {
         @Override
         public void actionPerformed(ActionEvent e) {
             new ControllerWyniki(new ViewWyniki(), new Mundial(), new Rozgrywka(), new TypGrupy(), new Grupa(), new Reprezentacja(), new Mecz(), new Zawodnik());
+            view.setVisible(false);
+        }
+    }
+
+    private class ZawodnicyListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerZawodnicy(new ViewZawodnicy(), new Mundial(), new Reprezentacja());
             view.setVisible(false);
         }
     }

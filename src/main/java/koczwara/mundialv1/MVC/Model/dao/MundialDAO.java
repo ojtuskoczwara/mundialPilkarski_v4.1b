@@ -22,4 +22,6 @@ public interface MundialDAO {
     public int getMundialByLokalRok(String lokalizacja, int rok) throws Exception;
 
     public List<Mundial> getMundialWithoutSomeMundialByMundialId(int mundialId) throws Exception;
+
+    public List<Mundial> getAllMundials() throws Exception;
 }

@@ -80,9 +80,11 @@ public class MundialDAOImpl implements MundialDAO{
     @Override
     public int getMundialByLokalRok(String lokalizacja, int rok) throws Exception {
         String sql = "SELECT id_mundialu FROM t_mundiale WHERE lokalizacja = ? AND rok = ?";
-        PreparedStatement ps = parserSQL.parseQuery(sql,lokalizacja, rok);
-        ResultSet rs = ps.executeQuery();
-        int id = rs.getInt("id_mundialu");
+        ResultSet rs = parserSQL.parseQuery(sql,lokalizacja, rok).executeQuery();
+        int id = 0;
+        while (rs.next()){
+            id = rs.getInt("id_mundialu");
+        }
         ConnectionDB.disconnect(rs);
         return id;
     }
@@ -100,6 +102,21 @@ public class MundialDAOImpl implements MundialDAO{
         }
         ConnectionDB.disconnect(resultSet);
         return mundiale;
+    }
+
+    @Override
+    public List<Mundial> getAllMundials() throws Exception {
+        List<Mundial> mundialList = new ArrayList<Mundial>();
+        String sql = "SELECT lokalizacja,rok FROM v_mundiale_view1 ";
+        ResultSet resultSet = parserSQL.parseQuery(sql).executeQuery();
+        while (resultSet.next()) {
+            Mundial mundial = new Mundial();
+            mundial.setLokalizacja(resultSet.getString("lokalizacja"));
+            mundial.setRok(resultSet.getInt("rok"));
+            mundialList.add(mundial);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return mundialList;
     }
 
 }

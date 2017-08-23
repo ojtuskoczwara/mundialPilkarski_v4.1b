@@ -130,4 +130,49 @@ public class ZawodnikDAOImpl implements ZawodnikDAO {
         ConnectionDB.disconnect(resultSet);
         return zawodnikList;
     }
+
+    @Override
+    public List<Zawodnik> getAllZawodnicyImieNazwisko() throws Exception {
+        String sql = "SELECT DISTINCT(id_zawodnika), imie, nazwisko FROM v_zawodnicy_view1 ORDER BY id_zawodnika";
+        List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
+        ResultSet resultSet = parserSQL.parseQuery(sql).executeQuery();
+        while (resultSet.next()){
+            Zawodnik zawodnik = new Zawodnik();
+            zawodnik.setImie(resultSet.getString("imie"));
+            zawodnik.setNazwisko(resultSet.getString("nazwisko"));
+            zawodnikList.add(zawodnik);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return zawodnikList;
+    }
+
+    @Override
+    public List<Zawodnik> getZawodnicyImieNazwiskoInMundial(int mundialId) throws Exception {
+        String sql = "SELECT imie, nazwisko FROM v_zawodnicy_view1 WHERE id_mundialu = ? ORDER BY id_zawodnika;";
+        List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
+        ResultSet resultSet = parserSQL.parseQuery(sql, mundialId).executeQuery();
+        while (resultSet.next()){
+            Zawodnik zawodnik = new Zawodnik();
+            zawodnik.setImie(resultSet.getString("imie"));
+            zawodnik.setNazwisko(resultSet.getString("nazwisko"));
+            zawodnikList.add(zawodnik);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return zawodnikList;
+    }
+
+    @Override
+    public List<Zawodnik> getZawodnicyImieNazwiskoInMundialInRep(int mundialId, int reprezentacjaId) throws Exception {
+        String sql = "SELECT imie, nazwisko FROM v_zawodnicy_view1 WHERE id_mundialu= ? AND id_reprezentacji= ? ORDER BY id_zawodnika;";
+        List<Zawodnik> zawodnikList = new ArrayList<Zawodnik>();
+        ResultSet resultSet = parserSQL.parseQuery(sql,mundialId,reprezentacjaId).executeQuery();
+        while (resultSet.next()){
+            Zawodnik zawodnik = new Zawodnik();
+            zawodnik.setImie(resultSet.getString("imie"));
+            zawodnik.setNazwisko(resultSet.getString("nazwisko"));
+            zawodnikList.add(zawodnik);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return zawodnikList;
+    }
 }

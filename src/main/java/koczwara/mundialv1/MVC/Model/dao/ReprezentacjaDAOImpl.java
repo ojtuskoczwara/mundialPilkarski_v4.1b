@@ -92,4 +92,30 @@ public class ReprezentacjaDAOImpl implements ReprezentacjaDAO {
         ConnectionDB.disconnect(resultSet);
         return reprezentacjaId;
     }
+
+    @Override
+    public List<Reprezentacja> getAllReprezentacjaInMundial(int mundialId) throws Exception {
+        String sql = "SELECT nazwa_reprezentacji FROM v_reprezentacje_view1 WHERE id_mundialu= ?";
+        List<Reprezentacja> reprezentacjaList = new ArrayList<Reprezentacja>();
+        ResultSet resultSet = parserSQL.parseQuery(sql,mundialId).executeQuery();
+        while (resultSet.next()){
+            Reprezentacja reprezentacja = new Reprezentacja();
+            reprezentacja.setNazwa(resultSet.getString("nazwa_reprezentacji"));
+            reprezentacjaList.add(reprezentacja);
+        }
+        ConnectionDB.disconnect(resultSet);
+        return reprezentacjaList;
+    }
+
+    @Override
+    public int getReprezentacjaId(String reprezentacjaNazwa) throws Exception {
+        String sql = "SELECT DISTINCT id_reprezentacji FROM v_reprezentacje_view1 WHERE nazwa_reprezentacji = ?";
+        ResultSet resultSet = parserSQL.parseQuery(sql, reprezentacjaNazwa).executeQuery();
+        int id = 0;
+        while (resultSet.next()) {
+            id= resultSet.getInt("id_reprezentacji");
+        }
+        ConnectionDB.disconnect(resultSet);
+        return id;
+    }
 }

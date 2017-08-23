@@ -18,4 +18,7 @@ public interface ZawodnikDAO {
     public void updateZawodnikById(String imie, String nazwisko, Zawodnik zawodnik) throws Exception;
     public List<Zawodnik> getZawodnicyImieNazwiskoSklad1ByMeczIdRep1Id(int meczId) throws Exception;
     public List<Zawodnik> getZawodnicyImieNazwiskoSklad2ByMeczIdRep1Id(int meczId) throws Exception;
+    public List<Zawodnik> getAllZawodnicyImieNazwisko() throws Exception;
+    public List<Zawodnik> getZawodnicyImieNazwiskoInMundial(int mundialId) throws Exception;
+    public List<Zawodnik> getZawodnicyImieNazwiskoInMundialInRep(int mundialId, int reprezentacjaId) throws Exception;
 }
