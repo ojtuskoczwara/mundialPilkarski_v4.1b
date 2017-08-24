@@ -27,11 +27,11 @@ public class ControllerZawodnikUsun {
     private DefaultListModel mundialListModel = new DefaultListModel();
     private DefaultListModel reprezentacjaListModel = new DefaultListModel();
     private DefaultListModel zawodnikListModel = new DefaultListModel();
-    ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
-    MundialDAO mundialDAO = new MundialDAOImpl();
-    ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
-    ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
-    ShowMyMessage showMyMessage = new ShowMyMessage();
+    private ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
+    private MundialDAO mundialDAO = new MundialDAOImpl();
+    private ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
+    private ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
     private String valueMundial, valueMundialLokalizacja, valueReprezentacjaNazwa, valueZawodnikImieNazwisko;
     private int valueMundialRok;
 
@@ -126,9 +126,8 @@ public class ControllerZawodnikUsun {
             super.mousePressed(e);
             if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
                 //Zaznaczony element String dzielimy na imie i nazwisko Separatorem jest spacja, +setter imie nazwisko
-                valueZawodnikImieNazwisko = view.getZawodnikList().getSelectedValue().toString();
-                String[] splited = null;
-                splited = valueZawodnikImieNazwisko.split("\\s");
+     //valueZawodnikImieNazwisko = view.getZawodnikList().getSelectedValue().toString();
+                String[] splited = view.getZawodnikList().getSelectedValue().toString().split("\\s");
                 modelZawodnik.setImie(splited[0]);
                 modelZawodnik.setNazwisko(splited[1]);
             }
@@ -148,35 +147,30 @@ public class ControllerZawodnikUsun {
     private class UsunZawodnika implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
-            try { //Pobranie idMundialu i zapisanie w modelMundial
-                modelMundial = mundialDAO.getIdMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
-            modelMundial.setLokalizacja(valueMundialLokalizacja); //Ustawienie lokalizacji poprzez setter
-            modelMundial.setRok(valueMundialRok); //Ustawienie roku poprzez setter
-            try { //Pobranie idReprezentacji i zapisanie w modelReprezentacja
-                modelReprezentacja = reprezentacjaDAO.getIdRepByNazwa(valueReprezentacjaNazwa);
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
-            modelReprezentacja.setNazwa(valueReprezentacjaNazwa); //Ustawienie nazwyReprezentacji poprzez setter
-            try { //Pobranie idZawodnika poprzez munLokalizacja i rok repNazwaRep oraz zawImie i nazwisko
-                modelZawodnik = zawodnikWReprezentacjaDAO.getZawodnikIdByLokalizacjaRokNazwaImieNazwisko(modelMundial, modelReprezentacja, modelZawodnik);
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
-
             if (!view.getMundialList().isSelectionEmpty() & !view.getReprezentacjaList().isSelectionEmpty() & !view.getZawodnikList().isSelectionEmpty()) {
+                //Pobranie idMundialu i zapisanie w modelMundial
+                String imie = null, nazwisko= null;
+                try {
+                    modelMundial = mundialDAO.getIdMundialByLokalizacjaRok(valueMundialLokalizacja, valueMundialRok);
+                    modelMundial.setLokalizacja(valueMundialLokalizacja); //Ustawienie lokalizacji poprzez setter
+                    modelMundial.setRok(valueMundialRok); //Ustawienie roku poprzez setter
+                    //Pobranie idReprezentacji i zapisanie w modelReprezentacja
+                    modelReprezentacja = reprezentacjaDAO.getIdRepByNazwa(valueReprezentacjaNazwa);
+                    modelReprezentacja.setNazwa(valueReprezentacjaNazwa); //Ustawienie nazwyReprezentacji poprzez setter
+                    //Pobranie idZawodnika poprzez munLokalizacja i rok repNazwaRep oraz zawImie i nazwisko
+                    imie = modelZawodnik.getImie();
+                    nazwisko = modelZawodnik.getNazwisko();
+                    modelZawodnik = zawodnikWReprezentacjaDAO.getZawodnikIdByLokalizacjaRokNazwaImieNazwisko(modelMundial, modelReprezentacja, modelZawodnik);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
                 int idZawodnika = modelZawodnik.getIdZawodnika();
                 try {
                     zawodnikWReprezentacjaDAO.deleteRowsByMundialIdReprezentacjaIdZawodnikId(modelMundial, modelReprezentacja, modelZawodnik); //Usunięcie wierszy z ZWR poprzez idMun idRep idZaw
                     zawodnikDAO.deleteZawodnik(idZawodnika); //Usunięcie zawodnika z t_Zawodnik
                     setZawodnikDLM();
-                } /*catch (MySQLIntegrityConstraintViolationException e1) {
-                    showMyMessage.warningMessage("Nie można usunąć zawodnika, ponieważ posiada klucz obcy w tabeli Zawodnik_W_Reprezentacja.","Błąd podczas operacji usuwania zawodnika");
-                } */catch (SQLException e1) {
+                    showMyMessage.informationMessage("Zawodnik: '" +imie+" "+nazwisko+"' został usunięty.","Success");
+                } catch (SQLException e1) {
                     e1.printStackTrace();
                 } catch (Exception e1) {
                     e1.printStackTrace();

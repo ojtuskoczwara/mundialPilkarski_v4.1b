@@ -10,8 +10,8 @@ public class ViewMundialDodaj extends JFrame {
     private JTextField nazwaMundialuTextField = new JTextField();
     private JLabel rokMundialuLabel = new JLabel("Rok");
     private JTextField rokMundialuTextField = new JTextField();
-    private JButton dodajMundialButton = new JButton("Add >>");
-    private JButton cofnijButton = new JButton("<<< Cofnij");
+    private JButton dodajMundialButton = new JButton("Add >>"), buttonDalejReprezentacja;
+    private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JList mundialeList ;
 
     public ViewMundialDodaj() {
@@ -38,8 +38,12 @@ public class ViewMundialDodaj extends JFrame {
         mundialeScrollList.setBounds(350,20,160,200);
         add(mundialeScrollList);
 
-        cofnijButton.setBounds(30,400,100,50);
+        cofnijButton.setBounds(30,400,100,30);
         add(cofnijButton);
+
+            buttonDalejReprezentacja = new JButton(">> Dalej >>");
+        buttonDalejReprezentacja.setBounds(410,400,100,30);
+        add(buttonDalejReprezentacja);
     }
 
     public String getNazwaMundialu() { return nazwaMundialuTextField.getText(); }
@@ -56,5 +60,9 @@ public class ViewMundialDodaj extends JFrame {
 
     public void setListToMundialeList(DefaultListModel modelListyMundiali) {
         mundialeList.setModel(modelListyMundiali);
+    }
+
+    public void setButtonDalejReprezentacjaActionListener(ActionListener listenButtonDalejReprezentacja) {
+        buttonDalejReprezentacja.addActionListener(listenButtonDalejReprezentacja);
     }
 }

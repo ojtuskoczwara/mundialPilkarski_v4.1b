@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
 public class ViewWyniki extends JFrame{
-    private JButton cofnijButton = new JButton("<< Cofnij");
+    private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JLabel dataMeczLabel = new JLabel("Data meczu:");
     private JLabel wynikLabel = new JLabel("Wynik:");
     private JLabel dataRokLabel, dataMiesiacLabel, dataDzienLabel;
@@ -295,7 +295,7 @@ public class ViewWyniki extends JFrame{
         r2z16.setBounds(xx+20,815,200,30);
         add(r2z16);
 
-        cofnijButton.setBounds(10,900,100,50);
+        cofnijButton.setBounds(10,900,100,30);
         add(cofnijButton);
     }
 

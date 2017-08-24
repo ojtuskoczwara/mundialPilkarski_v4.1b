@@ -7,9 +7,8 @@ import java.awt.event.MouseAdapter;
 
 public class ViewMundialUsun extends JFrame {
     private JList mundialeList;
-    private DefaultListModel mundialeModel;
     private JButton usunButton = new JButton("Usuń");
-    private JButton cofnijButton = new JButton("<< Cofnij");
+    private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JTextField lokalizacjaTF = new JTextField();
     private JTextField rokTF = new JTextField();
     private JLabel infoLabel = new JLabel();
@@ -17,27 +16,26 @@ public class ViewMundialUsun extends JFrame {
     public ViewMundialUsun() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 500);
-        setTitle("Mundial");
+        setTitle("Mundial usuń");
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
 
-        usunButton.setBounds(160, 60, 100, 50);
+        usunButton.setBounds(210, 60, 100, 50);
         add(usunButton);
-        cofnijButton.setBounds(30, 250, 100, 50);
+        cofnijButton.setBounds(30, 400, 100, 30);
         add(cofnijButton);
 
-        mundialeModel = new DefaultListModel();
-        mundialeList = new JList(mundialeModel);
+        mundialeList = new JList();
         JScrollPane mundialeScrollList = new JScrollPane(mundialeList);
         mundialeScrollList.setBounds(30,20,160,200);
         add(mundialeScrollList);
 
-        lokalizacjaTF.setBounds(270, 50, 100, 50);
-        rokTF.setBounds(270, 110, 100, 50);
+        lokalizacjaTF.setBounds(330, 50, 100, 50);
+        rokTF.setBounds(330, 110, 100, 50);
         add(lokalizacjaTF);
         add(rokTF);
-        infoLabel.setBounds(170,170,350,50);
+        infoLabel.setBounds(330,170,350,50);
         add(infoLabel);
     }
 
@@ -58,7 +56,6 @@ public class ViewMundialUsun extends JFrame {
     }
 
     public JList getMundialListSelectedValue() {
-        //return mundialeList.getSelectedValue().toString();
         return mundialeList;
     }
 

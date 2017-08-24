@@ -27,10 +27,10 @@ public class ControllerZawodnikEdytuj {
     private DefaultListModel mundialListModel = new DefaultListModel();
     private DefaultListModel reprezentacjaListModel = new DefaultListModel();
     private DefaultListModel zawodnikListModel = new DefaultListModel();
-    ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
-    MundialDAO mundialDAO = new MundialDAOImpl();
-    ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
-    ShowMyMessage showMyMessage = new ShowMyMessage();
+    private ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
+    private MundialDAO mundialDAO = new MundialDAOImpl();
+    private ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
     private String valueMundial, valueMundialLokalizacja, valueReprezentacjaNazwa, valueZawodnikImieNazwisko;
     private int valueMundialRok;
 
@@ -50,7 +50,7 @@ public class ControllerZawodnikEdytuj {
     }
 
 
-    public void setMundialDLM() {
+    private void setMundialDLM() {
         // Wstrzyknięcie danych do modeluMundialu który później jest argumentem JListMundiale
         mundialListModel.removeAllElements();
         try {
@@ -65,7 +65,7 @@ public class ControllerZawodnikEdytuj {
         }
     }
 
-    public void setReprezentacjaDLM() {
+    private void setReprezentacjaDLM() {
         // Wstrzyknięcie danych do modeluRep który później jest argumentem JListRep
         reprezentacjaListModel.removeAllElements();
         try {
@@ -80,7 +80,7 @@ public class ControllerZawodnikEdytuj {
         }
     }
 
-    public void setZawodnikDLM() {
+    private void setZawodnikDLM() {
         valueReprezentacjaNazwa = view.getReprezentacjaList().getSelectedValue().toString();
         try {
             List<Zawodnik> zawodnikList = zawodnikWReprezentacjaDAO.getAllZawodnicyAtMundialInRep(valueMundialLokalizacja, valueReprezentacjaNazwa);
@@ -125,9 +125,8 @@ public class ControllerZawodnikEdytuj {
             super.mousePressed(e);
             if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
                 //Zaznaczony element String dzielimy na imie i nazwisko Separatorem jest spacja, +setter imie nazwisko
-                valueZawodnikImieNazwisko = view.getZawodnikList().getSelectedValue().toString();
-                String[] splited = null;
-                splited = valueZawodnikImieNazwisko.split("\\s");
+    // valueZawodnikImieNazwisko = view.getZawodnikList().getSelectedValue().toString();
+                String[] splited = view.getZawodnikList().getSelectedValue().toString().split("\\s");
                 modelZawodnik.setImie(splited[0]);
                 modelZawodnik.setNazwisko(splited[1]);
             }
@@ -169,16 +168,39 @@ public class ControllerZawodnikEdytuj {
             }
             //Jeżeli jedno z pól jest puste to w miejsce pustego pola wstawiane jest stare imię lub nazwisko
             else if (view.getImieZawodnika().isEmpty() || view.getNazwiskoZawodnika().isEmpty()) {
-                if (view.getImieZawodnika().isEmpty())
+                if (view.getImieZawodnika().isEmpty()) {
+                    String tempPreviousNazwisko = modelZawodnik.getNazwisko();
                     modelZawodnik.setNazwisko(view.getNazwiskoZawodnika());
-                else
+                    showMyMessage.informationMessage("Nazwisko zawodnika: '"+ modelZawodnik.getImie() +" "+ tempPreviousNazwisko +"' zostało zmienione na: '" +modelZawodnik.getImie()+" "+modelZawodnik.getNazwisko()+"'.","Success");
+                }
+                 else {
+                    String tempPreviousImie = modelZawodnik.getImie();
                     modelZawodnik.setImie(view.getImieZawodnika());
+                    showMyMessage.informationMessage("Imię zawodnika: '"+ tempPreviousImie +" "+ modelZawodnik.getNazwisko() +"' zostało zmienione na: '" +modelZawodnik.getImie()+" "+modelZawodnik.getNazwisko()+"'.","Success");
+                }
                 try {
                     zawodnikDAO.updateZawodnik(modelZawodnik);
                     setZawodnikDLM();
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
+                view.setImieTextField("");
+                view.setNazwiskoTextField("");
+            }
+            else if (!view.getImieZawodnika().isEmpty() & !view.getNazwiskoZawodnika().isEmpty()) {
+                String tempPreviousNazwisko = modelZawodnik.getNazwisko();
+                String tempPreviousImie = modelZawodnik.getImie();
+                modelZawodnik.setImie(view.getImieZawodnika());
+                modelZawodnik.setNazwisko(view.getNazwiskoZawodnika());
+                showMyMessage.informationMessage("Imię i nazwisko zawodnika: '"+ tempPreviousImie +" "+ tempPreviousNazwisko +"' zostało zmienione na: '" +modelZawodnik.getImie()+" "+modelZawodnik.getNazwisko()+"'.","Success");
+                try {
+                    zawodnikDAO.updateZawodnik(modelZawodnik);
+                    setZawodnikDLM();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+                view.setImieTextField("");
+                view.setNazwiskoTextField("");
             }
             //Jeżeli oba pola są puste to wyświetli się błąd, przynajmniej jedno pole musi zostać uzupełnione
             else if (view.getImieZawodnika().isEmpty() && view.getNazwiskoZawodnika().isEmpty())

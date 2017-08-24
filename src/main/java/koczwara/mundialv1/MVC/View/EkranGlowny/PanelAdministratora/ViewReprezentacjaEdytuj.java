@@ -5,35 +5,33 @@ import java.awt.event.ActionListener;
 
 public class ViewReprezentacjaEdytuj extends JFrame {
     private JList reprezentacjaList;
-    private DefaultListModel reprezentacjaListModel;
     private JButton edytujButton = new JButton("Edytuj");
-    private JButton cofnijButton = new JButton("<< Cofnij");
+    private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JLabel nowaNazwaLabel = new JLabel("Podaj nową nazwę:");
     private JTextField nowaNazwaTextField = new JTextField();
 
     public ViewReprezentacjaEdytuj() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 500);
-        setTitle("Mundial");
+        setTitle("Reprezentacja edytuj");
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
 
-        cofnijButton.setBounds(30, 400, 100, 50);
+        cofnijButton.setBounds(30, 400, 100, 30);
         add(cofnijButton);
 
-        reprezentacjaListModel = new DefaultListModel();
         reprezentacjaList = new JList();
         JScrollPane reprezentacjaScrollList = new JScrollPane(reprezentacjaList);
         reprezentacjaScrollList.setBounds(30,20,160,200);
         add(reprezentacjaScrollList);
 
-        edytujButton.setBounds(160, 60, 100, 50);
+        edytujButton.setBounds(210, 60, 100, 50);
         add(edytujButton);
 
-        nowaNazwaLabel.setBounds(270,20,150,30);
+        nowaNazwaLabel.setBounds(330,20,150,30);
         add(nowaNazwaLabel);
-        nowaNazwaTextField.setBounds(270,50,100,30);
+        nowaNazwaTextField.setBounds(330,50,100,30);
         add(nowaNazwaTextField);
     }
 

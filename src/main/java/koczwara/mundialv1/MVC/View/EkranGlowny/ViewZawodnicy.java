@@ -84,8 +84,8 @@ public class ViewZawodnicy extends JFrame{
         scrollPaneZawodnik.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         add(scrollPaneZawodnik);
 
-            buttonCofnij = new JButton("<< Cofnij");
-        buttonCofnij.setBounds(10,700,100,50);
+            buttonCofnij = new JButton("<< Cofnij <<");
+        buttonCofnij.setBounds(10,700,100,30);
         add(buttonCofnij);
     }
 

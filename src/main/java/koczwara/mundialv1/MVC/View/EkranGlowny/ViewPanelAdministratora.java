@@ -15,8 +15,9 @@ public class ViewPanelAdministratora extends JFrame {
     private JButton edytujZawodnikaButton = new JButton("Edytuj zawodnika");
     private JButton usunZawodnikaButton = new JButton("Usuń zawodnika");
     private JButton dodajReprezentacjaDoGrupaButton = new JButton("Dodaj reprezentacje do grup");
-    private JButton dodajWynikiMeczuButton = new JButton("Dodaj wynik meczu");
-    private JButton cofnijButton = new JButton("<<< Cofnij");
+    private JButton dodajWynikiMeczuButton = new JButton("Dodaj datę,wynik,składy meczu");
+    private JButton cofnijButton = new JButton("<< Cofnij <<");
+
 
     public ViewPanelAdministratora() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -63,15 +64,18 @@ public class ViewPanelAdministratora extends JFrame {
         JPanel grupaPanel = new JPanel();
         dodajReprezentacjaDoGrupaButton.setBounds(50,340,150,50);
         grupaPanel.add(dodajReprezentacjaDoGrupaButton);
-        dodajWynikiMeczuButton.setBounds(50,400,150,50);
-        grupaPanel.add(dodajWynikiMeczuButton);
         grupaPanel.setBounds(10,340,450,100);
         grupaPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(),"Grupa Panel"));
         this.add(grupaPanel);
 
+        JPanel dataWynikiSkladyPanel = new JPanel();
+        dodajWynikiMeczuButton.setBounds(50,400,150,50);
+        dataWynikiSkladyPanel.add(dodajWynikiMeczuButton);
+        dataWynikiSkladyPanel.setBounds(10,450,450,100);
+        dataWynikiSkladyPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(),"Data, wyniki, składy Panel"));
+        this.add(dataWynikiSkladyPanel);
 
-
-        cofnijButton.setBounds(10,500,100,30);
+        cofnijButton.setBounds(10,600,100,30);
         add(cofnijButton);
     }
 

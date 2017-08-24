@@ -7,9 +7,8 @@ import java.awt.event.MouseAdapter;
 
 public class ViewMundialEdytuj extends JFrame {
     private JList mundialList;
-    private DefaultListModel mundialListModel;
     private JButton edytujButton = new JButton("Edytuj");
-    private JButton cofnijButton = new JButton("<< Cofnij");
+    private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JLabel nowaLokalizacjaLabel = new JLabel("Podaj nową lokalizację:");
     private JLabel nowyRokLabel = new JLabel("Podaj nowy rok:");
     private JTextField nowaLokalizajcaTextField = new JTextField();
@@ -20,31 +19,31 @@ public class ViewMundialEdytuj extends JFrame {
     public ViewMundialEdytuj() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 500);
-        setTitle("Mundial");
+        setTitle("Mundial edytuj");
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
 
-        cofnijButton.setBounds(30, 400, 100, 50);
+        cofnijButton.setBounds(30, 400, 100, 30);
         add(cofnijButton);
 
-        mundialListModel = new DefaultListModel();
-        mundialList = new JList(mundialListModel);
+
+        mundialList = new JList();
         JScrollPane mundialeScrollList = new JScrollPane(mundialList);
         mundialeScrollList.setBounds(30,20,160,200);
         add(mundialeScrollList);
 
-        edytujButton.setBounds(160, 60, 100, 50);
+        edytujButton.setBounds(200, 60, 100, 50);
         add(edytujButton);
 
-        nowaLokalizacjaLabel.setBounds(270,20,150,30);
+        nowaLokalizacjaLabel.setBounds(330,20,150,30);
         add(nowaLokalizacjaLabel);
-        nowaLokalizajcaTextField.setBounds(270,50,100,30);
+        nowaLokalizajcaTextField.setBounds(330,50,100,30);
         add(nowaLokalizajcaTextField);
 
-        nowyRokLabel.setBounds(270,100,150,30);
+        nowyRokLabel.setBounds(330,100,150,30);
         add(nowyRokLabel);
-        nowyRokTextField.setBounds(270,130,100,30);
+        nowyRokTextField.setBounds(330,130,100,30);
         add(nowyRokTextField);
 
     }
@@ -75,17 +74,6 @@ public class ViewMundialEdytuj extends JFrame {
 
     public void setMundialListMouseListener(MouseAdapter listenMundialList) {
         mundialList.addMouseListener(listenMundialList);
-    }
-    public void showMyWarningMessage(String message, String messageTitle) {
-        JOptionPane.showMessageDialog(this, message, messageTitle, JOptionPane.WARNING_MESSAGE);
-    }
-
-    public void showMyInfoMessage(String message, String messageTitle) {
-        JOptionPane.showMessageDialog(this, message, messageTitle, JOptionPane.INFORMATION_MESSAGE);
-    }
-
-    public void showMyErrorMessage(String message, String messageTitle) {
-        JOptionPane.showMessageDialog(this, message, messageTitle, JOptionPane.ERROR_MESSAGE);
     }
 
     public void setCzyszczenieNowaLokalizajcaTextField(String text) {

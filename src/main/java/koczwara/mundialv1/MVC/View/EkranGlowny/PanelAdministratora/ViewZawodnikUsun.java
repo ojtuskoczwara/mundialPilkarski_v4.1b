@@ -11,31 +11,25 @@ public class ViewZawodnikUsun extends JFrame {
     private JList mundialList;
     private JList reprezentacjaList;
     private JList zawodnikList;
-    private DefaultListModel zawodnikListModel;
-    private DefaultListModel mundialListModel;
-    private DefaultListModel reprezentacjaListModel;
 
     public ViewZawodnikUsun(){
-        super("Edytuj zawodnika");
+        super("Zawodnik usuń");
         setSize(600,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
 
-        mundialListModel = new DefaultListModel();
         mundialList= new JList();
         JScrollPane mundialScrollList = new JScrollPane(mundialList);
         mundialScrollList.setBounds(10,20,160,200);
         add(mundialScrollList);
 
-        reprezentacjaListModel = new DefaultListModel();
         reprezentacjaList = new JList();
         JScrollPane reprezentacjaScrollList = new JScrollPane(reprezentacjaList);
         reprezentacjaScrollList.setBounds(180,20,160,200);
         add(reprezentacjaScrollList);
 
-        zawodnikListModel = new DefaultListModel();
         zawodnikList = new JList();
         JScrollPane zawodnikScrollList = new JScrollPane(zawodnikList);
         zawodnikScrollList.setBounds(350,20,160,200);

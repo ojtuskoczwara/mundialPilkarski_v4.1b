@@ -9,7 +9,7 @@ public class ViewMecz extends JFrame{
     private JList mundialList;
     private JList meczList;
     private DefaultListModel mundialListModel, meczListModel, reprezentacja1ListModel, reprezentacja2ListModel;
-    private JButton cofnijButton = new JButton("<< Cofnij");
+    private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JButton dodajButton = new JButton("Zatwierdź");
     private JLabel dataMeczLabel = new JLabel("Wybierz datę meczu:");
     private JLabel wynikLabel = new JLabel("Wynik:");
@@ -288,7 +288,7 @@ public class ViewMecz extends JFrame{
         zaw16Rep2ComboBox.setBounds(330,815,200,30);
         add(zaw16Rep2ComboBox);
 // Przyciski cofnij i zatwierdz
-        cofnijButton.setBounds(10,900,100,50);
+        cofnijButton.setBounds(10,900,100,30);
         add(cofnijButton);
         dodajButton.setBounds(230,870,100,50);
         add(dodajButton);
@@ -343,23 +343,6 @@ public class ViewMecz extends JFrame{
     public void addComboBoxModelToZawodnik15Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw15Rep1ComboBox.setModel(zawodnikComboBoxModel);}
     public void addComboBoxModelToZawodnik16Rep1ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw16Rep1ComboBox.setModel(zawodnikComboBoxModel);}
 
-    public JComboBox getZawodnik1Rep1ComboBox() { return zaw1Rep1ComboBox; }
-    public JComboBox getZawodnik2Rep1ComboBox() { return zaw2Rep1ComboBox; }
-    public JComboBox getZawodnik3Rep1ComboBox() { return zaw3Rep1ComboBox; }
-    public JComboBox getZawodnik4Rep1ComboBox() { return zaw4Rep1ComboBox; }
-    public JComboBox getZawodnik5Rep1ComboBox() { return zaw5Rep1ComboBox; }
-    public JComboBox getZawodnik6Rep1ComboBox() { return zaw6Rep1ComboBox; }
-    public JComboBox getZawodnik7Rep1ComboBox() { return zaw7Rep1ComboBox; }
-    public JComboBox getZawodnik8Rep1ComboBox() { return zaw8Rep1ComboBox; }
-    public JComboBox getZawodnik9Rep1ComboBox() { return zaw9Rep1ComboBox; }
-    public JComboBox getZawodnik10Rep1ComboBox() { return zaw10Rep1ComboBox; }
-    public JComboBox getZawodnik11Rep1ComboBox() { return zaw11Rep1ComboBox; }
-    public JComboBox getZawodnik12Rep1ComboBox() { return zaw12Rep1ComboBox; }
-    public JComboBox getZawodnik13Rep1ComboBox() { return zaw13Rep1ComboBox; }
-    public JComboBox getZawodnik14Rep1ComboBox() { return zaw14Rep1ComboBox; }
-    public JComboBox getZawodnik15Rep1ComboBox() { return zaw15Rep1ComboBox; }
-    public JComboBox getZawodnik16Rep1ComboBox() { return zaw16Rep1ComboBox; }
-
     public void addComboBoxModelToZawodnik1Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw1Rep2ComboBox.setModel(zawodnikComboBoxModel);}
     public void addComboBoxModelToZawodnik2Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw2Rep2ComboBox.setModel(zawodnikComboBoxModel);}
     public void addComboBoxModelToZawodnik3Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw3Rep2ComboBox.setModel(zawodnikComboBoxModel);}
@@ -376,23 +359,6 @@ public class ViewMecz extends JFrame{
     public void addComboBoxModelToZawodnik14Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw14Rep2ComboBox.setModel(zawodnikComboBoxModel);}
     public void addComboBoxModelToZawodnik15Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw15Rep2ComboBox.setModel(zawodnikComboBoxModel);}
     public void addComboBoxModelToZawodnik16Rep2ComboBox(DefaultComboBoxModel zawodnikComboBoxModel) {zaw16Rep2ComboBox.setModel(zawodnikComboBoxModel);}
-
-    public JComboBox getZawodnik1Rep2ComboBox() { return zaw1Rep2ComboBox; }
-    public JComboBox getZawodnik2Rep2ComboBox() { return zaw2Rep2ComboBox; }
-    public JComboBox getZawodnik3Rep2ComboBox() { return zaw3Rep2ComboBox; }
-    public JComboBox getZawodnik4Rep2ComboBox() { return zaw4Rep2ComboBox; }
-    public JComboBox getZawodnik5Rep2ComboBox() { return zaw5Rep2ComboBox; }
-    public JComboBox getZawodnik6Rep2ComboBox() { return zaw6Rep2ComboBox; }
-    public JComboBox getZawodnik7Rep2ComboBox() { return zaw7Rep2ComboBox; }
-    public JComboBox getZawodnik8Rep2ComboBox() { return zaw8Rep2ComboBox; }
-    public JComboBox getZawodnik9Rep2ComboBox() { return zaw9Rep2ComboBox; }
-    public JComboBox getZawodnik10Rep2ComboBox() { return zaw10Rep2ComboBox; }
-    public JComboBox getZawodnik11Rep2ComboBox() { return zaw11Rep2ComboBox; }
-    public JComboBox getZawodnik12Rep2ComboBox() { return zaw12Rep2ComboBox; }
-    public JComboBox getZawodnik13Rep2ComboBox() { return zaw13Rep2ComboBox; }
-    public JComboBox getZawodnik14Rep2ComboBox() { return zaw14Rep2ComboBox; }
-    public JComboBox getZawodnik15Rep2ComboBox() { return zaw15Rep2ComboBox; }
-    public JComboBox getZawodnik16Rep2ComboBox() { return zaw16Rep2ComboBox; }
 
     public void addCofnijButtonListener(ActionListener listenCofnijButton) {cofnijButton.addActionListener(listenCofnijButton); }
     public void addDodajButtonListener(ActionListener listenDodajButton) {dodajButton.addActionListener(listenDodajButton); }

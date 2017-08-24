@@ -12,15 +12,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
-/**
- * Created by Wojtek on 2017-05-30.
- */
 public class ControllerReprezentacjaEdytuj {
     private ViewReprezentacjaEdytuj view;
     private Reprezentacja model;
-    ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
+    private ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
     private DefaultListModel dlm = new DefaultListModel();
-    ShowMyMessage showMyMessage = new ShowMyMessage();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
 
     public ControllerReprezentacjaEdytuj(ViewReprezentacjaEdytuj view, Reprezentacja model) {
         this.view = view;
@@ -32,7 +29,7 @@ public class ControllerReprezentacjaEdytuj {
     }
 
 
-    public void setRepDLM() {
+    private void setRepDLM() {
         // Wstrzyknięcie danych do modeluRep który później jest argumentem JListRep
         dlm.removeAllElements();
         try {

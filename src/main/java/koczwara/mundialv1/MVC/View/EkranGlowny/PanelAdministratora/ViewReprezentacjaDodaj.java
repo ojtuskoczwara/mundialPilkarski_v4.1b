@@ -8,14 +8,13 @@ public class ViewReprezentacjaDodaj extends JFrame {
     private JLabel nazwaReprezentacjiLabel = new JLabel("Nazwa reprezentacji:");
     private JTextField nazwaReprezentacjiTextField = new JTextField();
     private JButton dodajReprezentacjeButton = new JButton("Add >>");
-    private JButton cofnijButton = new JButton("<<< Cofnij");
+    private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JList reprezentacjaList;
-    private DefaultListModel reprezentacjaListModel;
 
     public ViewReprezentacjaDodaj() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 500);
-        setTitle("Mundial");
+        setTitle("Reprezentacja dodaj");
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -27,13 +26,13 @@ public class ViewReprezentacjaDodaj extends JFrame {
         dodajReprezentacjeButton.setBounds(200, 80, 100, 50);
         add(dodajReprezentacjeButton);
 
-        reprezentacjaListModel = new DefaultListModel();
+
         reprezentacjaList = new JList();
         JScrollPane reprezentacjaScrollList = new JScrollPane(reprezentacjaList);
         reprezentacjaScrollList.setBounds(350,20,160,200);
         add(reprezentacjaScrollList);
 
-        cofnijButton.setBounds(30, 400, 100, 50);
+        cofnijButton.setBounds(30, 400, 100, 30);
         add(cofnijButton);
     }
 

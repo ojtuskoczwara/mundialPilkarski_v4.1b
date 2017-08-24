@@ -14,16 +14,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
-/**
- * Created by Wojtek on 2017-05-29.
- */
 public class ControllerReprezentacjaUsun {
     private ViewReprezentacjaUsun view;
     private Reprezentacja model;
-    ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
-    ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
+    private ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
+    private ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
     private DefaultListModel dlm = new DefaultListModel();
-    ShowMyMessage showMyMessage = new ShowMyMessage();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
 
     public ControllerReprezentacjaUsun(ViewReprezentacjaUsun view, Reprezentacja model) {
         this.view = view;
@@ -43,7 +40,7 @@ public class ControllerReprezentacjaUsun {
         }
     }
 
-    public void setRepDLM() {
+    private void setRepDLM() {
         // Wstrzyknięcie danych do modeluRep który później jest argumentem JListRep
         dlm.removeAllElements();
         try {

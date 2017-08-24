@@ -50,19 +50,18 @@ public class ControllerReprezentacjaDodaj {
     private class DodajReprezentacjaButton implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            model.setNazwa(view.getNazwaReprezentacji());
-            try {
-                reprezentacjaDAO.addReprezentacja(model);
-                setRepDLM();
-            } catch (Exception e1) {
-                e1.printStackTrace();
-                /*
-                //zmienic w tabeli t_reprezentacja nazweRep na UNIQE
-                showMyMessage.showInfoJOptionPane("Reprezentacja istnieje już w bazie danych!", "Błąd", "Error");
-                */
+            if (view.getNazwaReprezentacji().equals("")){
+                showMyMessage.warningMessage("Wypełnij wszystkie pola!","Warning");
             }
-
-
+            else if (!view.getNazwaReprezentacji().equals("")){
+                model.setNazwa(view.getNazwaReprezentacji());
+                try {
+                    reprezentacjaDAO.addReprezentacja(model);
+                    setRepDLM();
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+            }
         }
     }
 

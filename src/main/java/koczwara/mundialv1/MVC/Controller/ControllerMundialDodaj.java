@@ -37,6 +37,8 @@ public class ControllerMundialDodaj {
                 mundialDAO.addMundial(model);
                 setDLM(); // odświeżenie listy mundiali w Jlist
                 showMyMessage.informationMessage("Dodanie mundialu zakończone pomyślnie", "Success");
+            } catch (NumberFormatException ex) {
+                showMyMessage.warningMessage("Wypełnij wszystkie pola!","Warning");
             } catch (Exception e1) {
                 e1.printStackTrace();
             }

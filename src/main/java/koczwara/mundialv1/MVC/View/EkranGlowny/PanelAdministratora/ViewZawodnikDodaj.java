@@ -1,13 +1,9 @@
 package koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
-/**
- * Created by Wojtek on 2017-05-30.
- */
 public class ViewZawodnikDodaj extends JFrame {
     private JLabel imieLabel = new JLabel("Imię:");
     private JTextField imieTextField = new JTextField();
@@ -21,7 +17,7 @@ public class ViewZawodnikDodaj extends JFrame {
 
 
     public ViewZawodnikDodaj() {
-        super("Dodawanie reprezentacji");
+        super("Zawodnik dodaj");
         setSize(600,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
