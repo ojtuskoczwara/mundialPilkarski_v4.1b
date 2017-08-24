@@ -2,9 +2,7 @@ package koczwara.mundialv1.MVC.Controller;
 
 
 import koczwara.mundialv1.MVC.Model.entity.*;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.*;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
-import koczwara.mundialv1.MVC.View.ViewEkranGlowny;
+import koczwara.mundialv1.MVC.View.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -124,7 +122,7 @@ public class ControllerPanelAdministratora {
     private class DodajWynikMeczuListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            new ControllerGrupaMecz(new ViewMecz(), new Mundial(), new Rozgrywka(), new TypGrupy(), new Grupa(), new Reprezentacja(), new Mecz(), new Zawodnik());
+            new ControllerMecze(new ViewMecze(), new Mundial(), new Rozgrywka(), new TypGrupy(), new Grupa(), new Reprezentacja(), new Mecz(), new Zawodnik());
             view.setVisible(false);
         }
     }

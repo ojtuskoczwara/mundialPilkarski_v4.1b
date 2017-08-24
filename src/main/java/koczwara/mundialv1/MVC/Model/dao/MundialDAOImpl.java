@@ -1,9 +1,9 @@
 package koczwara.mundialv1.MVC.Model.dao;
 
 
-import koczwara.mundialv1.MVC.Model.Connection.ConnectionDB;
+import koczwara.mundialv1.MVC.Controller.DatabaseConnection.ConnectionDB;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
-import koczwara.mundialv1.MVC.Model.utils.ParserSQL;
+import koczwara.mundialv1.MVC.Tools.utils.ParserSQL;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

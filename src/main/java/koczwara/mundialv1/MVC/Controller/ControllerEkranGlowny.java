@@ -2,11 +2,10 @@ package koczwara.mundialv1.MVC.Controller;
 
 
 import koczwara.mundialv1.MVC.Model.entity.*;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMecz;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewWyniki;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewWynikiDrabinka;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewZawodnicy;
+import koczwara.mundialv1.MVC.View.ViewPanelAdministratora;
+import koczwara.mundialv1.MVC.View.ViewWyniki;
+import koczwara.mundialv1.MVC.View.ViewWynikiDrabinka;
+import koczwara.mundialv1.MVC.View.ViewZawodnicy;
 import koczwara.mundialv1.MVC.View.ViewEkranGlowny;
 
 import java.awt.event.ActionEvent;

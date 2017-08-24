@@ -5,10 +5,10 @@ import koczwara.mundialv1.MVC.Model.dao.ReprezentacjaDAOImpl;
 import koczwara.mundialv1.MVC.Model.entity.Grupa;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
-import koczwara.mundialv1.MVC.Model.utils.*;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewGrupaDodaj;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewReprezentacjaDodaj;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
+import koczwara.mundialv1.MVC.Tools.ShowMyMessage;
+import koczwara.mundialv1.MVC.View.ViewGrupaDodaj;
+import koczwara.mundialv1.MVC.View.ViewReprezentacjaDodaj;
+import koczwara.mundialv1.MVC.View.ViewPanelAdministratora;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

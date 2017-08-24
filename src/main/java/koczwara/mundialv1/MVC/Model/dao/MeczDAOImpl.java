@@ -1,9 +1,9 @@
 package koczwara.mundialv1.MVC.Model.dao;
 
-import koczwara.mundialv1.MVC.Model.Connection.ConnectionDB;
+import koczwara.mundialv1.MVC.Controller.DatabaseConnection.ConnectionDB;
 import koczwara.mundialv1.MVC.Model.entity.Mecz;
 import koczwara.mundialv1.MVC.Model.entity.Rozgrywka;
-import koczwara.mundialv1.MVC.Model.utils.ParserSQL;
+import koczwara.mundialv1.MVC.Tools.utils.ParserSQL;
 
 import java.sql.Date;
 import java.sql.ResultSet;

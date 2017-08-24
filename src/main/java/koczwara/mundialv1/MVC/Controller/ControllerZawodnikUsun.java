@@ -6,9 +6,9 @@ import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
 import koczwara.mundialv1.MVC.Model.entity.Zawodnik;
 import koczwara.mundialv1.MVC.Model.entity.ZawodnikWReprezentacja;
-import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewZawodnikUsun;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
+import koczwara.mundialv1.MVC.Tools.ShowMyMessage;
+import koczwara.mundialv1.MVC.View.ViewZawodnikUsun;
+import koczwara.mundialv1.MVC.View.ViewPanelAdministratora;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

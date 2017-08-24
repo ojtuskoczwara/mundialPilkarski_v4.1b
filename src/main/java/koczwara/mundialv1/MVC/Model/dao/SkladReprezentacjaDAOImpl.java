@@ -2,11 +2,8 @@ package koczwara.mundialv1.MVC.Model.dao;
 
 import koczwara.mundialv1.MVC.Model.entity.Rozgrywka;
 import koczwara.mundialv1.MVC.Model.entity.SkladReprezentacja1;
-import koczwara.mundialv1.MVC.Model.entity.SkladReprezentacja2;
 import koczwara.mundialv1.MVC.Model.entity.Zawodnik;
-import koczwara.mundialv1.MVC.Model.utils.ParserSQL;
-
-import java.util.List;
+import koczwara.mundialv1.MVC.Tools.utils.ParserSQL;
 
 public class SkladReprezentacjaDAOImpl implements SkladReprezentacjaDAO{
     private ParserSQL parserSQL = new ParserSQL();

@@ -3,7 +3,7 @@ package koczwara.mundialv1.MVC.Controller;
 import koczwara.mundialv1.MVC.Model.dao.MundialDAO;
 import koczwara.mundialv1.MVC.Model.dao.MundialDAOImpl;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewWynikiDrabinka;
+import koczwara.mundialv1.MVC.View.ViewWynikiDrabinka;
 
 import javax.swing.*;
 import java.util.List;

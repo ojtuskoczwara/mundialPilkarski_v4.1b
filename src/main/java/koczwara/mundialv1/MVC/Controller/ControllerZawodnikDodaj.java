@@ -3,12 +3,12 @@ package koczwara.mundialv1.MVC.Controller;
 
 import koczwara.mundialv1.MVC.Model.dao.*;
 import koczwara.mundialv1.MVC.Model.entity.*;
-import koczwara.mundialv1.MVC.Model.utils.exceptions.CheckBoxUnchecked;
-import koczwara.mundialv1.MVC.Model.utils.exceptions.MundialNotSelected;
-import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMecz;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewZawodnikDodaj;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
+import koczwara.mundialv1.MVC.Tools.exceptions.CheckBoxUnchecked;
+import koczwara.mundialv1.MVC.Tools.exceptions.MundialNotSelected;
+import koczwara.mundialv1.MVC.Tools.ShowMyMessage;
+import koczwara.mundialv1.MVC.View.ViewMecze;
+import koczwara.mundialv1.MVC.View.ViewZawodnikDodaj;
+import koczwara.mundialv1.MVC.View.ViewPanelAdministratora;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -318,7 +318,7 @@ public class ControllerZawodnikDodaj {
     private class PrzejscieDoDalejDataWynikiSkladyMeczu implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            new ControllerGrupaMecz(new ViewMecz(), new Mundial(), new Rozgrywka(), new TypGrupy(), new Grupa(), new Reprezentacja(), new Mecz(), new Zawodnik());
+            new ControllerMecze(new ViewMecze(), new Mundial(), new Rozgrywka(), new TypGrupy(), new Grupa(), new Reprezentacja(), new Mecz(), new Zawodnik());
             view.setVisible(false);
         }
     }

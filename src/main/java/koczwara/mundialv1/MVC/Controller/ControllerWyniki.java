@@ -2,8 +2,8 @@ package koczwara.mundialv1.MVC.Controller;
 
 import koczwara.mundialv1.MVC.Model.dao.*;
 import koczwara.mundialv1.MVC.Model.entity.*;
-import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewWyniki;
+import koczwara.mundialv1.MVC.Tools.ShowMyMessage;
+import koczwara.mundialv1.MVC.View.ViewWyniki;
 import koczwara.mundialv1.MVC.View.ViewEkranGlowny;
 
 import javax.swing.*;

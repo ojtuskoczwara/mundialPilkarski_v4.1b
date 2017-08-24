@@ -3,9 +3,9 @@ package koczwara.mundialv1.MVC.Controller;
 import koczwara.mundialv1.MVC.Model.dao.ReprezentacjaDAO;
 import koczwara.mundialv1.MVC.Model.dao.ReprezentacjaDAOImpl;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
-import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewReprezentacjaEdytuj;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
+import koczwara.mundialv1.MVC.Tools.ShowMyMessage;
+import koczwara.mundialv1.MVC.View.ViewReprezentacjaEdytuj;
+import koczwara.mundialv1.MVC.View.ViewPanelAdministratora;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

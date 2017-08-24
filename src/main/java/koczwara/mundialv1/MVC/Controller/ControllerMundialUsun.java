@@ -6,8 +6,8 @@ import koczwara.mundialv1.MVC.Model.dao.MundialDAOImpl;
 import koczwara.mundialv1.MVC.Model.dao.ZawodnikWReprezentacjaDAO;
 import koczwara.mundialv1.MVC.Model.dao.ZawodnikWReprezentacjaDAOImpl;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
-import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMundialUsun;
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
+import koczwara.mundialv1.MVC.View.ViewMundialUsun;
+import koczwara.mundialv1.MVC.View.ViewPanelAdministratora;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

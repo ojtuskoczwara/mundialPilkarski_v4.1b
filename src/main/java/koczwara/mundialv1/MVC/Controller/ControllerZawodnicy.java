@@ -5,7 +5,7 @@ import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
 import koczwara.mundialv1.MVC.Model.entity.Zawodnik;
 
-import koczwara.mundialv1.MVC.View.EkranGlowny.ViewZawodnicy;
+import koczwara.mundialv1.MVC.View.ViewZawodnicy;
 import koczwara.mundialv1.MVC.View.ViewEkranGlowny;
 
 import javax.swing.*;
