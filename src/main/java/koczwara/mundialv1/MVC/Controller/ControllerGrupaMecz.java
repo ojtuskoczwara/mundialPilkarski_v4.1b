@@ -89,7 +89,7 @@ public class ControllerGrupaMecz {
         this.view.addMundialListMouseListener(new PressedOnElementOfMundialList());
         this.view.addMeczListMouseListener(new PressedOnElementOfMeczList());
         this.view.addDodajButtonListener(new AddMeczButton());
-
+        this.view.setButtonDalejDoPanelAdministratoraActionListener(new GoToAdminPanel());
     }
 
 
@@ -484,4 +484,12 @@ public class ControllerGrupaMecz {
         return tabZawodnikReprezentacja2ComboBox;
     }
 
+    private class GoToAdminPanel implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerPanelAdministratora(new ViewPanelAdministratora());
+            view.setVisible(false);
+            view.dispose();
+        }
+    }
 }

@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class ViewReprezentacjaDodaj extends JFrame {
     private JLabel nazwaReprezentacjiLabel = new JLabel("Nazwa reprezentacji:");
     private JTextField nazwaReprezentacjiTextField = new JTextField();
-    private JButton dodajReprezentacjeButton = new JButton("Add >>");
+    private JButton dodajReprezentacjeButton = new JButton("Add >>"), buttonDalejDodajRepDoGrupy;
     private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JList reprezentacjaList;
 
@@ -34,6 +34,10 @@ public class ViewReprezentacjaDodaj extends JFrame {
 
         cofnijButton.setBounds(30, 400, 100, 30);
         add(cofnijButton);
+
+            buttonDalejDodajRepDoGrupy = new JButton(">> Dalej >>");
+        buttonDalejDodajRepDoGrupy.setBounds(410,400,100,30);
+        add(buttonDalejDodajRepDoGrupy);
     }
 
     public String getNazwaReprezentacji() {
@@ -50,5 +54,9 @@ public class ViewReprezentacjaDodaj extends JFrame {
 
     public void addDodajReprezentacjeButtonListener(ActionListener listenDodajReprezentacjeButton) {
         dodajReprezentacjeButton.addActionListener(listenDodajReprezentacjeButton);
+    }
+
+    public void setButtonDalejDodajRepDoGrupyActionListener(ActionListener listenButtonDalejRepDoGrupy) {
+        buttonDalejDodajRepDoGrupy.addActionListener(listenButtonDalejRepDoGrupy);
     }
 }

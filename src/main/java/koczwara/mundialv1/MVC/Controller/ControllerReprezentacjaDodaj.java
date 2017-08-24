@@ -2,8 +2,11 @@ package koczwara.mundialv1.MVC.Controller;
 
 import koczwara.mundialv1.MVC.Model.dao.ReprezentacjaDAO;
 import koczwara.mundialv1.MVC.Model.dao.ReprezentacjaDAOImpl;
+import koczwara.mundialv1.MVC.Model.entity.Grupa;
+import koczwara.mundialv1.MVC.Model.entity.Mundial;
 import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
 import koczwara.mundialv1.MVC.Model.utils.*;
+import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewGrupaDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewReprezentacjaDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
 
@@ -27,7 +30,7 @@ public class ControllerReprezentacjaDodaj {
         setRepDLM();
         this.view.addDodajReprezentacjeButtonListener(new DodajReprezentacjaButton());
         this.view.addCofnijButtonListener(new CofnijDoPanelAdmin());
-
+        this.view.setButtonDalejDodajRepDoGrupyActionListener(new ButtonDalejRepDoGrupy());
     }
 
 
@@ -71,6 +74,14 @@ public class ControllerReprezentacjaDodaj {
             new ControllerPanelAdministratora(new ViewPanelAdministratora());
             view.setVisible(false);
             view.dispose();
+        }
+    }
+
+    private class ButtonDalejRepDoGrupy implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerGrupaDodaj(new ViewGrupaDodaj(), new Mundial(), new Reprezentacja(), new Grupa());
+            view.setVisible(false);
         }
     }
 }

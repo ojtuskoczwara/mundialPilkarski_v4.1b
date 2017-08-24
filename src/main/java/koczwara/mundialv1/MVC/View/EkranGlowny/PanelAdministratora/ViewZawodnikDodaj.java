@@ -9,7 +9,7 @@ public class ViewZawodnikDodaj extends JFrame {
     private JTextField imieTextField = new JTextField();
     private JLabel nazwiskoLabel = new JLabel("Nazwisko:");
     private JTextField nazwiskoTextField = new JTextField();
-    private JButton dodajZawodnikaButton = new JButton("Dodaj");
+    private JButton dodajZawodnikaButton = new JButton("Dodaj"), buttonDalejDataWynikiSklady;
     private JButton cofnijButton = new JButton("<< Cofnij <<");
     private JList mundialList, reprezentacjaList, zawodnikList, mundial2List, zawodnik2PodgladList;
     private JScrollPane mundial2ScrollList, zawodnik2PodgladScrollList;
@@ -23,7 +23,6 @@ public class ViewZawodnikDodaj extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
-
 
         mundialList = new JList();
         JScrollPane mundialScrollList = new JScrollPane(mundialList);
@@ -49,10 +48,13 @@ public class ViewZawodnikDodaj extends JFrame {
         nazwiskoTextField.setBounds(410,310,150,30);
         add(nazwiskoTextField);
 
-        dodajZawodnikaButton.setBounds(250,520,100,30);
+        dodajZawodnikaButton.setBounds(250,500,100,50);
         add(dodajZawodnikaButton);
         cofnijButton.setBounds(20,520,100,30);
         add(cofnijButton);
+            buttonDalejDataWynikiSklady = new JButton(">> Dalej >>");
+        buttonDalejDataWynikiSklady.setBounds(460,520,100,30);
+        add(buttonDalejDataWynikiSklady);
 
         checkBoxIstniejacyZawodnik = new JCheckBox();
         checkBoxIstniejacyZawodnik.setBounds(10,240,20,20);
@@ -165,4 +167,8 @@ public class ViewZawodnikDodaj extends JFrame {
 
     public void setCheckBoxIstniejacyZawodnik(boolean trueFalse) { checkBoxIstniejacyZawodnik.setSelected(trueFalse); }
     public void setCheckBoxNowyZawodnik(boolean trueFalse) { checkBoxNowyZawodnik.setSelected(trueFalse); }
+
+    public void setButtonDalejDataWynikiSkladyActionListener(ActionListener listenButtonDalejDataWynikSklady) {
+        buttonDalejDataWynikiSklady.addActionListener(listenButtonDalejDataWynikSklady);
+    }
 }

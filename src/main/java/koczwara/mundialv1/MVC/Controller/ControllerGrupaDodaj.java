@@ -1,11 +1,10 @@
 package koczwara.mundialv1.MVC.Controller;
 
 import koczwara.mundialv1.MVC.Model.dao.*;
-import koczwara.mundialv1.MVC.Model.entity.Grupa;
-import koczwara.mundialv1.MVC.Model.entity.Mundial;
-import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
+import koczwara.mundialv1.MVC.Model.entity.*;
 import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewGrupaDodaj;
+import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewZawodnikDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
 
 import javax.swing.*;
@@ -57,6 +56,7 @@ public class ControllerGrupaDodaj {
         this.view.addUsunGrGButtonListener(new DeleteReprezentacjaFromGrupaG());
         this.view.addDodajGrHButtonListener(new AddReprezentacjaToGrupaH());
         this.view.addUsunGrHButtonListener(new DeleteReprezentacjaFromGrupaH());
+        this.view.setButtonDalejDodajZawodnikaActionListener(new GoToZawodnikAdding());
     }
 
     public void setMundialDLM() {
@@ -440,6 +440,14 @@ public class ControllerGrupaDodaj {
                 deleteReprezentacjaFromGrupa(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu(), modelReprezentacja.getIdReprezentacji());
                 setGrupaDLM(modelGrupa.getNazwaGrupy(), modelMundial.getIdMundialu());
             } else showMyMessage.errorMessage("Wybierz mundial oraz reprezentację, którą chcesz usunąć z grupy.", "Nie wybrano mundialu lub reprezentacji");
+        }
+    }
+
+    private class GoToZawodnikAdding implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerZawodnikDodaj(new ViewZawodnikDodaj(), new Zawodnik(), new Reprezentacja(), new Mundial(), new ZawodnikWReprezentacja());
+            view.setVisible(false);
         }
     }
 }

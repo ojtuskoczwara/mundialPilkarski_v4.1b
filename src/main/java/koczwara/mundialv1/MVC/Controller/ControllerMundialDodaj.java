@@ -3,8 +3,10 @@ package koczwara.mundialv1.MVC.Controller;
 import koczwara.mundialv1.MVC.Model.dao.MundialDAO;
 import koczwara.mundialv1.MVC.Model.dao.MundialDAOImpl;
 import koczwara.mundialv1.MVC.Model.entity.Mundial;
+import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
 import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMundialDodaj;
+import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewReprezentacjaDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
 
 import javax.swing.*;
@@ -26,6 +28,7 @@ public class ControllerMundialDodaj {
         setDLM(); // Ustawienie modelu(listy mundiali) do JList
         this.view.setDodajMundialButtonListener(new DodajMundialButtonListener());
         this.view.setCofnijButtonListener(new CofnijButtonListener());
+        this.view.setButtonDalejReprezentacjaActionListener(new ButtonDalejReprezentacja());
     }
 
     private class DodajMundialButtonListener implements ActionListener {
@@ -70,4 +73,11 @@ public class ControllerMundialDodaj {
     }
 
 
+    private class ButtonDalejReprezentacja implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerReprezentacjaDodaj(new ViewReprezentacjaDodaj(), new Reprezentacja());
+            view.setVisible(false);
+        }
+    }
 }

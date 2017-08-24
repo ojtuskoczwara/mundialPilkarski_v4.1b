@@ -2,13 +2,11 @@ package koczwara.mundialv1.MVC.Controller;
 
 
 import koczwara.mundialv1.MVC.Model.dao.*;
-import koczwara.mundialv1.MVC.Model.entity.Mundial;
-import koczwara.mundialv1.MVC.Model.entity.Reprezentacja;
-import koczwara.mundialv1.MVC.Model.entity.Zawodnik;
-import koczwara.mundialv1.MVC.Model.entity.ZawodnikWReprezentacja;
+import koczwara.mundialv1.MVC.Model.entity.*;
 import koczwara.mundialv1.MVC.Model.utils.exceptions.CheckBoxUnchecked;
 import koczwara.mundialv1.MVC.Model.utils.exceptions.MundialNotSelected;
 import koczwara.mundialv1.MVC.Model.utils.ShowMyMessage;
+import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewMecz;
 import koczwara.mundialv1.MVC.View.EkranGlowny.PanelAdministratora.ViewZawodnikDodaj;
 import koczwara.mundialv1.MVC.View.EkranGlowny.ViewPanelAdministratora;
 
@@ -55,6 +53,7 @@ public class ControllerZawodnikDodaj {
         this.view.addCheckBoxIstniejacyZawodnikActionListener(new WybranieIstniejacyZawodnikDoNowyMundial());
         this.view.addCheckBoxNowyZawodnikActionListener(new WybranieNowyZawodnikDoNowyMundial());
         this.view.addMundial2ListMouseListener(new WybranieElementuMundial2List() );
+        this.view.setButtonDalejDataWynikiSkladyActionListener(new PrzejscieDoDalejDataWynikiSkladyMeczu());
     }
 
 
@@ -313,6 +312,14 @@ public class ControllerZawodnikDodaj {
             }
             else
                 showMyMessage.informationMessage("Wybierz mundial,reprezentacje,zawodnika aby wyświetlić zawodników w nowym mundialu.","Nie wybrano mundialu,reprezentacji i zawodnika");
+        }
+    }
+
+    private class PrzejscieDoDalejDataWynikiSkladyMeczu implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new ControllerGrupaMecz(new ViewMecz(), new Mundial(), new Rozgrywka(), new TypGrupy(), new Grupa(), new Reprezentacja(), new Mecz(), new Zawodnik());
+            view.setVisible(false);
         }
     }
 }

@@ -16,11 +16,9 @@ public class ViewGrupaDodaj extends JFrame{
     private JButton dodajGrFButton = new JButton("F >");
     private JButton dodajGrGButton = new JButton("G >");
     private JButton dodajGrHButton = new JButton("H >");
-    private JButton cofnijButton = new JButton("<< Cofnij <<");
+    private JButton cofnijButton = new JButton("<< Cofnij <<"), buttonDalejDodajZawodnika;
     private JList mundialList, reprezentacjaList;
     private JList grupaAList, grupaBList, grupaCList, grupaDList, grupaEList, grupaFList, grupaGList, grupaHList;
-    private DefaultListModel mundialListModel, reprezentacjaListModel;
-    private DefaultListModel grupaAListModel,grupaBListModel,grupaCListModel,grupaDListModel,grupaEListModel,grupaFListModel,grupaGListModel,grupaHListModel;
     private JLabel grupaALabel = new JLabel("Grupa A");
     private JLabel grupaBLabel = new JLabel("Grupa B");
     private JLabel grupaCLabel = new JLabel("Grupa C");
@@ -46,19 +44,16 @@ public class ViewGrupaDodaj extends JFrame{
         setLocationRelativeTo(null);
         setVisible(true);
 
-        mundialListModel = new DefaultListModel();
         mundialList= new JList();
         JScrollPane mundialScrollPane = new JScrollPane(mundialList);
         mundialScrollPane.setBounds(50,20,160,200);
         add(mundialScrollPane);
 
-        reprezentacjaListModel = new DefaultListModel();
         reprezentacjaList = new JList();
         JScrollPane scrollPaneGrupaAList = new JScrollPane(reprezentacjaList);
         scrollPaneGrupaAList.setBounds(220,20,180,200);
         add(scrollPaneGrupaAList);
 
-        grupaAListModel = new DefaultListModel();
         grupaAList = new JList();
         grupaALabel.setBounds(120, 235, 60, 20);
         add(grupaALabel);
@@ -69,7 +64,6 @@ public class ViewGrupaDodaj extends JFrame{
         usunGrAButton.setBounds(10,315,60,50);
         add(usunGrAButton);
 
-        grupaBListModel = new DefaultListModel();
         grupaBList = new JList();
         grupaBLabel.setBounds(380,235,60,20);
         add(grupaBLabel);
@@ -80,7 +74,6 @@ public class ViewGrupaDodaj extends JFrame{
         usunGrBButton.setBounds(270,315,60,50);
         add(usunGrBButton);
 
-        grupaCListModel = new DefaultListModel();
         grupaCList = new JList();
         grupaCLabel.setBounds(640, 235, 60, 20);
         add(grupaCLabel);
@@ -91,7 +84,6 @@ public class ViewGrupaDodaj extends JFrame{
         usunGrCButton.setBounds(530,315,60,50);
         add(usunGrCButton);
 
-        grupaDListModel = new DefaultListModel();
         grupaDList = new JList();
         grupaDLabel.setBounds(120,375,60,20);
         add(grupaDLabel);
@@ -102,7 +94,6 @@ public class ViewGrupaDodaj extends JFrame{
         usunGrDButton.setBounds(10,455,60,50);
         add(usunGrDButton);
 
-        grupaEListModel = new DefaultListModel();
         grupaEList = new JList();
         grupaELabel.setBounds(380,375,60,20);
         add(grupaELabel);
@@ -113,7 +104,6 @@ public class ViewGrupaDodaj extends JFrame{
         usunGrEButton.setBounds(270,455,60,50);
         add(usunGrEButton);
 
-        grupaFListModel = new DefaultListModel();
         grupaFList = new JList();
         grupaFLabel.setBounds(640,375,60,20);
         add(grupaFLabel);
@@ -124,7 +114,6 @@ public class ViewGrupaDodaj extends JFrame{
         usunGrFButton.setBounds(530,455,60,50);
         add(usunGrFButton);
 
-        grupaGListModel = new DefaultListModel();
         grupaGList = new JList();
         grupaGLabel.setBounds(120,515,60,20);
         add(grupaGLabel);
@@ -135,7 +124,6 @@ public class ViewGrupaDodaj extends JFrame{
         usunGrGButton.setBounds(10,595,60,50);
         add(usunGrGButton);
 
-        grupaHListModel = new DefaultListModel();
         grupaHList = new JList();
         grupaHLabel.setBounds(380,515,60,20);
         add(grupaHLabel);
@@ -148,6 +136,10 @@ public class ViewGrupaDodaj extends JFrame{
 
         cofnijButton.setBounds(20,680,100,30);
         add(cofnijButton);
+
+            buttonDalejDodajZawodnika = new JButton(">> Dalej >>");
+        buttonDalejDodajZawodnika.setBounds(650,680,100,30);
+        add(buttonDalejDodajZawodnika);
     }
 
     public void addCofnijButtonListener(ActionListener listenCofnijButton) {
@@ -282,4 +274,8 @@ public class ViewGrupaDodaj extends JFrame{
     public JList getGrupaFList() { return grupaFList; }
     public JList getGrupaGList() { return grupaGList; }
     public JList getGrupaHList() { return grupaHList; }
+
+    public void setButtonDalejDodajZawodnikaActionListener(ActionListener listenButtonDalejDodajZawodnika) {
+        buttonDalejDodajZawodnika.addActionListener(listenButtonDalejDodajZawodnika);
+    }
 }
