@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: koczwara.mundialv1.MVC.AppMVC
+Main-Class: koczwara.mundialv1.AppStart
 
