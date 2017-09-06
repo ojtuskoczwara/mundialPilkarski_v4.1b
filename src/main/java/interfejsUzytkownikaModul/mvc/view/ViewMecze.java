@@ -55,14 +55,20 @@ public class ViewMecze extends JFrame{
 
     public ViewMecze() {
         super("Aktualizuj mecz");
-        setSize(800, 1000);
+        setSize(1050, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
 
         int x = 10;
-        int xx = 410;
+        int xx = 560;
+        int h = 30;
+        int y = 290;
+        int w = 200;
+        int a = 20;
+        int b = 40;
+        int d = 360;
 
 //Lista rozwijalna Mundiale
         mundialList= new JList();
@@ -73,226 +79,239 @@ public class ViewMecze extends JFrame{
 //Lista rozwijalna Mecze w wybranym mundialu
         meczList= new JList();
         JScrollPane meczScrollList = new JScrollPane(meczList);
-        meczScrollList.setBounds(410,20,365,200);
+        meczScrollList.setBounds(xx+95,20,365,200);
         add(meczScrollList);
 
 //Wszystko dotyczace ustawienia daty meczu
-        dataMeczLabel.setBounds(220,50,120,40);
+        dataMeczLabel.setBounds(d,50,120,40);
         add(dataMeczLabel);
 
-        dataRokLabel.setBounds(220,90,30,30);
+        dataRokLabel.setBounds(d-5,90,35,30);
         dataRokLabel.setBorder(BorderFactory.createLineBorder(Color.black));
         add(dataRokLabel);
 
         JLabel przecinekLabel = new JLabel("-");
-        przecinekLabel.setBounds(255,90,10,30);
+        przecinekLabel.setBounds(d+35,90,10,30);
         add(przecinekLabel);
 
-        dataMiesiacTextField.setBounds(265,90,30,30);
+        dataMiesiacTextField.setBounds(d+45,90,30,30);
         add(dataMiesiacTextField);
 
         JLabel przecinek2Label = new JLabel("-");
-        przecinek2Label.setBounds(298,90,10,30);
+        przecinek2Label.setBounds(d+80,90,10,30);
         add(przecinek2Label);
 
-        dataDzienTextField.setBounds(310,90,30,30);
+        dataDzienTextField.setBounds(d+90,90,30,30);
         add(dataDzienTextField);
 
 //Label wynik i dwukropek oraz TF gole_r1 gole_r2
-        wynikLabel.setBounds(265,130,50,30);
+        wynikLabel.setBounds(d+45,130,50,30);
         add(wynikLabel);
 
-        goleRep1TextField.setBounds(200,160,50,50);
+        goleRep1TextField.setBounds(d-20,160,50,50);
         add(goleRep1TextField);
 
         JLabel dwukropek = new JLabel(":");
-        dwukropek.setBounds(287,160,50,50);
+        dwukropek.setBounds(d+70,160,50,50);
         add(dwukropek);
 
-        goleRep2TextField.setBounds(325,160,50,50);
+        goleRep2TextField.setBounds(d+105,160,50,50);
         add(goleRep2TextField);
 
 //nazwaRep1 nazwaRep2 label
-        nazwaRep1Label.setBounds(10,230,220,50);
+        nazwaRep1Label.setBounds(x+110,230,220,50);
         nazwaRep1Label.setHorizontalAlignment(SwingConstants.CENTER);
         nazwaRep1Label.setBorder(BorderFactory.createLineBorder(Color.black));
         add(nazwaRep1Label);
 
-        nazwaRep2Label.setBounds(410,230,220,50);
+        nazwaRep2Label.setBounds(xx+110,230,220,50);
         nazwaRep2Label.setHorizontalAlignment(SwingConstants.CENTER);
         nazwaRep2Label.setBorder(BorderFactory.createLineBorder(Color.black));
         add(nazwaRep2Label);
 
 //Sklady reprezentacji_1
         JLabel lp1Rep1 = new JLabel("1. ");
-         lp1Rep1.setBounds(x,290,20,30);
-         add(lp1Rep1);
-         zaw1Rep1ComboBox.setBounds(x+20,290,200,30);
-         add(zaw1Rep1ComboBox);
         JLabel lp2Rep1 = new JLabel("2. ");
-         lp2Rep1.setBounds(x,325,20,30);
-         add(lp2Rep1);
-         zaw2Rep1ComboBox.setBounds(x+20,325,200,30);
-         add(zaw2Rep1ComboBox);
         JLabel lp3Rep1 = new JLabel("3. ");
-         lp3Rep1.setBounds(x,360,20,30);
-         add(lp3Rep1);
-         zaw3Rep1ComboBox.setBounds(x+20,360,200,30);
-         add(zaw3Rep1ComboBox);
         JLabel lp4Rep1 = new JLabel("4. ");
-         lp4Rep1.setBounds(x,395,20,30);
-         add(lp4Rep1);
-         zaw4Rep1ComboBox.setBounds(x+20,395,200,30);
-         add(zaw4Rep1ComboBox);
         JLabel lp5Rep1 = new JLabel("5. ");
-        lp5Rep1.setBounds(x,430,20,30);
-        add(lp5Rep1);
-        zaw5Rep1ComboBox.setBounds(x+20,430,200,30);
-        add(zaw5Rep1ComboBox);
         JLabel lp6Rep1 = new JLabel("6. ");
-        lp6Rep1.setBounds(x,465,20,30);
-        add(lp6Rep1);
-        zaw6Rep1ComboBox.setBounds(x+20,465,200,30);
-        add(zaw6Rep1ComboBox);
         JLabel lp7Rep1 = new JLabel("7. ");
-        lp7Rep1.setBounds(x,500,20,30);
-        add(lp7Rep1);
-        zaw7Rep1ComboBox.setBounds(x+20,500,200,30);
-        add(zaw7Rep1ComboBox);
         JLabel lp8Rep1 = new JLabel("8. ");
-        lp8Rep1.setBounds(x,535,20,30);
-        add(lp8Rep1);
-        zaw8Rep1ComboBox.setBounds(x+20,535,200,30);
-        add(zaw8Rep1ComboBox);
         JLabel lp9Rep1 = new JLabel("9. ");
-        lp9Rep1.setBounds(x,570,20,30);
-        add(lp9Rep1);
-        zaw9Rep1ComboBox.setBounds(x+20,570,200,30);
-        add(zaw9Rep1ComboBox);
         JLabel lp10Rep1 = new JLabel("10. ");
-        lp10Rep1.setBounds(x,605,20,30);
-        add(lp10Rep1);
-        zaw10Rep1ComboBox.setBounds(x+20,605,200,30);
-        add(zaw10Rep1ComboBox);
         JLabel lp11Rep1 = new JLabel("11. ");
-        lp11Rep1.setBounds(x,640,20,30);
-        add(lp11Rep1);
-        zaw11Rep1ComboBox.setBounds(x+20,640,200,30);
-        add(zaw11Rep1ComboBox);
         JLabel lp12Rep1 = new JLabel("12. ");
-        lp12Rep1.setBounds(x,675,20,30);
-        add(lp12Rep1);
-        zaw12Rep1ComboBox.setBounds(x+20,675,200,30);
-        add(zaw12Rep1ComboBox);
         JLabel lp13Rep1 = new JLabel("13. ");
-        lp13Rep1.setBounds(x,710,20,30);
-        add(lp13Rep1);
-        zaw13Rep1ComboBox.setBounds(x+20,710,200,30);
-        add(zaw13Rep1ComboBox);
         JLabel lp14Rep1 = new JLabel("14. ");
-        lp14Rep1.setBounds(x,745,20,30);
-        add(lp14Rep1);
-        zaw14Rep1ComboBox.setBounds(x+20,745,200,30);
-        add(zaw14Rep1ComboBox);
         JLabel lp15Rep1 = new JLabel("15. ");
-        lp15Rep1.setBounds(x,780,20,30);
-        add(lp15Rep1);
-        zaw15Rep1ComboBox.setBounds(x+20,780,200,30);
-        add(zaw15Rep1ComboBox);
         JLabel lp16Rep1 = new JLabel("16. ");
-        lp16Rep1.setBounds(x,815,20,30);
+
+        lp1Rep1.setBounds(x,y,a,h);
+        lp3Rep1.setBounds(x,y+(h+5)*1,a,h);
+        lp5Rep1.setBounds(x,y+(h+5)*2,a,h);
+        lp7Rep1.setBounds(x,y+(h+5)*3,a,h);
+        lp9Rep1.setBounds(x,y+(h+5)*4,a,h);
+        lp11Rep1.setBounds(x,y+(h+5)*5,a,h);
+        lp13Rep1.setBounds(x,y+(h+5)*6,a,h);
+        lp15Rep1.setBounds(x,y+(h+5)*7,a,h);
+
+        lp2Rep1.setBounds(x+w+b,y,a,h);
+        lp4Rep1.setBounds(x+w+b,y+(h+5)*1,a,h);
+        lp6Rep1.setBounds(x+w+b,y+(h+5)*2,a,h);
+        lp8Rep1.setBounds(x+w+b,y+(h+5)*3,a,h);
+        lp10Rep1.setBounds(x+w+b,y+(h+5)*4,a,h);
+        lp12Rep1.setBounds(x+w+b,y+(h+5)*5,a,h);
+        lp14Rep1.setBounds(x+w+b,y+(h+5)*6,a,h);
+        lp16Rep1.setBounds(x+w+b,y+(h+5)*7,a,h);
+
+        zaw1Rep1ComboBox.setBounds(x+a,y,w,h);
+        zaw3Rep1ComboBox.setBounds(x+a,y+(h+5)*1,w,h);
+        zaw5Rep1ComboBox.setBounds(x+a,y+(h+5)*2,w,h);
+        zaw7Rep1ComboBox.setBounds(x+a,y+(h+5)*3,w,h);
+        zaw9Rep1ComboBox.setBounds(x+a,y+(h+5)*4,w,h);
+        zaw11Rep1ComboBox.setBounds(x+a,y+(h+5)*5,w,h);
+        zaw13Rep1ComboBox.setBounds(x+a,y+(h+5)*6,w,h);
+        zaw15Rep1ComboBox.setBounds(x+a,y+(h+5)*7,w,h);
+
+        zaw2Rep1ComboBox.setBounds(x+w+a+b,y,w,h);
+        zaw4Rep1ComboBox.setBounds(x+w+a+b,y+(h+5)*1,w,h);
+        zaw6Rep1ComboBox.setBounds(x+w+a+b,y+(h+5)*2,w,h);
+        zaw8Rep1ComboBox.setBounds(x+w+a+b,y+(h+5)*3,w,h);
+        zaw10Rep1ComboBox.setBounds(x+w+a+b,y+(h+5)*4,w,h);
+        zaw12Rep1ComboBox.setBounds(x+w+a+b,y+(h+5)*5,w,h);
+        zaw14Rep1ComboBox.setBounds(x+w+a+b,y+(h+5)*6,w,h);
+        zaw16Rep1ComboBox.setBounds(x+w+a+b,y+(h+5)*7,w,h);
+
+        add(lp1Rep1);
+        add(lp2Rep1);
+        add(lp3Rep1);
+        add(lp4Rep1);
+        add(lp5Rep1);
+        add(lp6Rep1);
+        add(lp7Rep1);
+        add(lp8Rep1);
+        add(lp9Rep1);
+        add(lp10Rep1);
+        add(lp11Rep1);
+        add(lp12Rep1);
+        add(lp13Rep1);
+        add(lp14Rep1);
+        add(lp15Rep1);
         add(lp16Rep1);
-        zaw16Rep1ComboBox.setBounds(x+20,815,200,30);
+
+        add(zaw1Rep1ComboBox);
+        add(zaw2Rep1ComboBox);
+        add(zaw3Rep1ComboBox);
+        add(zaw4Rep1ComboBox);
+        add(zaw5Rep1ComboBox);
+        add(zaw6Rep1ComboBox);
+        add(zaw7Rep1ComboBox);
+        add(zaw8Rep1ComboBox);
+        add(zaw9Rep1ComboBox);
+        add(zaw10Rep1ComboBox);
+        add(zaw11Rep1ComboBox);
+        add(zaw12Rep1ComboBox);
+        add(zaw13Rep1ComboBox);
+        add(zaw14Rep1ComboBox);
+        add(zaw15Rep1ComboBox);
         add(zaw16Rep1ComboBox);
 
 //Sklady reprezentacji_2
         JLabel lp1Rep2 = new JLabel("1. ");
-         lp1Rep2.setBounds(xx, 290,20,30);
-         add(lp1Rep2);
-         zaw1Rep2ComboBox.setBounds(xx+20,290,200,30);
-         add(zaw1Rep2ComboBox);
         JLabel lp2Rep2 = new JLabel("2. ");
-        lp2Rep2.setBounds(xx,325,20,30);
-        add(lp2Rep2);
-        zaw2Rep2ComboBox.setBounds(xx+20,325,200,30);
-        add(zaw2Rep2ComboBox);
         JLabel lp3Rep2 = new JLabel("3. ");
-        lp3Rep2.setBounds(xx,360,20,30);
-        add(lp3Rep2);
-        zaw3Rep2ComboBox.setBounds(xx+20,360,200,30);
-        add(zaw3Rep2ComboBox);
         JLabel lp4Rep2 = new JLabel("4. ");
-        lp4Rep2.setBounds(xx,395,20,30);
-        add(lp4Rep2);
-        zaw4Rep2ComboBox.setBounds(xx+20,395,200,30);
-        add(zaw4Rep2ComboBox);
         JLabel lp5Rep2 = new JLabel("5. ");
-        lp5Rep2.setBounds(xx,430,20,30);
-        add(lp5Rep2);
-        zaw5Rep2ComboBox.setBounds(xx+20,430,200,30);
-        add(zaw5Rep2ComboBox);
         JLabel lp6Rep2 = new JLabel("6. ");
-        lp6Rep2.setBounds(xx,465,20,30);
-        add(lp6Rep2);
-        zaw6Rep2ComboBox.setBounds(xx+20,465,200,30);
-        add(zaw6Rep2ComboBox);
         JLabel lp7Rep2 = new JLabel("7. ");
-        lp7Rep2.setBounds(xx,500,20,30);
-        add(lp7Rep2);
-        zaw7Rep2ComboBox.setBounds(xx+20,500,200,30);
-        add(zaw7Rep2ComboBox);
         JLabel lp8Rep2 = new JLabel("8. ");
-        lp8Rep2.setBounds(xx,535,20,30);
-        add(lp8Rep2);
-        zaw8Rep2ComboBox.setBounds(xx+20,535,200,30);
-        add(zaw8Rep2ComboBox);
         JLabel lp9Rep2 = new JLabel("9. ");
-        lp9Rep2.setBounds(xx,570,20,30);
-        add(lp9Rep2);
-        zaw9Rep2ComboBox.setBounds(xx+20,570,200,30);
-        add(zaw9Rep2ComboBox);
         JLabel lp10Rep2 = new JLabel("10. ");
-        lp10Rep2.setBounds(xx,605,20,30);
-        add(lp10Rep2);
-        zaw10Rep2ComboBox.setBounds(xx+20,605,200,30);
-        add(zaw10Rep2ComboBox);
         JLabel lp11Rep2 = new JLabel("11. ");
-        lp11Rep2.setBounds(xx,640,20,30);
-        add(lp11Rep2);
-        zaw11Rep2ComboBox.setBounds(xx+20,640,200,30);
-        add(zaw11Rep2ComboBox);
         JLabel lp12Rep2 = new JLabel("12. ");
-        lp12Rep2.setBounds(xx,675,20,30);
-        add(lp12Rep2);
-        zaw12Rep2ComboBox.setBounds(xx+20,675,200,30);
-        add(zaw12Rep2ComboBox);
         JLabel lp13Rep2 = new JLabel("13. ");
-        lp13Rep2.setBounds(xx,710,20,30);
-        add(lp13Rep2);
-        zaw13Rep2ComboBox.setBounds(xx+20,710,200,30);
-        add(zaw13Rep2ComboBox);
         JLabel lp14Rep2 = new JLabel("14. ");
-        lp14Rep2.setBounds(xx,745,20,30);
-        add(lp14Rep2);
-        zaw14Rep2ComboBox.setBounds(xx+20,745,200,30);
-        add(zaw14Rep2ComboBox);
         JLabel lp15Rep2 = new JLabel("15. ");
-        lp15Rep2.setBounds(xx,780,20,30);
-        add(lp15Rep2);
-        zaw15Rep2ComboBox.setBounds(xx+20,780,200,30);
-        add(zaw15Rep2ComboBox);
         JLabel lp16Rep2 = new JLabel("16. ");
-        lp16Rep2.setBounds(xx,815,20,30);
+
+        lp1Rep2.setBounds(xx,y,a,h);
+        lp3Rep2.setBounds(xx,y+(h+5)*1,a,h);
+        lp5Rep2.setBounds(xx,y+(h+5)*2,a,h);
+        lp7Rep2.setBounds(xx,y+(h+5)*3,a,h);
+        lp9Rep2.setBounds(xx,y+(h+5)*4,a,h);
+        lp11Rep2.setBounds(xx,y+(h+5)*5,a,h);
+        lp13Rep2.setBounds(xx,y+(h+5)*6,a,h);
+        lp15Rep2.setBounds(xx,y+(h+5)*7,a,h);
+
+        lp2Rep2.setBounds(xx+w+b,y,a,h);
+        lp4Rep2.setBounds(xx+w+b,y+(h+5)*1,a,h);
+        lp6Rep2.setBounds(xx+w+b,y+(h+5)*2,a,h);
+        lp8Rep2.setBounds(xx+w+b,y+(h+5)*3,a,h);
+        lp10Rep2.setBounds(xx+w+b,y+(h+5)*4,a,h);
+        lp12Rep2.setBounds(xx+w+b,y+(h+5)*5,a,h);
+        lp14Rep2.setBounds(xx+w+b,y+(h+5)*6,a,h);
+        lp16Rep2.setBounds(xx+w+b,y+(h+5)*7,a,h);
+
+        zaw1Rep2ComboBox.setBounds(xx+a,y,w,h);
+        zaw3Rep2ComboBox.setBounds(xx+a,y+(h+5)*1,w,h);
+        zaw5Rep2ComboBox.setBounds(xx+a,y+(h+5)*2,w,h);
+        zaw7Rep2ComboBox.setBounds(xx+a,y+(h+5)*3,w,h);
+        zaw9Rep2ComboBox.setBounds(xx+a,y+(h+5)*4,w,h);
+        zaw11Rep2ComboBox.setBounds(xx+a,y+(h+5)*5,w,h);
+        zaw13Rep2ComboBox.setBounds(xx+a,y+(h+5)*6,w,h);
+        zaw15Rep2ComboBox.setBounds(xx+a,y+(h+5)*7,w,h);
+
+        zaw2Rep2ComboBox.setBounds(xx+w+a+b,y,w,h);
+        zaw4Rep2ComboBox.setBounds(xx+w+a+b,y+(h+5)*1,w,h);
+        zaw6Rep2ComboBox.setBounds(xx+w+a+b,y+(h+5)*2,w,h);
+        zaw8Rep2ComboBox.setBounds(xx+w+a+b,y+(h+5)*3,w,h);
+        zaw10Rep2ComboBox.setBounds(xx+w+a+b,y+(h+5)*4,w,h);
+        zaw12Rep2ComboBox.setBounds(xx+w+a+b,y+(h+5)*5,w,h);
+        zaw14Rep2ComboBox.setBounds(xx+w+a+b,y+(h+5)*6,w,h);
+        zaw16Rep2ComboBox.setBounds(xx+w+a+b,y+(h+5)*7,w,h);
+
+        add(lp1Rep2);
+        add(lp2Rep2);
+        add(lp3Rep2);
+        add(lp4Rep2);
+        add(lp5Rep2);
+        add(lp6Rep2);
+        add(lp7Rep2);
+        add(lp8Rep2);
+        add(lp9Rep2);
+        add(lp10Rep2);
+        add(lp11Rep2);
+        add(lp12Rep2);
+        add(lp13Rep2);
+        add(lp14Rep2);
+        add(lp15Rep2);
         add(lp16Rep2);
-        zaw16Rep2ComboBox.setBounds(xx+20,815,200,30);
+
+        add(zaw1Rep2ComboBox);
+        add(zaw2Rep2ComboBox);
+        add(zaw3Rep2ComboBox);
+        add(zaw4Rep2ComboBox);
+        add(zaw5Rep2ComboBox);
+        add(zaw6Rep2ComboBox);
+        add(zaw7Rep2ComboBox);
+        add(zaw8Rep2ComboBox);
+        add(zaw9Rep2ComboBox);
+        add(zaw10Rep2ComboBox);
+        add(zaw11Rep2ComboBox);
+        add(zaw12Rep2ComboBox);
+        add(zaw13Rep2ComboBox);
+        add(zaw14Rep2ComboBox);
+        add(zaw15Rep2ComboBox);
         add(zaw16Rep2ComboBox);
+
 // Przyciski cofnij i zatwierdz
-        cofnijButton.setBounds(10,900,100,30);
+        cofnijButton.setBounds(10,600,100,30);
         add(cofnijButton);
-        dodajButton.setBounds(230,870,100,50);
+        dodajButton.setBounds(470,580,100,50);
         add(dodajButton);
             buttonDalejDoPanelAdministratora = new JButton(">> Koniec <<");
-        buttonDalejDoPanelAdministratora.setBounds(660,900,110,30);
+        buttonDalejDoPanelAdministratora.setBounds(910,600,110,30);
         add(buttonDalejDoPanelAdministratora);
     }
 

@@ -15,7 +15,7 @@ public class ViewZawodnicy extends JFrame{
 
     public ViewZawodnicy() {
         super("Zawodnicy");
-        setSize(600, 800);
+        setSize(600, 630);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
@@ -27,9 +27,9 @@ public class ViewZawodnicy extends JFrame{
         int cbWys = 30;
         int cb2X = 30;
         int lX = cb2X+cbSzer+10;
-        int lY = cbY+cbWys*2;
+        int lY = cbY+cbWys*2-40;
         int lSzer = 160;
-        int lWys = 200;
+        int lWys = 160;
         int jcbX = cbX;
         int jcbY = lY+lWys+10;
         int jcbSzer = 150;
@@ -77,15 +77,14 @@ public class ViewZawodnicy extends JFrame{
             JLabel labelZawodnik = new JLabel("LISTA ZAWODNIKÓW");
         labelZawodnik.setBounds(jcbX+190,jcbY+jcbWys-30,120,30);
         add(labelZawodnik);
-
             listZawodnik = new JList();
             JScrollPane scrollPaneZawodnik = new JScrollPane(listZawodnik);
-        scrollPaneZawodnik.setBounds(jcbX+120,jcbY+jcbWys,lSzer+100,lSzer*2+50);
+        scrollPaneZawodnik.setBounds(jcbX+120,jcbY+jcbWys,lSzer+100,lSzer*2-10);
         scrollPaneZawodnik.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         add(scrollPaneZawodnik);
 
             buttonCofnij = new JButton("<< Cofnij <<");
-        buttonCofnij.setBounds(10,700,100,30);
+        buttonCofnij.setBounds(10,550,100,30);
         add(buttonCofnij);
     }
 

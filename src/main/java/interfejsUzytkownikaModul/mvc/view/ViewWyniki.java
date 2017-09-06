@@ -18,14 +18,19 @@ public class ViewWyniki extends JFrame{
 
     public ViewWyniki() {
         super("Wyniki meczów");
-        setSize(800, 1000);
+        setSize(890, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
 
         int x = 10;
-        int xx = 410;
+        int xx = 500;
+        int h = 30;
+        int y = 290;
+        int w = 200;
+        int a = 20;
+        int d = 310;
 
 //Lista rozwijalna Mundiale
         mundialList= new JList();
@@ -36,65 +41,65 @@ public class ViewWyniki extends JFrame{
 //Lista rozwijalna Mecze w wybranym mundialu
         meczList= new JList();
         JScrollPane meczScrollList = new JScrollPane(meczList);
-        meczScrollList.setBounds(410,20,365,200);
+        meczScrollList.setBounds(xx,20,365,200);
         add(meczScrollList);
 
 //Wszystko dotyczace ustawienia daty meczu
-        dataMeczLabel.setBounds(240,50,120,40);
+        dataMeczLabel.setBounds(d,50,120,40);
         dataMeczLabel.setFont(new Font("Arial Black",Font.ITALIC,12));
         add(dataMeczLabel);
 
         dataRokLabel = new JLabel();
-        dataRokLabel.setBounds(220,90,50,30);
+        dataRokLabel.setBounds(d-20,90,50,30);
         dataRokLabel.setFont(new Font("Arial Black",Font.PLAIN,15));
         add(dataRokLabel);
 
         JLabel przecinekLabel = new JLabel("-");
-        przecinekLabel.setBounds(265,90,10,30);
+        przecinekLabel.setBounds(d+25,90,10,30);
         add(przecinekLabel);
 
         dataMiesiacLabel = new JLabel();
-        dataMiesiacLabel.setBounds(275,90,30,30);
+        dataMiesiacLabel.setBounds(d+35,90,30,30);
         dataMiesiacLabel.setFont(new Font("Arial Black",Font.PLAIN,15));
         add(dataMiesiacLabel);
 
         JLabel przecinek2Label = new JLabel("-");
-        przecinek2Label.setBounds(310,90,10,30);
+        przecinek2Label.setBounds(d+70,90,10,30);
         add(przecinek2Label);
 
         dataDzienLabel = new JLabel();
-        dataDzienLabel.setBounds(320,90,30,30);
+        dataDzienLabel.setBounds(d+80,90,30,30);
         dataDzienLabel.setFont(new Font("Arial Black",Font.PLAIN,15));
         add(dataDzienLabel);
 
 //Label wynik i dwukropek oraz TF gole_r1 gole_r2
-        wynikLabel.setBounds(255,130,50,50);
+        wynikLabel.setBounds(d+15,130,50,50);
         wynikLabel.setFont(new Font("Arial Black",Font.ITALIC,12));
         add(wynikLabel);
 
         goleRep1Label = new JLabel();
-        goleRep1Label.setBounds(240,160,50,50);
+        goleRep1Label.setBounds(d,160,50,50);
         goleRep1Label.setFont(new Font("Arial Black",Font.PLAIN,15));
         add(goleRep1Label);
 
         JLabel dwukropek = new JLabel(":");
-        dwukropek.setBounds(275,160,50,50);
+        dwukropek.setBounds(d+35,160,50,50);
         add(dwukropek);
 
         goleRep2Label = new JLabel();
-        goleRep2Label.setBounds(310,160,50,50);
+        goleRep2Label.setBounds(d+70,160,50,50);
         goleRep2Label.setFont(new Font("Arial Black",Font.PLAIN,15));
         add(goleRep2Label);
 
 //nazwaRep1 nazwaRep2 label
         nazwaRep1Label = new JLabel();
-        nazwaRep1Label.setBounds(10,230,200,50);
+        nazwaRep1Label.setBounds(x+100,230,200,50);
         nazwaRep1Label.setHorizontalAlignment(SwingConstants.CENTER);
         nazwaRep1Label.setFont(new Font("Arial Black",Font.ITALIC,15));
         add(nazwaRep1Label);
 
         nazwaRep2Label = new JLabel();
-        nazwaRep2Label.setBounds(410,230,200,50);
+        nazwaRep2Label.setBounds(xx+100,230,200,50);
         nazwaRep2Label.setHorizontalAlignment(SwingConstants.CENTER);
         nazwaRep2Label.setFont(new Font("Arial Black",Font.ITALIC,15));
         add(nazwaRep2Label);
@@ -116,85 +121,91 @@ public class ViewWyniki extends JFrame{
         r1z14= new JLabel();
         r1z15= new JLabel();
         r1z16= new JLabel();
+
         JLabel lp1Rep1 = new JLabel("1. ");
-        lp1Rep1.setBounds(x,290,20,30);
-        add(lp1Rep1);
-        r1z1.setBounds(x+20,290,200,30);
-        add(r1z1);
         JLabel lp2Rep1 = new JLabel("2. ");
-        lp2Rep1.setBounds(x,325,20,30);
-        add(lp2Rep1);
-        r1z2.setBounds(x+20,325,200,30);
-        add(r1z2);
         JLabel lp3Rep1 = new JLabel("3. ");
-        lp3Rep1.setBounds(x,360,20,30);
-        add(lp3Rep1);
-        r1z3.setBounds(x+20,360,200,30);
-        add(r1z3);
         JLabel lp4Rep1 = new JLabel("4. ");
-        lp4Rep1.setBounds(x,395,20,30);
-        add(lp4Rep1);
-        r1z4.setBounds(x+20,395,200,30);
-        add(r1z4);
         JLabel lp5Rep1 = new JLabel("5. ");
-        lp5Rep1.setBounds(x,430,20,30);
-        add(lp5Rep1);
-        r1z5.setBounds(x+20,430,200,30);
-        add(r1z5);
         JLabel lp6Rep1 = new JLabel("6. ");
-        lp6Rep1.setBounds(x,465,20,30);
-        add(lp6Rep1);
-        r1z6.setBounds(x+20,465,200,30);
-        add(r1z6);
         JLabel lp7Rep1 = new JLabel("7. ");
-        lp7Rep1.setBounds(x,500,20,30);
-        add(lp7Rep1);
-        r1z7.setBounds(x+20,500,200,30);
-        add(r1z7);
         JLabel lp8Rep1 = new JLabel("8. ");
-        lp8Rep1.setBounds(x,535,20,30);
-        add(lp8Rep1);
-        r1z8.setBounds(x+20,535,200,30);
-        add(r1z8);
         JLabel lp9Rep1 = new JLabel("9. ");
-        lp9Rep1.setBounds(x,570,20,30);
-        add(lp9Rep1);
-        r1z9.setBounds(x+20,570,200,30);
-        add(r1z9);
         JLabel lp10Rep1 = new JLabel("10. ");
-        lp10Rep1.setBounds(x,605,20,30);
-        add(lp10Rep1);
-        r1z10.setBounds(x+20,605,200,30);
-        add(r1z10);
         JLabel lp11Rep1 = new JLabel("11. ");
-        lp11Rep1.setBounds(x,640,20,30);
-        add(lp11Rep1);
-        r1z11.setBounds(x+20,640,200,30);
-        add(r1z11);
         JLabel lp12Rep1 = new JLabel("12. ");
-        lp12Rep1.setBounds(x,675,20,30);
-        add(lp12Rep1);
-        r1z12.setBounds(x+20,675,200,30);
-        add(r1z12);
         JLabel lp13Rep1 = new JLabel("13. ");
-        lp13Rep1.setBounds(x,710,20,30);
-        add(lp13Rep1);
-        r1z13.setBounds(x+20,710,200,30);
-        add(r1z13);
         JLabel lp14Rep1 = new JLabel("14. ");
-        lp14Rep1.setBounds(x,745,20,30);
-        add(lp14Rep1);
-        r1z14.setBounds(x+20,745,200,30);
-        add(r1z14);
         JLabel lp15Rep1 = new JLabel("15. ");
-        lp15Rep1.setBounds(x,780,20,30);
-        add(lp15Rep1);
-        r1z15.setBounds(x+20,780,200,30);
-        add(r1z15);
         JLabel lp16Rep1 = new JLabel("16. ");
-        lp16Rep1.setBounds(x,815,20,30);
+
+        lp1Rep1.setBounds(x,y,a,h);
+        lp3Rep1.setBounds(x,y+(h+5)*1,a,h);
+        lp5Rep1.setBounds(x,y+(h+5)*2,a,h);
+        lp7Rep1.setBounds(x,y+(h+5)*3,a,h);
+        lp9Rep1.setBounds(x,y+(h+5)*4,a,h);
+        lp11Rep1.setBounds(x,y+(h+5)*5,a,h);
+        lp13Rep1.setBounds(x,y+(h+5)*6,a,h);
+        lp15Rep1.setBounds(x,y+(h+5)*7,a,h);
+
+        lp2Rep1.setBounds(x+w,y,a,h);
+        lp4Rep1.setBounds(x+w,y+(h+5)*1,a,h);
+        lp6Rep1.setBounds(x+w,y+(h+5)*2,a,h);
+        lp8Rep1.setBounds(x+w,y+(h+5)*3,a,h);
+        lp10Rep1.setBounds(x+w,y+(h+5)*4,a,h);
+        lp12Rep1.setBounds(x+w,y+(h+5)*5,a,h);
+        lp14Rep1.setBounds(x+w,y+(h+5)*6,a,h);
+        lp16Rep1.setBounds(x+w,y+(h+5)*7,a,h);
+
+        r1z1.setBounds(x+a,y,w,h);
+        r1z3.setBounds(x+a,y+(h+5)*1,w,h);
+        r1z5.setBounds(x+a,y+(h+5)*2,w,h);
+        r1z7.setBounds(x+a,y+(h+5)*3,w,h);
+        r1z9.setBounds(x+a,y+(h+5)*4,w,h);
+        r1z11.setBounds(x+a,y+(h+5)*5,w,h);
+        r1z13.setBounds(x+a,y+(h+5)*6,w,h);
+        r1z15.setBounds(x+a,y+(h+5)*7,w,h);
+
+        r1z2.setBounds(x+w+a,y,w,h);
+        r1z4.setBounds(x+w+a,y+(h+5)*1,w,h);
+        r1z6.setBounds(x+w+a,y+(h+5)*2,w,h);
+        r1z8.setBounds(x+w+a,y+(h+5)*3,w,h);
+        r1z10.setBounds(x+w+a,y+(h+5)*4,w,h);
+        r1z12.setBounds(x+w+a,y+(h+5)*5,w,h);
+        r1z14.setBounds(x+w+a,y+(h+5)*6,w,h);
+        r1z16.setBounds(x+w+a,y+(h+5)*7,w,h);
+
+        add(lp1Rep1);
+        add(lp2Rep1);
+        add(lp3Rep1);
+        add(lp4Rep1);
+        add(lp5Rep1);
+        add(lp6Rep1);
+        add(lp7Rep1);
+        add(lp8Rep1);
+        add(lp9Rep1);
+        add(lp10Rep1);
+        add(lp11Rep1);
+        add(lp12Rep1);
+        add(lp13Rep1);
+        add(lp14Rep1);
+        add(lp15Rep1);
         add(lp16Rep1);
-        r1z16.setBounds(x+20,815,200,30);
+        add(r1z1);
+        add(r1z2);
+        add(r1z3);
+        add(r1z4);
+        add(r1z5);
+        add(r1z6);
+        add(r1z7);
+        add(r1z8);
+        add(r1z9);
+        add(r1z10);
+        add(r1z11);
+        add(r1z12);
+        add(r1z13);
+        add(r1z14);
+        add(r1z15);
         add(r1z16);
 
 //Sklady reprezentacji_2
@@ -214,88 +225,94 @@ public class ViewWyniki extends JFrame{
         r2z14= new JLabel();
         r2z15= new JLabel();
         r2z16= new JLabel();
+
         JLabel lp1Rep2 = new JLabel("1. ");
-        lp1Rep2.setBounds(xx, 290,20,30);
-        add(lp1Rep2);
-        r2z1.setBounds(xx+20,290,200,30);
-        add(r2z1);
         JLabel lp2Rep2 = new JLabel("2. ");
-        lp2Rep2.setBounds(xx,325,20,30);
-        add(lp2Rep2);
-        r2z2.setBounds(xx+20,325,200,30);
-        add(r2z2);
         JLabel lp3Rep2 = new JLabel("3. ");
-        lp3Rep2.setBounds(xx,360,20,30);
-        add(lp3Rep2);
-        r2z3.setBounds(xx+20,360,200,30);
-        add(r2z3);
         JLabel lp4Rep2 = new JLabel("4. ");
-        lp4Rep2.setBounds(xx,395,20,30);
-        add(lp4Rep2);
-        r2z4.setBounds(xx+20,395,200,30);
-        add(r2z4);
         JLabel lp5Rep2 = new JLabel("5. ");
-        lp5Rep2.setBounds(xx,430,20,30);
-        add(lp5Rep2);
-        r2z5.setBounds(xx+20,430,200,30);
-        add(r2z5);
         JLabel lp6Rep2 = new JLabel("6. ");
-        lp6Rep2.setBounds(xx,465,20,30);
-        add(lp6Rep2);
-        r2z6.setBounds(xx+20,465,200,30);
-        add(r2z6);
         JLabel lp7Rep2 = new JLabel("7. ");
-        lp7Rep2.setBounds(xx,500,20,30);
-        add(lp7Rep2);
-        r2z7.setBounds(xx+20,500,200,30);
-        add(r2z7);
         JLabel lp8Rep2 = new JLabel("8. ");
-        lp8Rep2.setBounds(xx,535,20,30);
-        add(lp8Rep2);
-        r2z8.setBounds(xx+20,535,200,30);
-        add(r2z8);
         JLabel lp9Rep2 = new JLabel("9. ");
-        lp9Rep2.setBounds(xx,570,20,30);
-        add(lp9Rep2);
-        r2z9.setBounds(xx+20,570,200,30);
-        add(r2z9);
         JLabel lp10Rep2 = new JLabel("10. ");
-        lp10Rep2.setBounds(xx,605,20,30);
-        add(lp10Rep2);
-        r2z10.setBounds(xx+20,605,200,30);
-        add(r2z10);
         JLabel lp11Rep2 = new JLabel("11. ");
-        lp11Rep2.setBounds(xx,640,20,30);
-        add(lp11Rep2);
-        r2z11.setBounds(xx+20,640,200,30);
-        add(r2z11);
         JLabel lp12Rep2 = new JLabel("12. ");
-        lp12Rep2.setBounds(xx,675,20,30);
-        add(lp12Rep2);
-        r2z12.setBounds(xx+20,675,200,30);
-        add(r2z12);
         JLabel lp13Rep2 = new JLabel("13. ");
-        lp13Rep2.setBounds(xx,710,20,30);
-        add(lp13Rep2);
-        r2z13.setBounds(xx+20,710,200,30);
-        add(r2z13);
         JLabel lp14Rep2 = new JLabel("14. ");
-        lp14Rep2.setBounds(xx,745,20,30);
-        add(lp14Rep2);
-        r2z14.setBounds(xx+20,745,200,30);
-        add(r2z14);
         JLabel lp15Rep2 = new JLabel("15. ");
-        lp15Rep2.setBounds(xx,780,20,30);
-        add(lp15Rep2);
-        r2z15.setBounds(xx+20,780,200,30);
-        add(r2z15);
         JLabel lp16Rep2 = new JLabel("16. ");
-        lp16Rep2.setBounds(xx,815,20,30);
+
+        lp1Rep2.setBounds(xx,y,a,h);
+        lp3Rep2.setBounds(xx,y+(h+5)*1,a,h);
+        lp5Rep2.setBounds(xx,y+(h+5)*2,a,h);
+        lp7Rep2.setBounds(xx,y+(h+5)*3,a,h);
+        lp9Rep2.setBounds(xx,y+(h+5)*4,a,h);
+        lp11Rep2.setBounds(xx,y+(h+5)*5,a,h);
+        lp13Rep2.setBounds(xx,y+(h+5)*6,a,h);
+        lp15Rep2.setBounds(xx,y+(h+5)*7,a,h);
+
+        lp2Rep2.setBounds(xx+w,y,a,h);
+        lp4Rep2.setBounds(xx+w,y+(h+5)*1,a,h);
+        lp6Rep2.setBounds(xx+w,y+(h+5)*2,a,h);
+        lp8Rep2.setBounds(xx+w,y+(h+5)*3,a,h);
+        lp10Rep2.setBounds(xx+w,y+(h+5)*4,a,h);
+        lp12Rep2.setBounds(xx+w,y+(h+5)*5,a,h);
+        lp14Rep2.setBounds(xx+w,y+(h+5)*6,a,h);
+        lp16Rep2.setBounds(xx+w,y+(h+5)*7,a,h);
+
+        r2z1.setBounds(xx+a,y,w,h);
+        r2z3.setBounds(xx+a,y+(h+5)*1,w,h);
+        r2z5.setBounds(xx+a,y+(h+5)*2,w,h);
+        r2z7.setBounds(xx+a,y+(h+5)*3,w,h);
+        r2z9.setBounds(xx+a,y+(h+5)*4,w,h);
+        r2z11.setBounds(xx+a,y+(h+5)*5,w,h);
+        r2z13.setBounds(xx+a,y+(h+5)*6,w,h);
+        r2z15.setBounds(xx+a,y+(h+5)*7,w,h);
+
+        r2z2.setBounds(xx+w+a,y,w,h);
+        r2z4.setBounds(xx+w+a,y+(h+5)*1,w,h);
+        r2z6.setBounds(xx+w+a,y+(h+5)*2,w,h);
+        r2z8.setBounds(xx+w+a,y+(h+5)*3,w,h);
+        r2z10.setBounds(xx+w+a,y+(h+5)*4,w,h);
+        r2z12.setBounds(xx+w+a,y+(h+5)*5,w,h);
+        r2z14.setBounds(xx+w+a,y+(h+5)*6,w,h);
+        r2z16.setBounds(xx+w+a,y+(h+5)*7,w,h);
+
+        add(lp1Rep2);
+        add(lp2Rep2);
+        add(lp3Rep2);
+        add(lp4Rep2);
+        add(lp5Rep2);
+        add(lp6Rep2);
+        add(lp7Rep2);
+        add(lp8Rep2);
+        add(lp9Rep2);
+        add(lp10Rep2);
+        add(lp11Rep2);
+        add(lp12Rep2);
+        add(lp13Rep2);
+        add(lp14Rep2);
+        add(lp15Rep2);
         add(lp16Rep2);
-        r2z16.setBounds(xx+20,815,200,30);
+        add(r2z1);
+        add(r2z2);
+        add(r2z3);
+        add(r2z4);
+        add(r2z5);
+        add(r2z6);
+        add(r2z7);
+        add(r2z8);
+        add(r2z9);
+        add(r2z10);
+        add(r2z11);
+        add(r2z12);
+        add(r2z13);
+        add(r2z14);
+        add(r2z15);
         add(r2z16);
 
-        cofnijButton.setBounds(10,900,100,30);
+        cofnijButton.setBounds(10,600,100,30);
         add(cofnijButton);
     }
 
