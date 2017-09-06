@@ -1,11 +1,6 @@
 package interfejsUzytkownikaModul.mvc.view;
 
-
-import javafx.scene.paint.*;
-
 import javax.swing.*;
-import java.awt.*;
-import java.awt.Color;
 import java.awt.event.ActionListener;
 
 public class ViewEkranGlowny extends JFrame {
