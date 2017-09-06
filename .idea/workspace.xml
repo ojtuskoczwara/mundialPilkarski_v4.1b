@@ -7,252 +7,253 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0f75e14-39a8-47d4-9fd7-e01ebbd0b59e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/AppMVC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerEkranGlowny$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerEkranGlowny$PanelAdministratoraListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerEkranGlowny$WynikiDrabinkaListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerEkranGlowny$WynikiListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerEkranGlowny$ZawodnicyListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerEkranGlowny.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaA.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaD.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaE.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaF.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaG.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaH.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$BackToPanelAdmin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaA.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaD.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaE.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaF.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaG.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaH.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$GoToZawodnikAdding.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$PressedOnElementOfMundialList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj$PressedOnElementOfReprezentacjaList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMecze$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMecze$AddMeczButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMecze$BackToAdminPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMecze$GoToAdminPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMecze$PressedOnElementOfMeczList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMecze$PressedOnElementOfMundialList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMecze.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialDodaj$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialDodaj$ButtonDalejReprezentacja.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialDodaj$CofnijButtonListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialDodaj$DodajMundialButtonListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialDodaj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialEdytuj$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialEdytuj$CofnijButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialEdytuj$EdytujMundialButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialEdytuj$MundialListMouse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialEdytuj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialUsun$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialUsun$CofnijButtonListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialUsun$MundialeListMouseListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialUsun$UsunMundialButtonListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerMundialUsun.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$CofnijDoEkranGlownyListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajMundialListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajReprezentacjeDoGrupyListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajReprezentacjeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajWynikMeczuListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$DodajZawodnikListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$EdytujMundialListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$EdytujReprezentacjeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$EdytujZawodnikListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$UsunMundialListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$UsunReprezentacjeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora$UsunZawodnikListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaDodaj$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaDodaj$ButtonDalejRepDoGrupy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaDodaj$CofnijDoPanelAdmin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaDodaj$DodajReprezentacjaButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaDodaj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaEdytuj$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaEdytuj$CofnijDoPanelAdmin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaEdytuj$EdytujReprezentacjaButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaEdytuj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaUsun$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaUsun$CofnijDoPanelAdmin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaUsun$UsunReprezentacjaButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaUsun.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerWyniki$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerWyniki$BackToPanelAdministratora.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerWyniki$PressedOnElementOfMeczList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerWyniki$PressedOnElementOfMundialList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerWyniki.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerWynikiDrabinka.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy$ClickOnCheckboxAllReps.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy$ClickOnCheckboxAllZawodniks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy$ClickOnCheckboxSpecificMundial.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy$ClickOnCheckboxSpecifyRep.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy$ClickOnCofnijButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy$ClickOnElementOfListMundial.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy$ClickOnElementOfListReprezentacja.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$CofnijDoPanelAdmin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$DodajZawodnikaButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$PrzejscieDoDalejDataWynikiSkladyMeczu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$WybranieElementuMundial2List.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$WybranieElementuMundialList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$WybranieElementuReprezentacjaList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$WybranieIstniejacyZawodnikDoNowyMundial.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj$WybranieNowyZawodnikDoNowyMundial.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj$BackToPanelAdmin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj$PressedOnElementOfMundialList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj$PressedOnElementOfReprezentacjaList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj$PressedOnElementOfZawodnikList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj$UpdatePlayer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikUsun$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikUsun$BackToPanelAdmin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikUsun$PressedOnElementOfMundialList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikUsun$PressedOnElementOfReprezentacjaList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikUsun$PressedOnElementOfZawodnikList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikUsun$UsunZawodnika.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/ControllerZawodnikUsun.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Controller/DatabaseConnection/ConnectionDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/GrupaDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MeczDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MundialDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/MundialDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/TypGrupyDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/TypGrupyDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/Grupa.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/Mecz.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/Mundial.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/Reprezentacja.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/ReprezentacjaWGrupa.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/Rozgrywka.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/SkladReprezentacja1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/SkladReprezentacja2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/TypGrupy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/Zawodnik.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Model/entity/ZawodnikWReprezentacja.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Tools/SetDLM.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Tools/ShowMyMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Tools/exceptions/CheckBoxUnchecked.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Tools/exceptions/MundialNotSelected.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Tools/exceptions/MyExceptions.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Tools/exceptions/MyOwnException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Tools/utils/NotImplement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/Tools/utils/ParserSQL.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewEkranGlowny.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewGrupaDodaj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewMecze.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewMundialDodaj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewMundialEdytuj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewMundialUsun.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewPanelAdministratora.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewReprezentacjaDodaj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewReprezentacjaEdytuj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewReprezentacjaUsun.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewWyniki.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewWynikiDrabinka.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewZawodnicy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewZawodnikDodaj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewZawodnikEdytuj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/MVC/View/ViewZawodnikUsun.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/AppMVC.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/AppStart.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerEkranGlowny.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerEkranGlowny.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerGrupaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerGrupaDodaj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerMecze.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMecze.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerMundialDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMundialDodaj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerMundialEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMundialEdytuj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerMundialUsun.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMundialUsun.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerPanelAdministratora.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerPanelAdministratora.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaDodaj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaEdytuj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerReprezentacjaUsun.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaUsun.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerWyniki.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerWyniki.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerWynikiDrabinka.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerWynikiDrabinka.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerZawodnicy.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnicy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerZawodnikDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikDodaj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerZawodnikEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikEdytuj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/ControllerZawodnikUsun.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikUsun.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Controller/DatabaseConnection/ConnectionDB.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/service/ConnectionDB.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/GrupaDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/GrupaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/GrupaDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/MeczDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MeczDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/MeczDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MeczDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/MundialDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MundialDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/MundialDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MundialDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaWGrupaDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ReprezentacjaWGrupaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaWGrupaDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/RozgrywkaDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/RozgrywkaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/RozgrywkaDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/SkladReprezentacjaDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/SkladReprezentacjaDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/TypGrupyDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/TypGrupyDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/TypGrupyDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/TypGrupyDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ZawodnikDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ZawodnikDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikWReprezentacjaDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikWReprezentacjaDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Grupa.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Grupa.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Mecz.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Mecz.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Mundial.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Mundial.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Reprezentacja.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Reprezentacja.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/ReprezentacjaWGrupa.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/ReprezentacjaWGrupa.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Rozgrywka.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Rozgrywka.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/SkladReprezentacja1.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/SkladReprezentacja1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/SkladReprezentacja2.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/SkladReprezentacja2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/TypGrupy.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/TypGrupy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/Zawodnik.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Zawodnik.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/entity/ZawodnikWReprezentacja.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/ZawodnikWReprezentacja.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Tools/SetDLM.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/SetDLM.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Tools/ShowMyMessage.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/ShowMyMessage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Tools/exceptions/CheckBoxUnchecked.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/exceptions/CheckBoxUnchecked.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Tools/exceptions/MundialNotSelected.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/exceptions/MundialNotSelected.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Tools/exceptions/MyExceptions.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/exceptions/MyExceptions.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Tools/exceptions/MyOwnException.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/exceptions/MyOwnException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Tools/utils/NotImplement.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/utils/NotImplement.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Tools/utils/ParserSQL.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/utils/ParserSQL.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewEkranGlowny.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewEkranGlowny.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewGrupaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewGrupaDodaj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewMecze.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMecze.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewMundialDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialDodaj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewMundialEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialEdytuj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewMundialUsun.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialUsun.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewPanelAdministratora.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewPanelAdministratora.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewReprezentacjaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaDodaj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewReprezentacjaEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaEdytuj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewReprezentacjaUsun.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaUsun.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewWyniki.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewWyniki.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewWynikiDrabinka.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewWynikiDrabinka.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewZawodnicy.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnicy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewZawodnikDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikDodaj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewZawodnikEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikEdytuj.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewZawodnikUsun.java" afterPath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikUsun.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/AppStart.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/AppStart.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/AppMVC.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulDatabaseConnection/ConnectionDB.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerEkranGlowny$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerEkranGlowny$PanelAdministratoraListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerEkranGlowny$WynikiDrabinkaListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerEkranGlowny$WynikiListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerEkranGlowny$ZawodnicyListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerEkranGlowny.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaB.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaC.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaF.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaG.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$AddReprezentacjaToGrupaH.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$BackToPanelAdmin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaB.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaC.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaF.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaG.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$DeleteReprezentacjaFromGrupaH.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$GoToZawodnikAdding.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$PressedOnElementOfMundialList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj$PressedOnElementOfReprezentacjaList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerGrupaDodaj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMecze$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMecze$AddMeczButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMecze$BackToAdminPanel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMecze$GoToAdminPanel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMecze$PressedOnElementOfMeczList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMecze$PressedOnElementOfMundialList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMecze.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialDodaj$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialDodaj$ButtonDalejReprezentacja.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialDodaj$CofnijButtonListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialDodaj$DodajMundialButtonListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialDodaj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialEdytuj$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialEdytuj$CofnijButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialEdytuj$EdytujMundialButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialEdytuj$MundialListMouse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialEdytuj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialUsun$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialUsun$CofnijButtonListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialUsun$MundialeListMouseListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialUsun$UsunMundialButtonListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerMundialUsun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$CofnijDoEkranGlownyListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$DodajMundialListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$DodajReprezentacjeDoGrupyListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$DodajReprezentacjeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$DodajWynikMeczuListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$DodajZawodnikListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$EdytujMundialListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$EdytujReprezentacjeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$EdytujZawodnikListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$UsunMundialListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$UsunReprezentacjeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora$UsunZawodnikListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerPanelAdministratora.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaDodaj$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaDodaj$ButtonDalejRepDoGrupy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaDodaj$CofnijDoPanelAdmin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaDodaj$DodajReprezentacjaButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaDodaj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaEdytuj$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaEdytuj$CofnijDoPanelAdmin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaEdytuj$EdytujReprezentacjaButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaEdytuj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaUsun$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaUsun$CofnijDoPanelAdmin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaUsun$UsunReprezentacjaButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerReprezentacjaUsun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerWyniki$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerWyniki$BackToPanelAdministratora.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerWyniki$PressedOnElementOfMeczList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerWyniki$PressedOnElementOfMundialList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerWyniki.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerWynikiDrabinka.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy$ClickOnCheckboxAllReps.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy$ClickOnCheckboxAllZawodniks.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy$ClickOnCheckboxSpecificMundial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy$ClickOnCheckboxSpecifyRep.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy$ClickOnCofnijButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy$ClickOnElementOfListMundial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy$ClickOnElementOfListReprezentacja.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$CofnijDoPanelAdmin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$DodajZawodnikaButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$PrzejscieDoDalejDataWynikiSkladyMeczu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$WybranieElementuMundial2List.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$WybranieElementuMundialList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$WybranieElementuReprezentacjaList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$WybranieIstniejacyZawodnikDoNowyMundial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj$WybranieNowyZawodnikDoNowyMundial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikDodaj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikEdytuj$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikEdytuj$BackToPanelAdmin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikEdytuj$PressedOnElementOfMundialList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikEdytuj$PressedOnElementOfReprezentacjaList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikEdytuj$PressedOnElementOfZawodnikList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikEdytuj$UpdatePlayer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikEdytuj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikUsun$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikUsun$BackToPanelAdmin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikUsun$PressedOnElementOfMundialList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikUsun$PressedOnElementOfReprezentacjaList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikUsun$PressedOnElementOfZawodnikList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikUsun$UsunZawodnika.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Controller/ControllerZawodnikUsun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/GrupaDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/GrupaDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/MeczDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/MeczDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/MundialDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/MundialDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/ReprezentacjaDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/ReprezentacjaDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/ReprezentacjaWGrupaDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/ReprezentacjaWGrupaDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/RozgrywkaDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/RozgrywkaDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/SkladReprezentacjaDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/SkladReprezentacjaDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/TypGrupyDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/TypGrupyDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/ZawodnikDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/ZawodnikDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/ZawodnikWReprezentacjaDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/dao/ZawodnikWReprezentacjaDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/Grupa.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/Mecz.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/Mundial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/Reprezentacja.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/ReprezentacjaWGrupa.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/Rozgrywka.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/SkladReprezentacja1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/SkladReprezentacja2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/TypGrupy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/Zawodnik.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/Model/entity/ZawodnikWReprezentacja.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewEkranGlowny.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewGrupaDodaj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewMecze.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewMundialDodaj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewMundialEdytuj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewMundialUsun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewPanelAdministratora.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewReprezentacjaDodaj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewReprezentacjaEdytuj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewReprezentacjaUsun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewWyniki.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewWynikiDrabinka.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewZawodnicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewZawodnikDodaj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewZawodnikEdytuj.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulMVC/View/ViewZawodnikUsun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulTools/SetDLM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulTools/ShowMyMessage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulTools/exceptions/CheckBoxUnchecked.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulTools/exceptions/MundialNotSelected.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulTools/exceptions/MyExceptions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulTools/exceptions/MyOwnException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulTools/utils/NotImplement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/koczwara/mundialv1/ModulTools/utils/ParserSQL.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerEkranGlowny.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerEkranGlowny.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerGrupaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerGrupaDodaj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMecze.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerMecze.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMundialDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerMundialDodaj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMundialEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerMundialEdytuj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMundialUsun.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerMundialUsun.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerPanelAdministratora.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerPanelAdministratora.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerReprezentacjaDodaj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerReprezentacjaEdytuj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaUsun.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerReprezentacjaUsun.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerWyniki.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerWyniki.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerWynikiDrabinka.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerWynikiDrabinka.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnicy.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerZawodnicy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerZawodnikDodaj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerZawodnikEdytuj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikUsun.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerZawodnikUsun.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/GrupaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/GrupaDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/GrupaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/GrupaDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MeczDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/MeczDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MeczDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/MeczDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MundialDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/MundialDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MundialDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/MundialDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ReprezentacjaDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ReprezentacjaDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaWGrupaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ReprezentacjaWGrupaDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaWGrupaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ReprezentacjaWGrupaDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/RozgrywkaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/RozgrywkaDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/RozgrywkaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/RozgrywkaDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/SkladReprezentacjaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/SkladReprezentacjaDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/SkladReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/SkladReprezentacjaDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/TypGrupyDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/TypGrupyDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/TypGrupyDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/TypGrupyDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ZawodnikDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ZawodnikDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikWReprezentacjaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ZawodnikWReprezentacjaDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikWReprezentacjaDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ZawodnikWReprezentacjaDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Grupa.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/Grupa.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Mecz.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/Mecz.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Mundial.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/Mundial.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Reprezentacja.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/Reprezentacja.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/ReprezentacjaWGrupa.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/ReprezentacjaWGrupa.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Rozgrywka.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/Rozgrywka.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/SkladReprezentacja1.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/SkladReprezentacja1.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/SkladReprezentacja2.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/SkladReprezentacja2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/TypGrupy.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/TypGrupy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/Zawodnik.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/Zawodnik.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/entity/ZawodnikWReprezentacja.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/entity/ZawodnikWReprezentacja.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewEkranGlowny.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewEkranGlowny.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewGrupaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewGrupaDodaj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMecze.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewMecze.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewMundialDodaj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewMundialEdytuj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialUsun.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewMundialUsun.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewPanelAdministratora.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewPanelAdministratora.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewReprezentacjaDodaj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewReprezentacjaEdytuj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaUsun.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewReprezentacjaUsun.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewWyniki.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewWyniki.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewWynikiDrabinka.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewWynikiDrabinka.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnicy.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnicy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikDodaj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnikDodaj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikEdytuj.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnikEdytuj.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikUsun.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnikUsun.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/SetDLM.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/SetDLM.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/ShowMyMessage.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/ShowMyMessage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/exceptions/CheckBoxUnchecked.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/exceptions/CheckBoxUnchecked.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/exceptions/MundialNotSelected.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/exceptions/MundialNotSelected.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/exceptions/MyExceptions.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/exceptions/MyExceptions.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/exceptions/MyOwnException.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/exceptions/MyOwnException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/utils/NotImplement.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/utils/NotImplement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/utils/ParserSQL.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/utils/ParserSQL.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/service/ConnectionDB.java" afterPath="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/service/ConnectionDB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
     </list>
@@ -271,14 +272,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AppStart.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/AppStart.java">
+      <file leaf-file-name="InterfejsUzytkownikaModul.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/InterfejsUzytkownikaModul.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -310,10 +309,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/utils/exceptions/MundialNotSelected.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/utils/exceptions/MyOwnException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/utils/exceptions/CheckBoxUnchecked.java" />
-        <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/EkranGlowny/ViewWynikiDrabinka.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/SkladReprezentacjaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Model/dao/MeczDAOImpl.java" />
@@ -361,6 +356,10 @@
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/View/ViewZawodnicy.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/AppMVC.java" />
         <option value="$PROJECT_DIR$/src/main/java/koczwara/mundialv1/AppStart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnikDodaj.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/AppStart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/interfejsUzytkownikaModul.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/InterfejsUzytkownikaModul.java" />
       </list>
     </option>
   </component>
@@ -399,8 +398,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -458,42 +455,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mundialv1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mundialPilkarski_v4.1b" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mundialPilkarski_v4.1b" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mundialv1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvc" />
+              <option name="myItemId" value="interfejsUzytkownikaModul" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,26 +477,26 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="koczwara.mundialv1.MVC.Model.dao" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="interfejsUzytkownikaModul.mvc" />
       <recent name="koczwara.mundialv1.ModulMVC" />
       <recent name="koczwara.mundialv1.MVC.ModulDatabaseConnection" />
       <recent name="koczwara.mundialv1.MVC.View" />
       <recent name="koczwara.mundialv1.MVC.Tools" />
-      <recent name="koczwara.mundialv1.MVC.Model.utils.exceptions" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="koczwara.mundialv1.MVC" />
-      <recent name="koczwara.mundialv1.MVC.Model.Connection" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Wojtek\IdeaProjects\mundialv1\src\main\java\koczwara\mundialv1\MVC" />
       <recent name="C:\Users\Wojtek\IdeaProjects\mundialv1\src\main\java\koczwara\mundialv1\MVC\Model" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="koczwara.mundialv1.MVC" />
+      <recent name="koczwara.mundialv1.MVC.Model.Connection" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="koczwara.mundialv1.MVC.Model.dao" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.AppStart">
+  <component name="RunManager" selected="Application.InterfejsUzytkownikaModul">
     <configuration default="false" name="AppStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -576,6 +545,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="koczwara.mundialv1.MVC.View.ViewGrupaDodaj" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="mundialv1" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="InterfejsUzytkownikaModul" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="interfejsUzytkownikaModul.mvc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="interfejsUzytkownikaModul.InterfejsUzytkownikaModul" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -968,16 +957,18 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.AppStart" />
       <item index="1" class="java.lang.String" itemvalue="Application.test" />
       <item index="2" class="java.lang.String" itemvalue="Application.ViewGrupaDodaj" />
+      <item index="3" class="java.lang.String" itemvalue="Application.InterfejsUzytkownikaModul" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.AppStart" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ViewGrupaDodaj" />
-        <item index="2" class="java.lang.String" itemvalue="Application.test" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.InterfejsUzytkownikaModul" />
+        <item index="1" class="java.lang.String" itemvalue="Application.AppStart" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ViewGrupaDodaj" />
+        <item index="3" class="java.lang.String" itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -1034,19 +1025,22 @@
       <workItem from="1503740511038" duration="1357000" />
       <workItem from="1504042233484" duration="1306000" />
       <workItem from="1504107387449" duration="2324000" />
+      <workItem from="1504646076913" duration="1305000" />
+      <workItem from="1504710033988" duration="1490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354770000" />
+    <option name="totallyTimeSpent" value="357565000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1055,10 +1049,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29865772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.49755502" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32997763" sideWeight="0.49755502" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29462102" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.301956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1070,7 +1064,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1092,35 +1085,21 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/TypGrupyDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/GrupaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="66" lean-forward="false" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MeczDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/MeczDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="49" column="104" lean-forward="true" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/RozgrywkaDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/RozgrywkaDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="67" column="66" lean-forward="true" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/GrupaDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/GrupaDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="95" column="26" lean-forward="false" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
@@ -1128,91 +1107,91 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/MVC/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikWReprezentacjaDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ZawodnikWReprezentacjaDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="156" column="4" lean-forward="false" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikWReprezentacjaDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ZawodnikWReprezentacjaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="21" column="127" lean-forward="false" selection-start-line="21" selection-start-column="127" selection-end-line="21" selection-end-column="127" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ZawodnikDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="22" column="118" lean-forward="true" selection-start-line="22" selection-start-column="118" selection-end-line="22" selection-end-column="118" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MeczDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/MeczDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MundialDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/MundialDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ZawodnikDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ZawodnikDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="173" column="9" lean-forward="true" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaWGrupaDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ReprezentacjaWGrupaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="106" lean-forward="false" selection-start-line="13" selection-start-column="106" selection-end-line="13" selection-end-column="106" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ReprezentacjaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/MundialDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/MundialDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="82" column="81" lean-forward="false" selection-start-line="82" selection-start-column="81" selection-end-line="82" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/model/dao/ReprezentacjaDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/model/dao/ReprezentacjaDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
           <caret line="111" column="38" lean-forward="false" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerWyniki.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerWyniki.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="622">
           <caret line="258" column="12" lean-forward="false" selection-start-line="258" selection-start-column="12" selection-end-line="260" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnicy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerZawodnicy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3560">
           <caret line="227" column="27" lean-forward="false" selection-start-line="227" selection-start-column="27" selection-end-line="227" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewEkranGlowny.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewEkranGlowny.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -1220,197 +1199,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMundialEdytuj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerMundialEdytuj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="92" column="125" lean-forward="false" selection-start-line="92" selection-start-column="125" selection-end-line="92" selection-end-column="125" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaEdytuj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerReprezentacjaEdytuj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-702">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaUsun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerReprezentacjaUsun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
           <caret line="42" column="11" lean-forward="false" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikUsun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerZawodnikUsun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="151" column="50" lean-forward="false" selection-start-line="151" selection-start-column="50" selection-end-line="151" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikEdytuj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerZawodnikEdytuj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="187" column="43" lean-forward="false" selection-start-line="187" selection-start-column="43" selection-end-line="187" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikUsun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnikUsun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikEdytuj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnikEdytuj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialUsun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewMundialUsun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewWyniki.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewWyniki.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="60" lean-forward="false" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaUsun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewReprezentacjaUsun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="46" lean-forward="false" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialEdytuj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewMundialEdytuj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaEdytuj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewReprezentacjaEdytuj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewPanelAdministratora.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewPanelAdministratora.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMundialDodaj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerMundialDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="687">
           <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerReprezentacjaDodaj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerReprezentacjaDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="539">
           <caret line="83" column="35" lean-forward="false" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewReprezentacjaDodaj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewReprezentacjaDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="590">
           <caret line="59" column="80" lean-forward="false" selection-start-line="59" selection-start-column="80" selection-end-line="59" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerGrupaDodaj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerGrupaDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="449" column="35" lean-forward="false" selection-start-line="449" selection-start-column="35" selection-end-line="449" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewGrupaDodaj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewGrupaDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
           <caret line="278" column="83" lean-forward="false" selection-start-line="278" selection-start-column="83" selection-end-line="278" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnikDodaj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="171" column="86" lean-forward="false" selection-start-line="171" selection-start-column="86" selection-end-line="171" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMundialDodaj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewMundialDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/utils/ParserSQL.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/utils/ParserSQL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewZawodnicy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnicy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
           <caret line="91" column="43" lean-forward="false" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/repository/utils/NotImplement.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/repository/utils/NotImplement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerZawodnikDodaj.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerZawodnikDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5457">
           <caret line="321" column="35" lean-forward="false" selection-start-line="321" selection-start-column="35" selection-end-line="321" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/view/ViewMecze.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewMecze.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="294" column="61" lean-forward="false" selection-start-line="294" selection-start-column="61" selection-end-line="294" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerPanelAdministratora.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerPanelAdministratora.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="670">
           <caret line="125" column="35" lean-forward="false" selection-start-line="125" selection-start-column="35" selection-end-line="125" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerMecze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/mvc/controller/ControllerEkranGlowny.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerEkranGlowny.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
@@ -1431,27 +1395,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/service/ConnectionDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/service/ConnectionDB.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/controller/ControllerMecze.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="-6680">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/koczwara/mundialv1/AppStart.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/view/ViewZawodnikDodaj.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="687">
+          <caret line="171" column="86" lean-forward="false" selection-start-line="171" selection-start-column="86" selection-end-line="171" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/mvc/AppStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfejsUzytkownikaModul/InterfejsUzytkownikaModul.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
