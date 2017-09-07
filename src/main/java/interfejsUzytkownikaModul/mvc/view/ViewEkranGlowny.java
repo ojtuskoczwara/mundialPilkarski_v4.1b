@@ -1,6 +1,5 @@
 package interfejsUzytkownikaModul.mvc.view;
 
-
 import javax.swing.*;
 import java.awt.event.ActionListener;
 
@@ -15,28 +14,22 @@ public class ViewEkranGlowny extends JFrame {
 
     public ViewEkranGlowny() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600,500);
+        setSize(500,450);
         setTitle("Ekran główny");
         setLayout(null);
         setLocationRelativeTo(null);
         setVisible(true);
 
-        mundialeButton.setBounds(250,30,100,50);
-        add(mundialeButton);
-        zawodnicyButton.setBounds(250,90,100,50);
+        zawodnicyButton.setBounds(50,20,300,100);
         add(zawodnicyButton);
-        wynikiButton.setBounds(250,150,100,50);
+        wynikiButton.setBounds(50,130,300,100);
         add(wynikiButton);
-        panelAdministratoraButton.setBounds(400,400,170,30);
+        panelAdministratoraButton.setBounds(50,300,200,70);
         add(panelAdministratoraButton);
     }
 
     public void addPanelAdministratoraButtonListener(ActionListener listenForPanelAdministratoraButton) {
         panelAdministratoraButton.addActionListener(listenForPanelAdministratoraButton);
-    }
-
-    public void addMundialeButtonListener(ActionListener listenForMundialeButton) {
-        mundialeButton.addActionListener(listenForMundialeButton);
     }
 
     public void addZawodnicyButtonListener(ActionListener listenForZawodnicyButton) {
