@@ -332,13 +332,7 @@ public class ControllerMecze {
         public void actionPerformed(ActionEvent e) {
             if (!view.getMundialList().isSelectionEmpty() & !view.getMeczList().isSelectionEmpty() & !view.getMiesiacFromTextField().isEmpty()
                     & !view.getDzienFromTextField().isEmpty() & !view.getGoleRep1().isEmpty() & !view.getGoleRep2().isEmpty()) {
-                //Przypisanie modelMecz danych idRep1, idRep2, idGrupy, idMundialu - te dane już mamy
-                //modelMecz.setIdMeczu(modelRozgrywka.getIdRozgrywki());
-                //modelMecz.setIdReprezentacji1(modelRozgrywka.getIdReprezentacji1());
-                //modelMecz.setIdReprezentacji2(modelRozgrywka.getIdReprezentacji2());
-                //modelMecz.setIdGrupy(modelRozgrywka.getIdGrupy());
                 modelMecz.setIdMundialu(modelMundial.getIdMundialu());
-
                 // Sprawdza czy gole sa cyfra czy litera i parsuje do int
                 String wyrazenieRegularneGole = "\\d{1,2}"; // Wyrazenie regularne: 1 lub 2 cyfry 0-9
                 Pattern pattern = Pattern.compile(wyrazenieRegularneGole);
@@ -388,13 +382,6 @@ public class ControllerMecze {
                                                     } catch (Exception e1) {
                                                         e1.printStackTrace();
                                                     }
-                                                    /*
-                                                    try {
-                                                        skladReprezentacjaDAO.addSkladReprezentacja2(modelMecz.getIdReprezentacji1(), modelMecz.getIdReprezentacji2(), modelMecz.getIdGrupy(), modelMecz.getIdMundialu(), zawodnicyRep2Id[i], modelMecz.getIdMeczu());
-                                                    } catch (Exception e1) {
-                                                        e1.printStackTrace();
-                                                    }
-                                                    */
                                                 }
                                             } else {
                                                 showMyMessage.errorMessage("Jeden lub więcej zawodników powtarza się w składzie reprezentacji "+view.getNazwaReprezentacji2FromLabel()+". Zawodnicy nie mogą się powtarzać!", "SKŁAD "+view.getNazwaReprezentacji2FromLabel()+": błąd podczas wyboru zawodnika");

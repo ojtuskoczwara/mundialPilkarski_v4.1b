@@ -73,7 +73,7 @@ public class ControllerMundialEdytuj {
             }
         }
     }
- // zamiast mouselistener można to zrobić bez użycia kliknięcia myszką
+
     // przy kliknięciu bEdytuj pobieramy z listy zaznaczony element i zapisujemy go w valLokal i valRok ... tak jak wyżej w MundialListMouse
     private class EdytujMundialButton implements ActionListener {
         @Override

@@ -18,9 +18,9 @@ import java.util.List;
 public class ControllerReprezentacjaDodaj {
     private ViewReprezentacjaDodaj view;
     private Reprezentacja model;
-    ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
+    private ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
     private DefaultListModel dlm = new DefaultListModel();
-    ShowMyMessage showMyMessage = new ShowMyMessage();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
 
 
     public ControllerReprezentacjaDodaj(ViewReprezentacjaDodaj view, Reprezentacja model) {
@@ -34,7 +34,7 @@ public class ControllerReprezentacjaDodaj {
     }
 
 
-    public void setRepDLM() {
+    private void setRepDLM() {
         // Wstrzyknięcie danych do modeluRep który później jest argumentem JListRep
         dlm.removeAllElements();
         try {

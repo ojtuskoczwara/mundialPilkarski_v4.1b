@@ -20,8 +20,8 @@ public class ControllerMundialUsun {
     private ViewMundialUsun view;
     private Mundial model;
     private DefaultListModel dlm = new DefaultListModel();
-    MundialDAO mundialDAO = new MundialDAOImpl();
-    ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
+    private MundialDAO mundialDAO = new MundialDAOImpl();
+    private ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
     private String valueMundial;
     private String valueMundialLokalizacja;
     private int valueMundialRok;
@@ -36,7 +36,7 @@ public class ControllerMundialUsun {
         this.view.setMundialeListMouseListener(new MundialeListMouseListener());
     }
 
-    public void setDLM() {
+    private void setDLM() {
         // Wstrzyknięcie danych do modeluMundialu który później jest argumentem JListMundiale
         dlm.removeAllElements();
         try {
@@ -79,10 +79,6 @@ public class ControllerMundialUsun {
             else
                 view.setInfoLabelText("Operacja usunięcia mundialu nie powiodła się.");
             setDLM();
-//            // ALBO zrobić to bez pobierania danych z DB a działanie na samej liście
-//            dlm.removeElement(view.getMundialListSelectedValue().getSelectedValue());
-//            view.setListMundialeModel(dlm);
-
         }
     }
 

@@ -29,11 +29,11 @@ public class ControllerZawodnikDodaj {
     private DefaultListModel zawodnikListModel = new DefaultListModel();
     private DefaultListModel zawodnik2ListModel = new DefaultListModel();
     private DefaultListModel mundial2ListModel = new DefaultListModel();
-    ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
-    ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
-    MundialDAO mundialDAO = new MundialDAOImpl();
-    ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
-    ShowMyMessage showMyMessage = new ShowMyMessage();
+    private ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
+    private ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
+    private MundialDAO mundialDAO = new MundialDAOImpl();
+    private ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
     private String valueMundial, valueMundialLokalizacja, valueReprezentacjaNazwa;
     private int valueMundialRok;
 
@@ -66,7 +66,7 @@ public class ControllerZawodnikDodaj {
         }
     }
 
-    public void setMundialDLM() {
+    private void setMundialDLM() {
         // Wstrzyknięcie danych do modeluMundialu który później jest argumentem JListMundiale
         mundialListModel.removeAllElements();
         try {
@@ -81,7 +81,7 @@ public class ControllerZawodnikDodaj {
         }
     }
 
-    public void setMundial2DLMWithoutSomeMundial() {
+    private void setMundial2DLMWithoutSomeMundial() {
         mundial2ListModel.removeAllElements();
 
         try {
@@ -109,7 +109,7 @@ public class ControllerZawodnikDodaj {
         }
     }
 
-    public void setReprezentacjaDLM() {
+    private void setReprezentacjaDLM() {
         // Wstrzyknięcie danych do modeluRep który później jest argumentem JListRep
         reprezentacjaListModel.removeAllElements();
         try {

@@ -4,7 +4,6 @@ package interfejsUzytkownikaModul.mvc.controller;
 import interfejsUzytkownikaModul.mvc.model.entity.*;
 import interfejsUzytkownikaModul.mvc.view.ViewPanelAdministratora;
 import interfejsUzytkownikaModul.mvc.view.ViewWyniki;
-import interfejsUzytkownikaModul.mvc.view.ViewWynikiDrabinka;
 import interfejsUzytkownikaModul.mvc.view.ViewZawodnicy;
 import interfejsUzytkownikaModul.mvc.view.ViewEkranGlowny;
 
@@ -17,7 +16,6 @@ public class ControllerEkranGlowny {
     public ControllerEkranGlowny(ViewEkranGlowny view) {
         this.view = view;
         this.view.addPanelAdministratoraButtonListener(new PanelAdministratoraListener());
-        //this.view.addWynikiButtonListener(new WynikiDrabinkaListener());
         this.view.addWynikiButtonListener(new WynikiListener());
         this.view.addZawodnicyButtonListener(new ZawodnicyListener());
     }
@@ -26,14 +24,6 @@ public class ControllerEkranGlowny {
         @Override
         public void actionPerformed(ActionEvent e) {
             new ControllerPanelAdministratora(new ViewPanelAdministratora());
-            view.setVisible(false);
-        }
-    }
-
-    private class WynikiDrabinkaListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            new ControllerWynikiDrabinka(new ViewWynikiDrabinka(), new Mundial());
             view.setVisible(false);
         }
     }

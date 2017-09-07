@@ -32,7 +32,7 @@ public class ControllerZawodnikUsun {
     private ReprezentacjaDAO reprezentacjaDAO = new ReprezentacjaDAOImpl();
     private ZawodnikWReprezentacjaDAO zawodnikWReprezentacjaDAO = new ZawodnikWReprezentacjaDAOImpl();
     private ShowMyMessage showMyMessage = new ShowMyMessage();
-    private String valueMundial, valueMundialLokalizacja, valueReprezentacjaNazwa, valueZawodnikImieNazwisko;
+    private String valueMundial, valueMundialLokalizacja, valueReprezentacjaNazwa;
     private int valueMundialRok;
 
     public ControllerZawodnikUsun(ViewZawodnikUsun view, Zawodnik modelZawodnik, Reprezentacja modelReprezentacja, Mundial modelMundial, ZawodnikWReprezentacja modelZawodnikWReprezentacja){
@@ -52,7 +52,7 @@ public class ControllerZawodnikUsun {
     }
 
 
-    public void setMundialDLM() {
+    private void setMundialDLM() {
         // Wstrzyknięcie danych do modeluMundialu który później jest argumentem JListMundiale
         mundialListModel.removeAllElements();
         try {
@@ -67,7 +67,7 @@ public class ControllerZawodnikUsun {
         }
     }
 
-    public void setReprezentacjaDLM() {
+    private void setReprezentacjaDLM() {
         // Wstrzyknięcie danych do modeluRep który później jest argumentem JListRep
         reprezentacjaListModel.removeAllElements();
         try {
@@ -82,7 +82,7 @@ public class ControllerZawodnikUsun {
         }
     }
 
-    public void setZawodnikDLM() {
+    private void setZawodnikDLM() {
         valueReprezentacjaNazwa = view.getReprezentacjaList().getSelectedValue().toString();
         try {
             List<Zawodnik> zawodnikList = zawodnikWReprezentacjaDAO.getAllZawodnicyAtMundialInRep(valueMundialLokalizacja, valueReprezentacjaNazwa);
@@ -126,7 +126,6 @@ public class ControllerZawodnikUsun {
             super.mousePressed(e);
             if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
                 //Zaznaczony element String dzielimy na imie i nazwisko Separatorem jest spacja, +setter imie nazwisko
-     //valueZawodnikImieNazwisko = view.getZawodnikList().getSelectedValue().toString();
                 String[] splited = view.getZawodnikList().getSelectedValue().toString().split("\\s");
                 modelZawodnik.setImie(splited[0]);
                 modelZawodnik.setNazwisko(splited[1]);

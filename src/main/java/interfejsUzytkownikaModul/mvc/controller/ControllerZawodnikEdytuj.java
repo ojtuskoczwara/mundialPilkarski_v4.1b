@@ -125,7 +125,6 @@ public class ControllerZawodnikEdytuj {
             super.mousePressed(e);
             if (!view.getMundialList().isSelectionEmpty() || !view.getReprezentacjaList().isSelectionEmpty()) {
                 //Zaznaczony element String dzielimy na imie i nazwisko Separatorem jest spacja, +setter imie nazwisko
-    // valueZawodnikImieNazwisko = view.getZawodnikList().getSelectedValue().toString();
                 String[] splited = view.getZawodnikList().getSelectedValue().toString().split("\\s");
                 modelZawodnik.setImie(splited[0]);
                 modelZawodnik.setNazwisko(splited[1]);

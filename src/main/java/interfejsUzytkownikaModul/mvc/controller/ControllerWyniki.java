@@ -33,7 +33,7 @@ public class ControllerWyniki {
     private ZawodnikDAO zawodnikDAO = new ZawodnikDAOImpl();
     private String valueMundialLokalizacja;
     private int valueMundialRok;
-    ShowMyMessage showMyMessage = new ShowMyMessage();
+    private ShowMyMessage showMyMessage = new ShowMyMessage();
 
 
     public ControllerWyniki(ViewWyniki view, Mundial modelMundial, Rozgrywka modelRozgrywka, TypGrupy modelTypGrupy, Grupa modelGrupa,
