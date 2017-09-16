@@ -7,9 +7,6 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- * Created by Mroziqella on 22.04.2017.
- */
 public class ParserSQL {
     private static Connection connection = ConnectionDB.getConnection();
 

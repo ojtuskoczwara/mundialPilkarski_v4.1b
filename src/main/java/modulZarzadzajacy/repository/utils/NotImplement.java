@@ -1,8 +1,5 @@
 package modulZarzadzajacy.repository.utils;
 
-/**
- * Created by Mroziqella on 22.04.2017.
- */
 public class NotImplement extends RuntimeException {
     public NotImplement() {
     }
