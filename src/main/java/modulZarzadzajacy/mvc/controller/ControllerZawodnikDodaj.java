@@ -182,7 +182,7 @@ public class ControllerZawodnikDodaj {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (view.getValueSelectedCheckBoxIstniejacyZawodnik() == true & view.getValueSelectedCheckBoxNowyZawodnik() == false & !view.getMundialList().isSelectionEmpty() & !view.getReprezentacjaList().isSelectionEmpty()
-                    & !view.getZawodnikList().isSelectionEmpty() & !view.getMundial2List().isSelectionEmpty()) {
+                     & !view.getMundial2List().isSelectionEmpty()) {
                 int zawodnikIndeksValue = view.getZawodnikList().getSelectedIndex();
                 String mundial2SelectedValue = view.getMundial2List().getSelectedValue().toString();
                 String[] lokalizacjaRok = mundial2SelectedValue.split(" ");
