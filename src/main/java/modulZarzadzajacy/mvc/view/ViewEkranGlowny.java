@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 
 public class ViewEkranGlowny extends JFrame {
 
-    private JButton mundialeButton = new JButton("Mundiale");
     private JButton zawodnicyButton = new JButton("Zawodnicy");
     private JButton wynikiButton = new JButton("Wyniki");
     private JButton panelAdministratoraButton = new JButton("Panel Administratora");
