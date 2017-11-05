@@ -33,7 +33,6 @@ public class ConnectionDB {
         }
     }
 
-
     public static void disconnect(ResultSet resultSet) throws Exception {
         if (resultSet.getStatement() != null) {
             resultSet.getStatement().close();

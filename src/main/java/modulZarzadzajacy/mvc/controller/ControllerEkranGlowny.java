@@ -43,4 +43,8 @@ public class ControllerEkranGlowny {
             view.setVisible(false);
         }
     }
+
+    public void Start(){
+        this.view.setVisible(true);
+    }
 }

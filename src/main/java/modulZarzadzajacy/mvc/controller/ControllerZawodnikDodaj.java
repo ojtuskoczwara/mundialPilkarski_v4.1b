@@ -38,7 +38,8 @@ public class ControllerZawodnikDodaj {
     private int valueMundialRok;
 
 
-    public ControllerZawodnikDodaj(ViewZawodnikDodaj view, Zawodnik modelZawodnik, Reprezentacja modelReprezentacja, Mundial modelMundial, ZawodnikWReprezentacja modelZawodnikWReprezentacja) {
+    public ControllerZawodnikDodaj(ViewZawodnikDodaj view, Zawodnik modelZawodnik, Reprezentacja modelReprezentacja,
+                                   Mundial modelMundial, ZawodnikWReprezentacja modelZawodnikWReprezentacja) {
         this.view = view;
         this.modelZawodnik = modelZawodnik;
         this.modelReprezentacja = modelReprezentacja;
